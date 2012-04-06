@@ -1,0 +1,23 @@
+--
+-- Table structure for table `wsdemo`
+--
+
+CREATE TABLE IF NOT EXISTS `wsdemo` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) DEFAULT NULL,
+  `descript` varchar(1000) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=31 ;
+
+--
+-- Dumping data for table `wsdemo`
+--
+
+INSERT INTO `wsdemo` (`id`, `title`, `descript`) VALUES
+(14, 'Testy', 'Asd ss. Asa sas d'),
+(3, 'Meow Mix', 'Cats like meow mix sa D DDASsdadsadas das dasa ds ads adsa sdA sd asdA SDA SD ads sd'),
+(16, 'Test', 'Asdf as fdfa afsa dfs'),
+(29, 'Hello', 'Meow'),
+(28, 'Test', 'Testasd asd'),
+(8, 'Testing', 'This is a test!'),
+(17, 'Test', 'Sd asd fdsafds dfs aadsf as df');
