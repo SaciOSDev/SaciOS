@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		084656431550E5AB00A58283 /* AddRemove.png in Resources */ = {isa = PBXBuildFile; fileRef = 084656351550E5AB00A58283 /* AddRemove.png */; };
+		084656441550E5AB00A58283 /* Back.png in Resources */ = {isa = PBXBuildFile; fileRef = 084656361550E5AB00A58283 /* Back.png */; };
+		084656451550E5AB00A58283 /* Check.png in Resources */ = {isa = PBXBuildFile; fileRef = 084656371550E5AB00A58283 /* Check.png */; };
+		084656461550E5AB00A58283 /* Demote.png in Resources */ = {isa = PBXBuildFile; fileRef = 084656381550E5AB00A58283 /* Demote.png */; };
+		084656471550E5AB00A58283 /* Details.png in Resources */ = {isa = PBXBuildFile; fileRef = 084656391550E5AB00A58283 /* Details.png */; };
+		084656481550E5AB00A58283 /* Flex.png in Resources */ = {isa = PBXBuildFile; fileRef = 0846563A1550E5AB00A58283 /* Flex.png */; };
+		084656491550E5AB00A58283 /* Flow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0846563B1550E5AB00A58283 /* Flow.png */; };
+		0846564A1550E5AB00A58283 /* Promote.png in Resources */ = {isa = PBXBuildFile; fileRef = 0846563C1550E5AB00A58283 /* Promote.png */; };
+		0846564B1550E5AB00A58283 /* Reseed.png in Resources */ = {isa = PBXBuildFile; fileRef = 0846563D1550E5AB00A58283 /* Reseed.png */; };
+		0846564C1550E5AB00A58283 /* Search.png in Resources */ = {isa = PBXBuildFile; fileRef = 0846563E1550E5AB00A58283 /* Search.png */; };
+		0846564D1550E5AB00A58283 /* ShortMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 0846563F1550E5AB00A58283 /* ShortMenu.png */; };
+		0846564E1550E5AB00A58283 /* ShortMenu1.png in Resources */ = {isa = PBXBuildFile; fileRef = 084656401550E5AB00A58283 /* ShortMenu1.png */; };
+		0846564F1550E5AB00A58283 /* ShortMenu2.png in Resources */ = {isa = PBXBuildFile; fileRef = 084656411550E5AB00A58283 /* ShortMenu2.png */; };
+		084656501550E5AB00A58283 /* ShortMenu3.png in Resources */ = {isa = PBXBuildFile; fileRef = 084656421550E5AB00A58283 /* ShortMenu3.png */; };
 		9044B585154F9F0200850349 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9044B584154F9F0200850349 /* UIKit.framework */; };
 		9044B587154F9F0200850349 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9044B586154F9F0200850349 /* Foundation.framework */; };
 		9044B589154F9F0200850349 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9044B588154F9F0200850349 /* CoreGraphics.framework */; };
@@ -23,6 +37,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		084656351550E5AB00A58283 /* AddRemove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddRemove.png; sourceTree = "<group>"; };
+		084656361550E5AB00A58283 /* Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Back.png; sourceTree = "<group>"; };
+		084656371550E5AB00A58283 /* Check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Check.png; sourceTree = "<group>"; };
+		084656381550E5AB00A58283 /* Demote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Demote.png; sourceTree = "<group>"; };
+		084656391550E5AB00A58283 /* Details.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Details.png; sourceTree = "<group>"; };
+		0846563A1550E5AB00A58283 /* Flex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Flex.png; sourceTree = "<group>"; };
+		0846563B1550E5AB00A58283 /* Flow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Flow.png; sourceTree = "<group>"; };
+		0846563C1550E5AB00A58283 /* Promote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Promote.png; sourceTree = "<group>"; };
+		0846563D1550E5AB00A58283 /* Reseed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Reseed.png; sourceTree = "<group>"; };
+		0846563E1550E5AB00A58283 /* Search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Search.png; sourceTree = "<group>"; };
+		0846563F1550E5AB00A58283 /* ShortMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShortMenu.png; sourceTree = "<group>"; };
+		084656401550E5AB00A58283 /* ShortMenu1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShortMenu1.png; sourceTree = "<group>"; };
+		084656411550E5AB00A58283 /* ShortMenu2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShortMenu2.png; sourceTree = "<group>"; };
+		084656421550E5AB00A58283 /* ShortMenu3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShortMenu3.png; sourceTree = "<group>"; };
 		9044B580154F9F0200850349 /* TMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9044B584154F9F0200850349 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9044B586154F9F0200850349 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -60,6 +88,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		084656341550E5AB00A58283 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				084656351550E5AB00A58283 /* AddRemove.png */,
+				084656361550E5AB00A58283 /* Back.png */,
+				084656371550E5AB00A58283 /* Check.png */,
+				084656381550E5AB00A58283 /* Demote.png */,
+				084656391550E5AB00A58283 /* Details.png */,
+				0846563A1550E5AB00A58283 /* Flex.png */,
+				0846563B1550E5AB00A58283 /* Flow.png */,
+				0846563C1550E5AB00A58283 /* Promote.png */,
+				0846563D1550E5AB00A58283 /* Reseed.png */,
+				0846563E1550E5AB00A58283 /* Search.png */,
+				0846563F1550E5AB00A58283 /* ShortMenu.png */,
+				084656401550E5AB00A58283 /* ShortMenu1.png */,
+				084656411550E5AB00A58283 /* ShortMenu2.png */,
+				084656421550E5AB00A58283 /* ShortMenu3.png */,
+			);
+			path = Images;
+			sourceTree = SOURCE_ROOT;
+		};
 		9044B575154F9F0200850349 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +140,7 @@
 		9044B58C154F9F0200850349 /* TMS */ = {
 			isa = PBXGroup;
 			children = (
+				084656341550E5AB00A58283 /* Images */,
 				9044B5B7154FA02400850349 /* Core App */,
 				9044B5B6154FA01300850349 /* Tournament Display */,
 				9044B5B5154F9FFD00850349 /* Tounrament Selector */,
@@ -213,6 +263,20 @@
 				9044B591154F9F0200850349 /* InfoPlist.strings in Resources */,
 				9044B5D9154FB8C100850349 /* SGPTournamentDetailFrontViewController.xib in Resources */,
 				9044B5DD154FB8CA00850349 /* SGPTournamentSelectorViewController.xib in Resources */,
+				084656431550E5AB00A58283 /* AddRemove.png in Resources */,
+				084656441550E5AB00A58283 /* Back.png in Resources */,
+				084656451550E5AB00A58283 /* Check.png in Resources */,
+				084656461550E5AB00A58283 /* Demote.png in Resources */,
+				084656471550E5AB00A58283 /* Details.png in Resources */,
+				084656481550E5AB00A58283 /* Flex.png in Resources */,
+				084656491550E5AB00A58283 /* Flow.png in Resources */,
+				0846564A1550E5AB00A58283 /* Promote.png in Resources */,
+				0846564B1550E5AB00A58283 /* Reseed.png in Resources */,
+				0846564C1550E5AB00A58283 /* Search.png in Resources */,
+				0846564D1550E5AB00A58283 /* ShortMenu.png in Resources */,
+				0846564E1550E5AB00A58283 /* ShortMenu1.png in Resources */,
+				0846564F1550E5AB00A58283 /* ShortMenu2.png in Resources */,
+				084656501550E5AB00A58283 /* ShortMenu3.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
