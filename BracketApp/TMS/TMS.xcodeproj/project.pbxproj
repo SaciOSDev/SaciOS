@@ -1,0 +1,371 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9044B585154F9F0200850349 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9044B584154F9F0200850349 /* UIKit.framework */; };
+		9044B587154F9F0200850349 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9044B586154F9F0200850349 /* Foundation.framework */; };
+		9044B589154F9F0200850349 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9044B588154F9F0200850349 /* CoreGraphics.framework */; };
+		9044B58B154F9F0200850349 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9044B58A154F9F0200850349 /* CoreData.framework */; };
+		9044B591154F9F0200850349 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9044B58F154F9F0200850349 /* InfoPlist.strings */; };
+		9044B593154F9F0200850349 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9044B592154F9F0200850349 /* main.m */; };
+		9044B597154F9F0200850349 /* SGPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9044B596154F9F0200850349 /* SGPAppDelegate.m */; };
+		9044B59A154F9F0200850349 /* TMS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9044B598154F9F0200850349 /* TMS.xcdatamodeld */; };
+		9044B5BB154FA0C500850349 /* SGPTournamentSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9044B5B9154FA0C500850349 /* SGPTournamentSelectorViewController.m */; };
+		9044B5BF154FA15000850349 /* SGPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9044B5BE154FA15000850349 /* SGPBaseViewController.m */; };
+		9044B5D1154FB1E300850349 /* SGPTournamentDetailFrontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9044B5CF154FB1E300850349 /* SGPTournamentDetailFrontViewController.m */; };
+		9044B5D9154FB8C100850349 /* SGPTournamentDetailFrontViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9044B5D7154FB8C100850349 /* SGPTournamentDetailFrontViewController.xib */; };
+		9044B5DD154FB8CA00850349 /* SGPTournamentSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9044B5DB154FB8CA00850349 /* SGPTournamentSelectorViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9044B580154F9F0200850349 /* TMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9044B584154F9F0200850349 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9044B586154F9F0200850349 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9044B588154F9F0200850349 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9044B58A154F9F0200850349 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9044B58E154F9F0200850349 /* TMS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TMS-Info.plist"; sourceTree = "<group>"; };
+		9044B590154F9F0200850349 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9044B592154F9F0200850349 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9044B594154F9F0200850349 /* TMS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TMS-Prefix.pch"; sourceTree = "<group>"; };
+		9044B595154F9F0200850349 /* SGPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGPAppDelegate.h; sourceTree = "<group>"; };
+		9044B596154F9F0200850349 /* SGPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGPAppDelegate.m; sourceTree = "<group>"; };
+		9044B599154F9F0200850349 /* TMS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TMS.xcdatamodel; sourceTree = "<group>"; };
+		9044B5B8154FA0C500850349 /* SGPTournamentSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPTournamentSelectorViewController.h; sourceTree = "<group>"; };
+		9044B5B9154FA0C500850349 /* SGPTournamentSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPTournamentSelectorViewController.m; sourceTree = "<group>"; };
+		9044B5BD154FA15000850349 /* SGPBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPBaseViewController.h; sourceTree = "<group>"; };
+		9044B5BE154FA15000850349 /* SGPBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPBaseViewController.m; sourceTree = "<group>"; };
+		9044B5CE154FB1E300850349 /* SGPTournamentDetailFrontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPTournamentDetailFrontViewController.h; sourceTree = "<group>"; };
+		9044B5CF154FB1E300850349 /* SGPTournamentDetailFrontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPTournamentDetailFrontViewController.m; sourceTree = "<group>"; };
+		9044B5D8154FB8C100850349 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SGPTournamentDetailFrontViewController.xib; sourceTree = "<group>"; };
+		9044B5DC154FB8CA00850349 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SGPTournamentSelectorViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9044B57D154F9F0200850349 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9044B585154F9F0200850349 /* UIKit.framework in Frameworks */,
+				9044B587154F9F0200850349 /* Foundation.framework in Frameworks */,
+				9044B589154F9F0200850349 /* CoreGraphics.framework in Frameworks */,
+				9044B58B154F9F0200850349 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9044B575154F9F0200850349 = {
+			isa = PBXGroup;
+			children = (
+				9044B58C154F9F0200850349 /* TMS */,
+				9044B583154F9F0200850349 /* Frameworks */,
+				9044B581154F9F0200850349 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9044B581154F9F0200850349 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9044B580154F9F0200850349 /* TMS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9044B583154F9F0200850349 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9044B584154F9F0200850349 /* UIKit.framework */,
+				9044B586154F9F0200850349 /* Foundation.framework */,
+				9044B588154F9F0200850349 /* CoreGraphics.framework */,
+				9044B58A154F9F0200850349 /* CoreData.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9044B58C154F9F0200850349 /* TMS */ = {
+			isa = PBXGroup;
+			children = (
+				9044B5B7154FA02400850349 /* Core App */,
+				9044B5B6154FA01300850349 /* Tournament Display */,
+				9044B5B5154F9FFD00850349 /* Tounrament Selector */,
+				9044B5B3154F9FBD00850349 /* CoreData Schema */,
+				9044B58D154F9F0200850349 /* Supporting Files */,
+			);
+			path = TMS;
+			sourceTree = "<group>";
+		};
+		9044B58D154F9F0200850349 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9044B58E154F9F0200850349 /* TMS-Info.plist */,
+				9044B58F154F9F0200850349 /* InfoPlist.strings */,
+				9044B592154F9F0200850349 /* main.m */,
+				9044B594154F9F0200850349 /* TMS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9044B5B3154F9FBD00850349 /* CoreData Schema */ = {
+			isa = PBXGroup;
+			children = (
+				9044B598154F9F0200850349 /* TMS.xcdatamodeld */,
+				9044B5B4154F9FCA00850349 /* DB Objects */,
+			);
+			name = "CoreData Schema";
+			sourceTree = "<group>";
+		};
+		9044B5B4154F9FCA00850349 /* DB Objects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "DB Objects";
+			sourceTree = "<group>";
+		};
+		9044B5B5154F9FFD00850349 /* Tounrament Selector */ = {
+			isa = PBXGroup;
+			children = (
+				9044B5B8154FA0C500850349 /* SGPTournamentSelectorViewController.h */,
+				9044B5B9154FA0C500850349 /* SGPTournamentSelectorViewController.m */,
+				9044B5DB154FB8CA00850349 /* SGPTournamentSelectorViewController.xib */,
+				9044B5CE154FB1E300850349 /* SGPTournamentDetailFrontViewController.h */,
+				9044B5CF154FB1E300850349 /* SGPTournamentDetailFrontViewController.m */,
+				9044B5D7154FB8C100850349 /* SGPTournamentDetailFrontViewController.xib */,
+			);
+			name = "Tounrament Selector";
+			sourceTree = "<group>";
+		};
+		9044B5B6154FA01300850349 /* Tournament Display */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Tournament Display";
+			sourceTree = "<group>";
+		};
+		9044B5B7154FA02400850349 /* Core App */ = {
+			isa = PBXGroup;
+			children = (
+				9044B595154F9F0200850349 /* SGPAppDelegate.h */,
+				9044B596154F9F0200850349 /* SGPAppDelegate.m */,
+				9044B5BD154FA15000850349 /* SGPBaseViewController.h */,
+				9044B5BE154FA15000850349 /* SGPBaseViewController.m */,
+			);
+			name = "Core App";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9044B57F154F9F0200850349 /* TMS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9044B5AF154F9F0200850349 /* Build configuration list for PBXNativeTarget "TMS" */;
+			buildPhases = (
+				9044B57C154F9F0200850349 /* Sources */,
+				9044B57D154F9F0200850349 /* Frameworks */,
+				9044B57E154F9F0200850349 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TMS;
+			productName = TMS;
+			productReference = 9044B580154F9F0200850349 /* TMS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9044B577154F9F0200850349 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SGP;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = Pearson;
+			};
+			buildConfigurationList = 9044B57A154F9F0200850349 /* Build configuration list for PBXProject "TMS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9044B575154F9F0200850349;
+			productRefGroup = 9044B581154F9F0200850349 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9044B57F154F9F0200850349 /* TMS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9044B57E154F9F0200850349 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9044B591154F9F0200850349 /* InfoPlist.strings in Resources */,
+				9044B5D9154FB8C100850349 /* SGPTournamentDetailFrontViewController.xib in Resources */,
+				9044B5DD154FB8CA00850349 /* SGPTournamentSelectorViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9044B57C154F9F0200850349 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9044B593154F9F0200850349 /* main.m in Sources */,
+				9044B597154F9F0200850349 /* SGPAppDelegate.m in Sources */,
+				9044B59A154F9F0200850349 /* TMS.xcdatamodeld in Sources */,
+				9044B5BB154FA0C500850349 /* SGPTournamentSelectorViewController.m in Sources */,
+				9044B5BF154FA15000850349 /* SGPBaseViewController.m in Sources */,
+				9044B5D1154FB1E300850349 /* SGPTournamentDetailFrontViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9044B58F154F9F0200850349 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9044B590154F9F0200850349 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9044B5D7154FB8C100850349 /* SGPTournamentDetailFrontViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9044B5D8154FB8C100850349 /* en */,
+			);
+			name = SGPTournamentDetailFrontViewController.xib;
+			sourceTree = "<group>";
+		};
+		9044B5DB154FB8CA00850349 /* SGPTournamentSelectorViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9044B5DC154FB8CA00850349 /* en */,
+			);
+			name = SGPTournamentSelectorViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9044B5AD154F9F0200850349 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9044B5AE154F9F0200850349 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9044B5B0154F9F0200850349 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TMS/TMS-Prefix.pch";
+				INFOPLIST_FILE = "TMS/TMS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9044B5B1154F9F0200850349 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TMS/TMS-Prefix.pch";
+				INFOPLIST_FILE = "TMS/TMS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9044B57A154F9F0200850349 /* Build configuration list for PBXProject "TMS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9044B5AD154F9F0200850349 /* Debug */,
+				9044B5AE154F9F0200850349 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9044B5AF154F9F0200850349 /* Build configuration list for PBXNativeTarget "TMS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9044B5B0154F9F0200850349 /* Debug */,
+				9044B5B1154F9F0200850349 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9044B598154F9F0200850349 /* TMS.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9044B599154F9F0200850349 /* TMS.xcdatamodel */,
+			);
+			currentVersion = 9044B599154F9F0200850349 /* TMS.xcdatamodel */;
+			path = TMS.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 9044B577154F9F0200850349 /* Project object */;
+}
