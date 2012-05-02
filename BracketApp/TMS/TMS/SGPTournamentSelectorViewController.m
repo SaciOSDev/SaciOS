@@ -9,7 +9,8 @@
 #import "SGPTournamentSelectorViewController.h"
 #import "SGPTournamentDetailFrontViewController.h"
 
-#define PADDING     25
+#define H_PADDING() (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPhone ? 25 : 150)
+#define V_PADDING() (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPhone ? 35 : 200)
 
 @interface SGPTournamentSelectorViewController ()
 
@@ -38,18 +39,23 @@
     
     // Replace the placeholder if necessary
     SGPTournamentDetailFrontViewController *controller = [viewControllers objectAtIndex:page];
-    if ((NSNull *)controller == [NSNull null]) {
+    if ((NSNull *)controller == [NSNull null])
+    {
         controller = [[SGPTournamentDetailFrontViewController alloc] initWithPageNumber:page];
+        [controller setParentNavController:[self navigationController]];
         [viewControllers replaceObjectAtIndex:page withObject:controller];
     }
     
+    
+    
     // Add the controller's view to the scroll view
-    if (controller.view.superview == nil) {
+    if (controller.view.superview == nil)
+    {
         CGRect frame = self.scrollView.frame;
-        frame.origin.x = frame.size.width * page + PADDING;
-        frame.origin.y = 0 + PADDING;
-        frame.size.width -= PADDING*2;
-        frame.size.height -= PADDING*2;
+        frame.origin.x = frame.size.width * page + H_PADDING();
+        frame.origin.y = 0 + V_PADDING();
+        frame.size.width -= H_PADDING()*2;
+        frame.size.height -= V_PADDING()*2;
         controller.view.frame = frame;
         [self.scrollView addSubview:controller.view];
     }
@@ -110,7 +116,8 @@
     // In the meantime, load the array with placeholders which will be replaced on demand
     NSMutableArray *controllers = [[NSMutableArray alloc] init];
     int pageCount = [self numberOfPages];
-    for (unsigned i = 0; i < pageCount; i++) {
+    for (unsigned i = 0; i < pageCount; i++)
+    {
         [controllers addObject:[NSNull null]];
     }
     viewControllers = controllers;
@@ -151,12 +158,13 @@
     // Now reset the coordinates of each bulletin in the list of viewControllers
     int pageCount = 0 ;
     for (UIViewController *vc in viewControllers) {
-        if ((NSNull *)vc != [NSNull null]) {
+        if ((NSNull *)vc != [NSNull null])
+        {
             CGRect frame = self.scrollView.frame;
-            frame.origin.x = frame.size.width * pageCount + PADDING;
-            frame.origin.y = 0 + PADDING;
-            frame.size.width -= PADDING*2;
-            frame.size.height -= PADDING*2;
+            frame.origin.x = frame.size.width * pageCount + H_PADDING();
+            frame.origin.y = 0 + V_PADDING();
+            frame.size.width -= H_PADDING()*2;
+            frame.size.height -= V_PADDING()*2;
             vc.view.frame = frame;
         }
         pageCount++;
@@ -171,11 +179,13 @@
 
 #pragma mark - UIScrollViewDelegate
 
-- (void)scrollViewDidScroll:(UIScrollView *)sender {
+- (void)scrollViewDidScroll:(UIScrollView *)sender
+{
     // We don't want a "feedback loop" between the UIPageControl and the scroll delegate in
     // which a scroll event generated from the user hitting the page control triggers updates from
     // the delegate method. We use a boolean to disable the delegate logic when the page control is used.
-    if (pageControlBeingUsed) {
+    if (pageControlBeingUsed)
+    {
         return;
     }
     
@@ -190,11 +200,19 @@
     [self loadScrollViewWithPage:page + 1];
 }
 
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
     pageControlBeingUsed = NO;
+    SGPTournamentDetailFrontViewController *controller = [viewControllers objectAtIndex:pageControl.currentPage];
+    if (controller!=nil && (NSNull *)controller != [NSNull null])
+    {
+        [controller showFronView];
+    }
+
 }
 
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView 
+{
     pageControlBeingUsed = NO;
 }
 

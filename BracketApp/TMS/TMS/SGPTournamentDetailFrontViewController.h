@@ -10,8 +10,16 @@
 
 @interface SGPTournamentDetailFrontViewController : SGPBaseViewController {
     int pageNumber;
+    BOOL flipped;
 }
 
+@property (strong, nonatomic) IBOutlet UIView *frontView;
+@property (strong, nonatomic) IBOutlet UIView *backView;
+@property (strong, nonatomic) UINavigationController *parentNavController;
+
 - (id)initWithPageNumber:(int)page;
+- (IBAction)showTournament:(id)sender;
+- (IBAction)flipView:(id)sender;
+- (IBAction)showFronView;
 
 @end

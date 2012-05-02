@@ -20,6 +20,8 @@
 		9044B5D1154FB1E300850349 /* SGPTournamentDetailFrontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9044B5CF154FB1E300850349 /* SGPTournamentDetailFrontViewController.m */; };
 		9044B5D9154FB8C100850349 /* SGPTournamentDetailFrontViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9044B5D7154FB8C100850349 /* SGPTournamentDetailFrontViewController.xib */; };
 		9044B5DD154FB8CA00850349 /* SGPTournamentSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9044B5DB154FB8CA00850349 /* SGPTournamentSelectorViewController.xib */; };
+		90D1F79D1551961C0088515E /* SGPTournamentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D1F79C1551961C0088515E /* SGPTournamentViewController.m */; };
+		90D1F7A1155199120088515E /* SGPTournamentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90D1F79F155199120088515E /* SGPTournamentViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,9 @@
 		9044B5CF154FB1E300850349 /* SGPTournamentDetailFrontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPTournamentDetailFrontViewController.m; sourceTree = "<group>"; };
 		9044B5D8154FB8C100850349 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SGPTournamentDetailFrontViewController.xib; sourceTree = "<group>"; };
 		9044B5DC154FB8CA00850349 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SGPTournamentSelectorViewController.xib; sourceTree = "<group>"; };
+		90D1F79B1551961C0088515E /* SGPTournamentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPTournamentViewController.h; sourceTree = "<group>"; };
+		90D1F79C1551961C0088515E /* SGPTournamentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPTournamentViewController.m; sourceTree = "<group>"; };
+		90D1F7A0155199120088515E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SGPTournamentViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +148,9 @@
 		9044B5B6154FA01300850349 /* Tournament Display */ = {
 			isa = PBXGroup;
 			children = (
+				90D1F79B1551961C0088515E /* SGPTournamentViewController.h */,
+				90D1F79C1551961C0088515E /* SGPTournamentViewController.m */,
+				90D1F79F155199120088515E /* SGPTournamentViewController.xib */,
 			);
 			name = "Tournament Display";
 			sourceTree = "<group>";
@@ -213,6 +221,7 @@
 				9044B591154F9F0200850349 /* InfoPlist.strings in Resources */,
 				9044B5D9154FB8C100850349 /* SGPTournamentDetailFrontViewController.xib in Resources */,
 				9044B5DD154FB8CA00850349 /* SGPTournamentSelectorViewController.xib in Resources */,
+				90D1F7A1155199120088515E /* SGPTournamentViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +238,7 @@
 				9044B5BB154FA0C500850349 /* SGPTournamentSelectorViewController.m in Sources */,
 				9044B5BF154FA15000850349 /* SGPBaseViewController.m in Sources */,
 				9044B5D1154FB1E300850349 /* SGPTournamentDetailFrontViewController.m in Sources */,
+				90D1F79D1551961C0088515E /* SGPTournamentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +267,14 @@
 				9044B5DC154FB8CA00850349 /* en */,
 			);
 			name = SGPTournamentSelectorViewController.xib;
+			sourceTree = "<group>";
+		};
+		90D1F79F155199120088515E /* SGPTournamentViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90D1F7A0155199120088515E /* en */,
+			);
+			name = SGPTournamentViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
