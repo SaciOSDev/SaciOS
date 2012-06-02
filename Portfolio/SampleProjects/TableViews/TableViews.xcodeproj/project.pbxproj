@@ -1,0 +1,479 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		90F6BC9915757A9000D982B7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F6BC9815757A9000D982B7 /* UIKit.framework */; };
+		90F6BC9B15757A9000D982B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F6BC9A15757A9000D982B7 /* Foundation.framework */; };
+		90F6BC9D15757A9000D982B7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 90F6BC9C15757A9000D982B7 /* CoreGraphics.framework */; };
+		90F6BCA315757A9000D982B7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 90F6BCA115757A9000D982B7 /* InfoPlist.strings */; };
+		90F6BCA515757A9000D982B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F6BCA415757A9000D982B7 /* main.m */; };
+		90F6BCA915757A9000D982B7 /* SGPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F6BCA815757A9000D982B7 /* SGPAppDelegate.m */; };
+		90F6BCC115757B2300D982B7 /* SGPRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F6BCBF15757B2300D982B7 /* SGPRootViewController.m */; };
+		90F6BCC215757B2300D982B7 /* SGPRootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90F6BCC015757B2300D982B7 /* SGPRootViewController.xib */; };
+		90F6BCC415757BAC00D982B7 /* MainWindows.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90F6BCC315757BAC00D982B7 /* MainWindows.xib */; };
+		90F6BCCE157582D200D982B7 /* SGPTableViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F6BCCD157582D200D982B7 /* SGPTableViewController1.m */; };
+		90F6BCD2157585F700D982B7 /* SGPTableViewController2.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F6BCD0157585F700D982B7 /* SGPTableViewController2.m */; };
+		90F6BCD3157585F700D982B7 /* SGPTableViewController2.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90F6BCD1157585F700D982B7 /* SGPTableViewController2.xib */; };
+		90F6BCD515758A4900D982B7 /* SGPTableViewController1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90F6BCD415758A4900D982B7 /* SGPTableViewController1.xib */; };
+		90F6BCDB15758E7A00D982B7 /* SGPTableViewController3.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F6BCD915758E7A00D982B7 /* SGPTableViewController3.m */; };
+		90F6BCDC15758E7A00D982B7 /* SGPTableViewController3.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90F6BCDA15758E7A00D982B7 /* SGPTableViewController3.xib */; };
+		90F6BCE015758ECE00D982B7 /* SGPTableViewController4.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F6BCDE15758ECE00D982B7 /* SGPTableViewController4.m */; };
+		90F6BCE115758ECE00D982B7 /* SGPTableViewController4.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90F6BCDF15758ECE00D982B7 /* SGPTableViewController4.xib */; };
+		90F6BCE91575915900D982B7 /* SGPTableViewControllerAccessors.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F6BCE71575915900D982B7 /* SGPTableViewControllerAccessors.m */; };
+		90F6BCEA1575915900D982B7 /* SGPTableViewControllerAccessors.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90F6BCE81575915900D982B7 /* SGPTableViewControllerAccessors.xib */; };
+		90F6BCF1157594DB00D982B7 /* SGPTableViewControllerCellTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F6BCEF157594DB00D982B7 /* SGPTableViewControllerCellTypes.m */; };
+		90F6BCF2157594DB00D982B7 /* SGPTableViewControllerCellTypes.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90F6BCF0157594DB00D982B7 /* SGPTableViewControllerCellTypes.xib */; };
+		90F6BCF81575964200D982B7 /* SGPTableViewControllerEditing.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F6BCF61575964200D982B7 /* SGPTableViewControllerEditing.m */; };
+		90F6BCF91575964200D982B7 /* SGPTableViewControllerEditing.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90F6BCF71575964200D982B7 /* SGPTableViewControllerEditing.xib */; };
+		90F6BCFD157599C300D982B7 /* SGPTableViewControllerSorting.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F6BCFB157599C300D982B7 /* SGPTableViewControllerSorting.m */; };
+		90F6BCFE157599C300D982B7 /* SGPTableViewControllerSorting.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90F6BCFC157599C300D982B7 /* SGPTableViewControllerSorting.xib */; };
+		90F6BD001575A08E00D982B7 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 90F6BCFF1575A08E00D982B7 /* icon.png */; };
+		90F6BD051575A14300D982B7 /* SGPTableViewController5.m in Sources */ = {isa = PBXBuildFile; fileRef = 90F6BD031575A14300D982B7 /* SGPTableViewController5.m */; };
+		90F6BD061575A14300D982B7 /* SGPTableViewController5.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90F6BD041575A14300D982B7 /* SGPTableViewController5.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		90F6BC9415757A9000D982B7 /* TableViews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableViews.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		90F6BC9815757A9000D982B7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		90F6BC9A15757A9000D982B7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		90F6BC9C15757A9000D982B7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		90F6BCA015757A9000D982B7 /* TableViews-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TableViews-Info.plist"; sourceTree = "<group>"; };
+		90F6BCA215757A9000D982B7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		90F6BCA415757A9000D982B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		90F6BCA615757A9000D982B7 /* TableViews-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TableViews-Prefix.pch"; sourceTree = "<group>"; };
+		90F6BCA715757A9000D982B7 /* SGPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGPAppDelegate.h; sourceTree = "<group>"; };
+		90F6BCA815757A9000D982B7 /* SGPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGPAppDelegate.m; sourceTree = "<group>"; };
+		90F6BCBE15757B2300D982B7 /* SGPRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPRootViewController.h; sourceTree = "<group>"; };
+		90F6BCBF15757B2300D982B7 /* SGPRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPRootViewController.m; sourceTree = "<group>"; };
+		90F6BCC015757B2300D982B7 /* SGPRootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGPRootViewController.xib; sourceTree = "<group>"; };
+		90F6BCC315757BAC00D982B7 /* MainWindows.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainWindows.xib; sourceTree = "<group>"; };
+		90F6BCCC157582D200D982B7 /* SGPTableViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPTableViewController1.h; sourceTree = "<group>"; };
+		90F6BCCD157582D200D982B7 /* SGPTableViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPTableViewController1.m; sourceTree = "<group>"; };
+		90F6BCCF157585F700D982B7 /* SGPTableViewController2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPTableViewController2.h; sourceTree = "<group>"; };
+		90F6BCD0157585F700D982B7 /* SGPTableViewController2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPTableViewController2.m; sourceTree = "<group>"; };
+		90F6BCD1157585F700D982B7 /* SGPTableViewController2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGPTableViewController2.xib; sourceTree = "<group>"; };
+		90F6BCD415758A4900D982B7 /* SGPTableViewController1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGPTableViewController1.xib; sourceTree = "<group>"; };
+		90F6BCD815758E7A00D982B7 /* SGPTableViewController3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPTableViewController3.h; sourceTree = "<group>"; };
+		90F6BCD915758E7A00D982B7 /* SGPTableViewController3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPTableViewController3.m; sourceTree = "<group>"; };
+		90F6BCDA15758E7A00D982B7 /* SGPTableViewController3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGPTableViewController3.xib; sourceTree = "<group>"; };
+		90F6BCDD15758ECE00D982B7 /* SGPTableViewController4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPTableViewController4.h; sourceTree = "<group>"; };
+		90F6BCDE15758ECE00D982B7 /* SGPTableViewController4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPTableViewController4.m; sourceTree = "<group>"; };
+		90F6BCDF15758ECE00D982B7 /* SGPTableViewController4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGPTableViewController4.xib; sourceTree = "<group>"; };
+		90F6BCE61575915900D982B7 /* SGPTableViewControllerAccessors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPTableViewControllerAccessors.h; sourceTree = "<group>"; };
+		90F6BCE71575915900D982B7 /* SGPTableViewControllerAccessors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPTableViewControllerAccessors.m; sourceTree = "<group>"; };
+		90F6BCE81575915900D982B7 /* SGPTableViewControllerAccessors.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGPTableViewControllerAccessors.xib; sourceTree = "<group>"; };
+		90F6BCEE157594DB00D982B7 /* SGPTableViewControllerCellTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPTableViewControllerCellTypes.h; sourceTree = "<group>"; };
+		90F6BCEF157594DB00D982B7 /* SGPTableViewControllerCellTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPTableViewControllerCellTypes.m; sourceTree = "<group>"; };
+		90F6BCF0157594DB00D982B7 /* SGPTableViewControllerCellTypes.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGPTableViewControllerCellTypes.xib; sourceTree = "<group>"; };
+		90F6BCF51575964200D982B7 /* SGPTableViewControllerEditing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPTableViewControllerEditing.h; sourceTree = "<group>"; };
+		90F6BCF61575964200D982B7 /* SGPTableViewControllerEditing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPTableViewControllerEditing.m; sourceTree = "<group>"; };
+		90F6BCF71575964200D982B7 /* SGPTableViewControllerEditing.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGPTableViewControllerEditing.xib; sourceTree = "<group>"; };
+		90F6BCFA157599C300D982B7 /* SGPTableViewControllerSorting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPTableViewControllerSorting.h; sourceTree = "<group>"; };
+		90F6BCFB157599C300D982B7 /* SGPTableViewControllerSorting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPTableViewControllerSorting.m; sourceTree = "<group>"; };
+		90F6BCFC157599C300D982B7 /* SGPTableViewControllerSorting.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGPTableViewControllerSorting.xib; sourceTree = "<group>"; };
+		90F6BCFF1575A08E00D982B7 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		90F6BD021575A14300D982B7 /* SGPTableViewController5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPTableViewController5.h; sourceTree = "<group>"; };
+		90F6BD031575A14300D982B7 /* SGPTableViewController5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPTableViewController5.m; sourceTree = "<group>"; };
+		90F6BD041575A14300D982B7 /* SGPTableViewController5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGPTableViewController5.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		90F6BC9115757A9000D982B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90F6BC9915757A9000D982B7 /* UIKit.framework in Frameworks */,
+				90F6BC9B15757A9000D982B7 /* Foundation.framework in Frameworks */,
+				90F6BC9D15757A9000D982B7 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		90F6BC8915757A9000D982B7 = {
+			isa = PBXGroup;
+			children = (
+				90F6BC9E15757A9000D982B7 /* TableViews */,
+				90F6BC9715757A9000D982B7 /* Frameworks */,
+				90F6BC9515757A9000D982B7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		90F6BC9515757A9000D982B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				90F6BC9415757A9000D982B7 /* TableViews.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		90F6BC9715757A9000D982B7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				90F6BC9815757A9000D982B7 /* UIKit.framework */,
+				90F6BC9A15757A9000D982B7 /* Foundation.framework */,
+				90F6BC9C15757A9000D982B7 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		90F6BC9E15757A9000D982B7 /* TableViews */ = {
+			isa = PBXGroup;
+			children = (
+				90F6BCC91575825100D982B7 /* AppDelegate */,
+				90F6BCE2157590CD00D982B7 /* Table Construction */,
+				90F6BCE31575910600D982B7 /* Table Layouts */,
+				90F6BC9F15757A9000D982B7 /* Supporting Files */,
+			);
+			path = TableViews;
+			sourceTree = "<group>";
+		};
+		90F6BC9F15757A9000D982B7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				90F6BCFF1575A08E00D982B7 /* icon.png */,
+				90F6BCA015757A9000D982B7 /* TableViews-Info.plist */,
+				90F6BCA115757A9000D982B7 /* InfoPlist.strings */,
+				90F6BCA415757A9000D982B7 /* main.m */,
+				90F6BCA615757A9000D982B7 /* TableViews-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		90F6BCC91575825100D982B7 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				90F6BCA715757A9000D982B7 /* SGPAppDelegate.h */,
+				90F6BCA815757A9000D982B7 /* SGPAppDelegate.m */,
+				90F6BCC315757BAC00D982B7 /* MainWindows.xib */,
+				90F6BCBE15757B2300D982B7 /* SGPRootViewController.h */,
+				90F6BCBF15757B2300D982B7 /* SGPRootViewController.m */,
+				90F6BCC015757B2300D982B7 /* SGPRootViewController.xib */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		90F6BCCA1575826000D982B7 /* Basic Table */ = {
+			isa = PBXGroup;
+			children = (
+				90F6BCCC157582D200D982B7 /* SGPTableViewController1.h */,
+				90F6BCCD157582D200D982B7 /* SGPTableViewController1.m */,
+				90F6BCD415758A4900D982B7 /* SGPTableViewController1.xib */,
+			);
+			name = "Basic Table";
+			sourceTree = "<group>";
+		};
+		90F6BCCB1575826A00D982B7 /* Multiple Sections */ = {
+			isa = PBXGroup;
+			children = (
+				90F6BCCF157585F700D982B7 /* SGPTableViewController2.h */,
+				90F6BCD0157585F700D982B7 /* SGPTableViewController2.m */,
+				90F6BCD1157585F700D982B7 /* SGPTableViewController2.xib */,
+			);
+			name = "Multiple Sections";
+			sourceTree = "<group>";
+		};
+		90F6BCD615758D8600D982B7 /* Table Headers */ = {
+			isa = PBXGroup;
+			children = (
+				90F6BCDD15758ECE00D982B7 /* SGPTableViewController4.h */,
+				90F6BCDE15758ECE00D982B7 /* SGPTableViewController4.m */,
+				90F6BCDF15758ECE00D982B7 /* SGPTableViewController4.xib */,
+			);
+			name = "Table Headers";
+			sourceTree = "<group>";
+		};
+		90F6BCD715758D9500D982B7 /* Section Headers */ = {
+			isa = PBXGroup;
+			children = (
+				90F6BCD815758E7A00D982B7 /* SGPTableViewController3.h */,
+				90F6BCD915758E7A00D982B7 /* SGPTableViewController3.m */,
+				90F6BCDA15758E7A00D982B7 /* SGPTableViewController3.xib */,
+			);
+			name = "Section Headers";
+			sourceTree = "<group>";
+		};
+		90F6BCE2157590CD00D982B7 /* Table Construction */ = {
+			isa = PBXGroup;
+			children = (
+				90F6BCCA1575826000D982B7 /* Basic Table */,
+				90F6BCCB1575826A00D982B7 /* Multiple Sections */,
+				90F6BCD715758D9500D982B7 /* Section Headers */,
+				90F6BCD615758D8600D982B7 /* Table Headers */,
+				90F6BD011575A12800D982B7 /* Table Headers (Plain) */,
+			);
+			name = "Table Construction";
+			sourceTree = "<group>";
+		};
+		90F6BCE31575910600D982B7 /* Table Layouts */ = {
+			isa = PBXGroup;
+			children = (
+				90F6BCED157594AF00D982B7 /* Cell Types */,
+				90F6BCEC157594A200D982B7 /* Accessory Buttons */,
+				90F6BCF31575961C00D982B7 /* Editing */,
+				90F6BCF41575962B00D982B7 /* Sorting */,
+				90F6BCEB1575944500D982B7 /* Custom Cells */,
+			);
+			name = "Table Layouts";
+			sourceTree = "<group>";
+		};
+		90F6BCEB1575944500D982B7 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		90F6BCEC157594A200D982B7 /* Accessory Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				90F6BCE61575915900D982B7 /* SGPTableViewControllerAccessors.h */,
+				90F6BCE71575915900D982B7 /* SGPTableViewControllerAccessors.m */,
+				90F6BCE81575915900D982B7 /* SGPTableViewControllerAccessors.xib */,
+			);
+			name = "Accessory Buttons";
+			sourceTree = "<group>";
+		};
+		90F6BCED157594AF00D982B7 /* Cell Types */ = {
+			isa = PBXGroup;
+			children = (
+				90F6BCEE157594DB00D982B7 /* SGPTableViewControllerCellTypes.h */,
+				90F6BCEF157594DB00D982B7 /* SGPTableViewControllerCellTypes.m */,
+				90F6BCF0157594DB00D982B7 /* SGPTableViewControllerCellTypes.xib */,
+			);
+			name = "Cell Types";
+			sourceTree = "<group>";
+		};
+		90F6BCF31575961C00D982B7 /* Editing */ = {
+			isa = PBXGroup;
+			children = (
+				90F6BCF51575964200D982B7 /* SGPTableViewControllerEditing.h */,
+				90F6BCF61575964200D982B7 /* SGPTableViewControllerEditing.m */,
+				90F6BCF71575964200D982B7 /* SGPTableViewControllerEditing.xib */,
+			);
+			name = Editing;
+			sourceTree = "<group>";
+		};
+		90F6BCF41575962B00D982B7 /* Sorting */ = {
+			isa = PBXGroup;
+			children = (
+				90F6BCFA157599C300D982B7 /* SGPTableViewControllerSorting.h */,
+				90F6BCFB157599C300D982B7 /* SGPTableViewControllerSorting.m */,
+				90F6BCFC157599C300D982B7 /* SGPTableViewControllerSorting.xib */,
+			);
+			name = Sorting;
+			sourceTree = "<group>";
+		};
+		90F6BD011575A12800D982B7 /* Table Headers (Plain) */ = {
+			isa = PBXGroup;
+			children = (
+				90F6BD021575A14300D982B7 /* SGPTableViewController5.h */,
+				90F6BD031575A14300D982B7 /* SGPTableViewController5.m */,
+				90F6BD041575A14300D982B7 /* SGPTableViewController5.xib */,
+			);
+			name = "Table Headers (Plain)";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		90F6BC9315757A9000D982B7 /* TableViews */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90F6BCBB15757A9000D982B7 /* Build configuration list for PBXNativeTarget "TableViews" */;
+			buildPhases = (
+				90F6BC9015757A9000D982B7 /* Sources */,
+				90F6BC9115757A9000D982B7 /* Frameworks */,
+				90F6BC9215757A9000D982B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TableViews;
+			productName = TableViews;
+			productReference = 90F6BC9415757A9000D982B7 /* TableViews.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		90F6BC8B15757A9000D982B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SGP;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = Pearson;
+			};
+			buildConfigurationList = 90F6BC8E15757A9000D982B7 /* Build configuration list for PBXProject "TableViews" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 90F6BC8915757A9000D982B7;
+			productRefGroup = 90F6BC9515757A9000D982B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				90F6BC9315757A9000D982B7 /* TableViews */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		90F6BC9215757A9000D982B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90F6BCA315757A9000D982B7 /* InfoPlist.strings in Resources */,
+				90F6BCC215757B2300D982B7 /* SGPRootViewController.xib in Resources */,
+				90F6BCC415757BAC00D982B7 /* MainWindows.xib in Resources */,
+				90F6BCD3157585F700D982B7 /* SGPTableViewController2.xib in Resources */,
+				90F6BCD515758A4900D982B7 /* SGPTableViewController1.xib in Resources */,
+				90F6BCDC15758E7A00D982B7 /* SGPTableViewController3.xib in Resources */,
+				90F6BCE115758ECE00D982B7 /* SGPTableViewController4.xib in Resources */,
+				90F6BCEA1575915900D982B7 /* SGPTableViewControllerAccessors.xib in Resources */,
+				90F6BCF2157594DB00D982B7 /* SGPTableViewControllerCellTypes.xib in Resources */,
+				90F6BCF91575964200D982B7 /* SGPTableViewControllerEditing.xib in Resources */,
+				90F6BCFE157599C300D982B7 /* SGPTableViewControllerSorting.xib in Resources */,
+				90F6BD001575A08E00D982B7 /* icon.png in Resources */,
+				90F6BD061575A14300D982B7 /* SGPTableViewController5.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		90F6BC9015757A9000D982B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90F6BCA515757A9000D982B7 /* main.m in Sources */,
+				90F6BCA915757A9000D982B7 /* SGPAppDelegate.m in Sources */,
+				90F6BCC115757B2300D982B7 /* SGPRootViewController.m in Sources */,
+				90F6BCCE157582D200D982B7 /* SGPTableViewController1.m in Sources */,
+				90F6BCD2157585F700D982B7 /* SGPTableViewController2.m in Sources */,
+				90F6BCDB15758E7A00D982B7 /* SGPTableViewController3.m in Sources */,
+				90F6BCE015758ECE00D982B7 /* SGPTableViewController4.m in Sources */,
+				90F6BCE91575915900D982B7 /* SGPTableViewControllerAccessors.m in Sources */,
+				90F6BCF1157594DB00D982B7 /* SGPTableViewControllerCellTypes.m in Sources */,
+				90F6BCF81575964200D982B7 /* SGPTableViewControllerEditing.m in Sources */,
+				90F6BCFD157599C300D982B7 /* SGPTableViewControllerSorting.m in Sources */,
+				90F6BD051575A14300D982B7 /* SGPTableViewController5.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		90F6BCA115757A9000D982B7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90F6BCA215757A9000D982B7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		90F6BCB915757A9000D982B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		90F6BCBA15757A9000D982B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		90F6BCBC15757A9000D982B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TableViews/TableViews-Prefix.pch";
+				INFOPLIST_FILE = "TableViews/TableViews-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		90F6BCBD15757A9000D982B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TableViews/TableViews-Prefix.pch";
+				INFOPLIST_FILE = "TableViews/TableViews-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		90F6BC8E15757A9000D982B7 /* Build configuration list for PBXProject "TableViews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90F6BCB915757A9000D982B7 /* Debug */,
+				90F6BCBA15757A9000D982B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90F6BCBB15757A9000D982B7 /* Build configuration list for PBXNativeTarget "TableViews" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90F6BCBC15757A9000D982B7 /* Debug */,
+				90F6BCBD15757A9000D982B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 90F6BC8B15757A9000D982B7 /* Project object */;
+}
