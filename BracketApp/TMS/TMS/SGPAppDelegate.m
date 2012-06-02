@@ -49,7 +49,7 @@
     }
     self.navigationController = [[UINavigationController alloc] initWithRootViewController:tsvc];
     self.window.rootViewController = self.navigationController;
-    tsvc.managedObjectContext = self.managedObjectContext;
+    [tsvc setManagedObjectContext:[self managedObjectContext]];
     
     [self.window makeKeyAndVisible];
     return YES;

@@ -39,6 +39,11 @@
     }
 }
 
+- (void)cancelModalView:(id)sender
+{
+    [[self navigationController] dismissModalViewControllerAnimated:YES];
+}
+
 #pragma mark - UIViewController
 
 - (void)viewDidUnload

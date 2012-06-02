@@ -35,6 +35,7 @@
     if ([self parentNavController]!=nil) 
     {
         SGPTournamentViewController *tvc = [[SGPTournamentViewController alloc] initWithNibName:@"SGPTournamentViewController" bundle:nil];
+        [tvc setManagedObjectContext:[self managedObjectContext]];
         [[self parentNavController] pushViewController:tvc animated:YES];
         [self showFronView];
         

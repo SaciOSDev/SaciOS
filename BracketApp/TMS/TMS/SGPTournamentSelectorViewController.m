@@ -8,6 +8,7 @@
 
 #import "SGPTournamentSelectorViewController.h"
 #import "SGPTournamentDetailFrontViewController.h"
+#import "SGPCreateTournamentViewController.h"
 
 #define H_PADDING() (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPhone ? 25 : 150)
 #define V_PADDING() (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPhone ? 35 : 200)
@@ -83,7 +84,11 @@
 
 - (IBAction)addTournament:(id)sender
 {
-    
+    SGPCreateTournamentViewController *vc = [[SGPCreateTournamentViewController alloc] initWithNibName:@"SGPCreateTournamentViewController" bundle:nil];
+    [vc setManagedObjectContext:[self managedObjectContext]];
+    UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
+    [nvc setModalPresentationStyle:UIModalPresentationFormSheet];
+    [[self navigationController] presentModalViewController:nvc animated:YES];
 }
 
 - (IBAction)deleteTournament:(id)sender

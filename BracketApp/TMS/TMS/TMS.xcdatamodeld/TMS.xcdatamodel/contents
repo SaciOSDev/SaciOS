@@ -1,9 +1,64 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Event">
-        <attribute name="timeStamp" optional="YES" attributeType="Date"/>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1171" systemVersion="11E53" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="EliminationStyle" representedClassName="EliminationStyle" syncable="YES">
+        <attribute name="displayName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tournaments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tournament" inverseName="eliminationStyle" inverseEntity="Tournament" syncable="YES"/>
+    </entity>
+    <entity name="Game" representedClassName="Game">
+        <attribute name="gameNumber" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="primID" optional="YES" attributeType="Integer 64" defaultValueString="0"/>
+        <attribute name="scoreForP1" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="scoreForP2" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="location" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="games" inverseEntity="Location" syncable="YES"/>
+        <relationship name="participants" optional="YES" toMany="YES" maxCount="2" deletionRule="Nullify" ordered="YES" destinationEntity="Participant" inverseName="games" inverseEntity="Participant" syncable="YES"/>
+        <relationship name="tournament" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Tournament" inverseName="games" inverseEntity="Tournament" syncable="YES"/>
+        <relationship name="winner" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Participant" inverseName="gamesWon" inverseEntity="Participant" syncable="YES"/>
+    </entity>
+    <entity name="Location" representedClassName="Location" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="displayName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="streetAddress" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="zip" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="games" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Game" inverseName="location" inverseEntity="Game" syncable="YES"/>
+        <relationship name="tournaments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tournament" inverseName="location" inverseEntity="Tournament" syncable="YES"/>
+    </entity>
+    <entity name="Participant" representedClassName="Participant" syncable="YES">
+        <attribute name="displayName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="primID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="rank" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="games" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Game" inverseName="participants" inverseEntity="Game" syncable="YES"/>
+        <relationship name="gamesWon" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Game" inverseName="winner" inverseEntity="Game" syncable="YES"/>
+        <relationship name="tournaments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tournament" inverseName="participants" inverseEntity="Tournament" syncable="YES"/>
+    </entity>
+    <entity name="SportType" representedClassName="SportType" syncable="YES">
+        <attribute name="displayName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tournaments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tournament" inverseName="sportType" inverseEntity="Tournament" syncable="YES"/>
+    </entity>
+    <entity name="Tournament" representedClassName="Tournament" syncable="YES">
+        <attribute name="displayName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="primID" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="status" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="eliminationStyle" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="EliminationStyle" inverseName="tournaments" inverseEntity="EliminationStyle" syncable="YES"/>
+        <relationship name="games" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Game" inverseName="tournament" inverseEntity="Game" syncable="YES"/>
+        <relationship name="location" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="tournaments" inverseEntity="Location" syncable="YES"/>
+        <relationship name="participants" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Participant" inverseName="tournaments" inverseEntity="Participant" syncable="YES"/>
+        <relationship name="sportType" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="SportType" inverseName="tournaments" inverseEntity="SportType" syncable="YES"/>
+        <relationship name="tournamentType" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="TournamentType" inverseName="tournaments" inverseEntity="TournamentType" syncable="YES"/>
+    </entity>
+    <entity name="TournamentType" representedClassName="TournamentType" syncable="YES">
+        <attribute name="displayName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="tournaments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tournament" inverseName="tournamentType" inverseEntity="Tournament" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
+        <element name="Game" positionX="261" positionY="189" width="128" height="180"/>
+        <element name="Participant" positionX="160" positionY="192" width="128" height="150"/>
+        <element name="Tournament" positionX="160" positionY="192" width="128" height="180"/>
+        <element name="TournamentType" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="EliminationStyle" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="SportType" positionX="160" positionY="192" width="128" height="75"/>
+        <element name="Location" positionX="160" positionY="192" width="128" height="150"/>
     </elements>
 </model>

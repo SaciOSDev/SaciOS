@@ -116,13 +116,12 @@
 				<string key="NSFrameSize">{320, 320}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<reference key="IBUIBackgroundColor" ref="824578938"/>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 			</object>
 			<object class="IBUIView" id="665308638">
-				<reference key="NSNextResponder"/>
+				<nil key="NSNextResponder"/>
 				<int key="NSvFlags">274</int>
 				<array class="NSMutableArray" key="NSSubviews">
 					<object class="IBUIButton" id="544991801">
@@ -130,7 +129,6 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrame">{{20, 20}, {280, 280}}</string>
 						<reference key="NSSuperview" ref="665308638"/>
-						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="287600337"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
@@ -153,8 +151,6 @@
 						<int key="NSvFlags">265</int>
 						<string key="NSFrame">{{275, 273}, {18, 19}}</string>
 						<reference key="NSSuperview" ref="665308638"/>
-						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -173,8 +169,6 @@
 					</object>
 				</array>
 				<string key="NSFrameSize">{320, 320}</string>
-				<reference key="NSSuperview"/>
-				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="544991801"/>
 				<reference key="IBUIBackgroundColor" ref="824578938"/>
 				<reference key="IBUISimulatedDestinationMetrics" ref="509359478"/>
@@ -347,11 +341,16 @@
 					<string key="superclassName">SGPBaseViewController</string>
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="flipView:">id</string>
+						<string key="showFronView">id</string>
 						<string key="showTournament:">id</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="flipView:">
 							<string key="name">flipView:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="showFronView">
+							<string key="name">showFronView</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="showTournament:">

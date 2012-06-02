@@ -14,5 +14,6 @@
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 - (void)insertNewObject:(id)sender;
+- (void)cancelModalView:(id)sender;
 
 @end

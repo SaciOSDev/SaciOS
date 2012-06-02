@@ -22,6 +22,22 @@
 		9044B5DD154FB8CA00850349 /* SGPTournamentSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9044B5DB154FB8CA00850349 /* SGPTournamentSelectorViewController.xib */; };
 		90D1F79D1551961C0088515E /* SGPTournamentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D1F79C1551961C0088515E /* SGPTournamentViewController.m */; };
 		90D1F7A1155199120088515E /* SGPTournamentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90D1F79F155199120088515E /* SGPTournamentViewController.xib */; };
+		90DC51E3156411F200E35E1E /* SGPCreateTournamentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DC51E1156411F200E35E1E /* SGPCreateTournamentViewController.m */; };
+		90DC51E71564120900E35E1E /* SGPCreateTournamentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90DC51E51564120900E35E1E /* SGPCreateTournamentViewController.xib */; };
+		90DC51F51564263900E35E1E /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 90DC51F31564263900E35E1E /* background.png */; };
+		90DC51F61564263900E35E1E /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90DC51F41564263900E35E1E /* background@2x.png */; };
+		90DC51FA15642BA200E35E1E /* SGPSportTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DC51F815642BA200E35E1E /* SGPSportTypeViewController.m */; };
+		90DC51FB15642BA200E35E1E /* SGPSportTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90DC51F915642BA200E35E1E /* SGPSportTypeViewController.xib */; };
+		90DC51FF1564308300E35E1E /* SGPTeamListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DC51FD1564308300E35E1E /* SGPTeamListViewController.m */; };
+		90DC52001564308300E35E1E /* SGPTeamListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90DC51FE1564308300E35E1E /* SGPTeamListViewController.xib */; };
+		90FF95CD157A917F007CE210 /* EliminationStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FF95CC157A917F007CE210 /* EliminationStyle.m */; };
+		90FF95D1157A917F007CE210 /* Tournament.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FF95D0157A917F007CE210 /* Tournament.m */; };
+		90FF95D4157A917F007CE210 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FF95D3157A917F007CE210 /* Game.m */; };
+		90FF95D7157A9180007CE210 /* Participant.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FF95D6157A9180007CE210 /* Participant.m */; };
+		90FF95DA157A9180007CE210 /* SportType.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FF95D9157A9180007CE210 /* SportType.m */; };
+		90FF95DD157A9180007CE210 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FF95DC157A9180007CE210 /* Location.m */; };
+		90FF95E0157A9180007CE210 /* TournamentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FF95DF157A9180007CE210 /* TournamentType.m */; };
+		90FF95E3157A91E9007CE210 /* SGPBaseManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FF95E2157A91E8007CE210 /* SGPBaseManagedObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +64,33 @@
 		90D1F79B1551961C0088515E /* SGPTournamentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPTournamentViewController.h; sourceTree = "<group>"; };
 		90D1F79C1551961C0088515E /* SGPTournamentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPTournamentViewController.m; sourceTree = "<group>"; };
 		90D1F7A0155199120088515E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SGPTournamentViewController.xib; sourceTree = "<group>"; };
+		90DC51E0156411F200E35E1E /* SGPCreateTournamentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPCreateTournamentViewController.h; sourceTree = "<group>"; };
+		90DC51E1156411F200E35E1E /* SGPCreateTournamentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPCreateTournamentViewController.m; sourceTree = "<group>"; };
+		90DC51E61564120900E35E1E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SGPCreateTournamentViewController.xib; sourceTree = "<group>"; };
+		90DC51F31564263900E35E1E /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		90DC51F41564263900E35E1E /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+		90DC51F715642BA200E35E1E /* SGPSportTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPSportTypeViewController.h; sourceTree = "<group>"; };
+		90DC51F815642BA200E35E1E /* SGPSportTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPSportTypeViewController.m; sourceTree = "<group>"; };
+		90DC51F915642BA200E35E1E /* SGPSportTypeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGPSportTypeViewController.xib; sourceTree = "<group>"; };
+		90DC51FC1564308200E35E1E /* SGPTeamListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPTeamListViewController.h; sourceTree = "<group>"; };
+		90DC51FD1564308300E35E1E /* SGPTeamListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPTeamListViewController.m; sourceTree = "<group>"; };
+		90DC51FE1564308300E35E1E /* SGPTeamListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGPTeamListViewController.xib; sourceTree = "<group>"; };
+		90FF95CB157A917F007CE210 /* EliminationStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EliminationStyle.h; sourceTree = "<group>"; };
+		90FF95CC157A917F007CE210 /* EliminationStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EliminationStyle.m; sourceTree = "<group>"; };
+		90FF95CF157A917F007CE210 /* Tournament.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tournament.h; sourceTree = "<group>"; };
+		90FF95D0157A917F007CE210 /* Tournament.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tournament.m; sourceTree = "<group>"; };
+		90FF95D2157A917F007CE210 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		90FF95D3157A917F007CE210 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		90FF95D5157A9180007CE210 /* Participant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Participant.h; sourceTree = "<group>"; };
+		90FF95D6157A9180007CE210 /* Participant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Participant.m; sourceTree = "<group>"; };
+		90FF95D8157A9180007CE210 /* SportType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SportType.h; sourceTree = "<group>"; };
+		90FF95D9157A9180007CE210 /* SportType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SportType.m; sourceTree = "<group>"; };
+		90FF95DB157A9180007CE210 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		90FF95DC157A9180007CE210 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		90FF95DE157A9180007CE210 /* TournamentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TournamentType.h; sourceTree = "<group>"; };
+		90FF95DF157A9180007CE210 /* TournamentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TournamentType.m; sourceTree = "<group>"; };
+		90FF95E1157A91E8007CE210 /* SGPBaseManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPBaseManagedObject.h; sourceTree = "<group>"; };
+		90FF95E2157A91E8007CE210 /* SGPBaseManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPBaseManagedObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				9044B5B7154FA02400850349 /* Core App */,
-				9044B5B6154FA01300850349 /* Tournament Display */,
 				9044B5B5154F9FFD00850349 /* Tounrament Selector */,
+				9044B5B6154FA01300850349 /* Tournament Display */,
 				9044B5B3154F9FBD00850349 /* CoreData Schema */,
 				9044B58D154F9F0200850349 /* Supporting Files */,
 			);
@@ -108,6 +151,7 @@
 		9044B58D154F9F0200850349 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				90DC51F21564263900E35E1E /* images */,
 				9044B58E154F9F0200850349 /* TMS-Info.plist */,
 				9044B58F154F9F0200850349 /* InfoPlist.strings */,
 				9044B592154F9F0200850349 /* main.m */,
@@ -128,6 +172,22 @@
 		9044B5B4154F9FCA00850349 /* DB Objects */ = {
 			isa = PBXGroup;
 			children = (
+				90FF95E1157A91E8007CE210 /* SGPBaseManagedObject.h */,
+				90FF95E2157A91E8007CE210 /* SGPBaseManagedObject.m */,
+				90FF95DE157A9180007CE210 /* TournamentType.h */,
+				90FF95DF157A9180007CE210 /* TournamentType.m */,
+				90FF95DB157A9180007CE210 /* Location.h */,
+				90FF95DC157A9180007CE210 /* Location.m */,
+				90FF95D8157A9180007CE210 /* SportType.h */,
+				90FF95D9157A9180007CE210 /* SportType.m */,
+				90FF95D5157A9180007CE210 /* Participant.h */,
+				90FF95D6157A9180007CE210 /* Participant.m */,
+				90FF95D2157A917F007CE210 /* Game.h */,
+				90FF95D3157A917F007CE210 /* Game.m */,
+				90FF95CF157A917F007CE210 /* Tournament.h */,
+				90FF95D0157A917F007CE210 /* Tournament.m */,
+				90FF95CB157A917F007CE210 /* EliminationStyle.h */,
+				90FF95CC157A917F007CE210 /* EliminationStyle.m */,
 			);
 			name = "DB Objects";
 			sourceTree = "<group>";
@@ -141,6 +201,15 @@
 				9044B5CE154FB1E300850349 /* SGPTournamentDetailFrontViewController.h */,
 				9044B5CF154FB1E300850349 /* SGPTournamentDetailFrontViewController.m */,
 				9044B5D7154FB8C100850349 /* SGPTournamentDetailFrontViewController.xib */,
+				90DC51E0156411F200E35E1E /* SGPCreateTournamentViewController.h */,
+				90DC51E1156411F200E35E1E /* SGPCreateTournamentViewController.m */,
+				90DC51E51564120900E35E1E /* SGPCreateTournamentViewController.xib */,
+				90DC51F715642BA200E35E1E /* SGPSportTypeViewController.h */,
+				90DC51F815642BA200E35E1E /* SGPSportTypeViewController.m */,
+				90DC51F915642BA200E35E1E /* SGPSportTypeViewController.xib */,
+				90DC51FC1564308200E35E1E /* SGPTeamListViewController.h */,
+				90DC51FD1564308300E35E1E /* SGPTeamListViewController.m */,
+				90DC51FE1564308300E35E1E /* SGPTeamListViewController.xib */,
 			);
 			name = "Tounrament Selector";
 			sourceTree = "<group>";
@@ -164,6 +233,15 @@
 				9044B5BE154FA15000850349 /* SGPBaseViewController.m */,
 			);
 			name = "Core App";
+			sourceTree = "<group>";
+		};
+		90DC51F21564263900E35E1E /* images */ = {
+			isa = PBXGroup;
+			children = (
+				90DC51F31564263900E35E1E /* background.png */,
+				90DC51F41564263900E35E1E /* background@2x.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +300,11 @@
 				9044B5D9154FB8C100850349 /* SGPTournamentDetailFrontViewController.xib in Resources */,
 				9044B5DD154FB8CA00850349 /* SGPTournamentSelectorViewController.xib in Resources */,
 				90D1F7A1155199120088515E /* SGPTournamentViewController.xib in Resources */,
+				90DC51E71564120900E35E1E /* SGPCreateTournamentViewController.xib in Resources */,
+				90DC51F51564263900E35E1E /* background.png in Resources */,
+				90DC51F61564263900E35E1E /* background@2x.png in Resources */,
+				90DC51FB15642BA200E35E1E /* SGPSportTypeViewController.xib in Resources */,
+				90DC52001564308300E35E1E /* SGPTeamListViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +322,17 @@
 				9044B5BF154FA15000850349 /* SGPBaseViewController.m in Sources */,
 				9044B5D1154FB1E300850349 /* SGPTournamentDetailFrontViewController.m in Sources */,
 				90D1F79D1551961C0088515E /* SGPTournamentViewController.m in Sources */,
+				90DC51E3156411F200E35E1E /* SGPCreateTournamentViewController.m in Sources */,
+				90DC51FA15642BA200E35E1E /* SGPSportTypeViewController.m in Sources */,
+				90DC51FF1564308300E35E1E /* SGPTeamListViewController.m in Sources */,
+				90FF95CD157A917F007CE210 /* EliminationStyle.m in Sources */,
+				90FF95D1157A917F007CE210 /* Tournament.m in Sources */,
+				90FF95D4157A917F007CE210 /* Game.m in Sources */,
+				90FF95D7157A9180007CE210 /* Participant.m in Sources */,
+				90FF95DA157A9180007CE210 /* SportType.m in Sources */,
+				90FF95DD157A9180007CE210 /* Location.m in Sources */,
+				90FF95E0157A9180007CE210 /* TournamentType.m in Sources */,
+				90FF95E3157A91E9007CE210 /* SGPBaseManagedObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +369,14 @@
 				90D1F7A0155199120088515E /* en */,
 			);
 			name = SGPTournamentViewController.xib;
+			sourceTree = "<group>";
+		};
+		90DC51E51564120900E35E1E /* SGPCreateTournamentViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90DC51E61564120900E35E1E /* en */,
+			);
+			name = SGPCreateTournamentViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
