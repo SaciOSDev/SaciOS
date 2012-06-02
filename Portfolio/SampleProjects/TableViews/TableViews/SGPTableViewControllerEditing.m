@@ -3,7 +3,7 @@
 //  TableViews
 //
 //  Created by Jeff Morris on 5/29/12.
-//  Copyright (c) 2012 Pearson. All rights reserved.
+//  Copyright (c) 2012 JDMdesign.com. All rights reserved.
 //
 
 #import "SGPTableViewControllerEditing.h"
@@ -136,7 +136,6 @@
 //                              cancelButtonTitle:@"OK" 
 //                              otherButtonTitles:nil] show];
             [tableView performSelector:@selector(reloadData) withObject:nil afterDelay:1.0];
-            NSTimeInterval time = 0.0f;
             break;
         default:
             break;
