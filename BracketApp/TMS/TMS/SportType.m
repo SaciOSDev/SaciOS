@@ -12,10 +12,18 @@
 @implementation SportType
 
 @dynamic displayName;
+@dynamic photo;
 @dynamic tournaments;
 
 + (NSString*)entityName {
     return NSStringFromClass([SportType class]);
+}
+
+- (UIImage*)image {
+    if ([self photo]) {
+        return [UIImage imageNamed:[self photo]];
+    }
+    return nil;
 }
 
 @end

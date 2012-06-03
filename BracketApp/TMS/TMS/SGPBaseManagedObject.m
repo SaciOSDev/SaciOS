@@ -10,15 +10,26 @@
 
 @implementation SGPBaseManagedObject
 
-+ (NSString*)entityName {
++ (NSString*)entityName
+{
     // This should be overwritten in the extending class.
     return NSStringFromClass([SGPBaseManagedObject class]);
 }
 
-+ (id)createObject:(NSManagedObjectContext*)moc {
-    if (moc==nil) return nil;
++ (id)createObject:(NSManagedObjectContext*)moc
+{
     return [NSEntityDescription insertNewObjectForEntityForName:[self entityName] 
                                          inManagedObjectContext:moc];
+}
+
++ (void)saveAll:(NSManagedObjectContext*)moc
+{
+    NSError *error = nil;
+    if (moc != nil) {
+        if ([moc hasChanges] && ![moc save:&error]) {
+            NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        } 
+    }
 }
 
 @end

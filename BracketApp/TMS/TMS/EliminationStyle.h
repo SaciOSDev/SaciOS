@@ -10,6 +10,8 @@
 #import <CoreData/CoreData.h>
 #import "SGPBaseManagedObject.h"
 
+@class Tournament;
+
 @interface EliminationStyle : SGPBaseManagedObject
 
 @property (nonatomic, retain) NSString * displayName;
@@ -18,8 +20,8 @@
 
 @interface EliminationStyle (CoreDataGeneratedAccessors)
 
-- (void)addTournamentsObject:(NSManagedObject *)value;
-- (void)removeTournamentsObject:(NSManagedObject *)value;
+- (void)addTournamentsObject:(Tournament *)value;
+- (void)removeTournamentsObject:(Tournament *)value;
 - (void)addTournaments:(NSSet *)values;
 - (void)removeTournaments:(NSSet *)values;
 

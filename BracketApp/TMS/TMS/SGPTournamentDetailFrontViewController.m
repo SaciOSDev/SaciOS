@@ -8,6 +8,9 @@
 
 #import "SGPTournamentDetailFrontViewController.h"
 #import "SGPTournamentViewController.h"
+#import "Tournament.h"
+#import "Participant.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface SGPTournamentDetailFrontViewController ()
 
@@ -15,9 +18,12 @@
 
 @implementation SGPTournamentDetailFrontViewController
 
+@synthesize tournament;
 @synthesize frontView;
 @synthesize backView;
+@synthesize backTableView;
 @synthesize parentNavController;
+@synthesize bigButton;
 
 #pragma mark - Public Methods
 
@@ -31,14 +37,12 @@
 
 - (IBAction)showTournament:(id)sender
 {
-    NSLog(@"TODO - Implement showTournament method!");
     if ([self parentNavController]!=nil) 
     {
         SGPTournamentViewController *tvc = [[SGPTournamentViewController alloc] initWithNibName:@"SGPTournamentViewController" bundle:nil];
         [tvc setManagedObjectContext:[self managedObjectContext]];
         [[self parentNavController] pushViewController:tvc animated:YES];
         [self showFronView];
-        
     }
 }
 
@@ -55,6 +59,8 @@
     }
     
     toView.frame = currentView.frame;
+    
+    [self refreshData];
     
     [UIView transitionWithView:self.view
                       duration:0.75
@@ -76,14 +82,64 @@
     }
 }
 
+- (void)refreshData {
+    [[self bigButton] setTitle:[[self tournament] displayName] forState:UIControlStateNormal];
+    [[self backTableView] reloadData];
+}
+
 #pragma mark - UIViewController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    [[[self frontView] layer] setMasksToBounds:YES];
+    [[[self frontView] layer] setCornerRadius:20];
+    [[[self frontView] layer] setBorderWidth:1];
+    [[[self frontView] layer] setBorderColor:[[UIColor blackColor] CGColor]];
+
+    [[[self backView] layer] setMasksToBounds:YES];
+    [[[self backView] layer] setCornerRadius:20];
+    [[[self backView] layer] setBorderWidth:1];
+    [[[self backView] layer] setBorderColor:[[UIColor blackColor] CGColor]];
+
+    [self refreshData];
+}
 
 - (void)viewDidUnload
 {
+    [self setTournament:nil];
     [self setFrontView:nil];
     [self setBackView:nil];
+    [self setBackTableView:nil];
     [self setParentNavController:nil];
+    [self setBigButton:nil];
     [super viewDidUnload];
 }
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 
+{
+    return [[[self tournament] participants] count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tv cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSString *cellIdent = @"";
+    UITableViewCell *cell = [tv dequeueReusableCellWithIdentifier:cellIdent];
+    if (cell==nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdent];
+    }
+    Participant *participant = [[[self tournament] participants] objectAtIndex:indexPath.row];
+    [[cell textLabel] setText:[NSString stringWithFormat:@"(%d) %@",indexPath.row+1,[participant displayName]]];
+    UIImage *photo = [participant image];
+    if (!photo) {
+        photo = [UIImage imageNamed:@"Silhouette.png"];
+    }
+    [[cell imageView] setImage:photo];
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    return cell;
+}
+
 
 @end

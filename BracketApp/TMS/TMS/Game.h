@@ -10,31 +10,31 @@
 #import <CoreData/CoreData.h>
 #import "SGPBaseManagedObject.h"
 
-@class Tournament;
+@class Tournament, Participant, Location;
 
 @interface Game : SGPBaseManagedObject
 
-@property (nonatomic, retain) NSNumber * primID;
 @property (nonatomic, retain) NSNumber * gameNumber;
 @property (nonatomic, retain) NSNumber * scoreForP1;
 @property (nonatomic, retain) NSNumber * scoreForP2;
 @property (nonatomic, retain) NSNumber * status;
 @property (nonatomic, retain) Tournament *tournament;
 @property (nonatomic, retain) NSOrderedSet *participants;
-@property (nonatomic, retain) NSManagedObject *winner;
-@property (nonatomic, retain) NSManagedObject *location;
+@property (nonatomic, retain) Participant *winner;
+@property (nonatomic, retain) Location *location;
 @end
 
 @interface Game (CoreDataGeneratedAccessors)
 
-- (void)insertObject:(NSManagedObject *)value inParticipantsAtIndex:(NSUInteger)idx;
+- (void)insertObject:(Participant *)value inParticipantsAtIndex:(NSUInteger)idx;
 - (void)removeObjectFromParticipantsAtIndex:(NSUInteger)idx;
 - (void)insertParticipants:(NSArray *)value atIndexes:(NSIndexSet *)indexes;
 - (void)removeParticipantsAtIndexes:(NSIndexSet *)indexes;
-- (void)replaceObjectInParticipantsAtIndex:(NSUInteger)idx withObject:(NSManagedObject *)value;
+- (void)replaceObjectInParticipantsAtIndex:(NSUInteger)idx withObject:(Participant *)value;
 - (void)replaceParticipantsAtIndexes:(NSIndexSet *)indexes withParticipants:(NSArray *)values;
-- (void)addParticipantsObject:(NSManagedObject *)value;
-- (void)removeParticipantsObject:(NSManagedObject *)value;
+- (void)addParticipantsObject:(Participant *)value;
+- (void)removeParticipantsObject:(Participant *)value;
 - (void)addParticipants:(NSOrderedSet *)values;
 - (void)removeParticipants:(NSOrderedSet *)values;
+
 @end

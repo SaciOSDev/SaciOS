@@ -9,9 +9,11 @@
 #import "SGPTournamentSelectorViewController.h"
 #import "SGPTournamentDetailFrontViewController.h"
 #import "SGPCreateTournamentViewController.h"
+#import "Tournament.h"
 
-#define H_PADDING() (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPhone ? 25 : 150)
-#define V_PADDING() (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPhone ? 35 : 200)
+#define TOURNMENT_SQUARE() (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPhone ? (UIDeviceOrientationIsPortrait([[UIDevice currentDevice] orientation]) ? 260 : 160) : 500)
+#define H_PADDING(width) ((width-TOURNMENT_SQUARE())/2)
+#define V_PADDING(height) ((height-TOURNMENT_SQUARE())/2)
 
 @interface SGPTournamentSelectorViewController ()
 
@@ -24,13 +26,65 @@
 
 #pragma mark - Private Methods
 
-- (IBAction)showTournament:(id)sender
-{
-    NSLog(@"TODO - Show Tournament Here!");
+- (CGRect)makeFrameForPage:(int)page {
+    CGRect frame = self.scrollView.frame;
+    frame.origin.x = frame.size.width * page + H_PADDING(frame.size.width);
+    frame.origin.y = V_PADDING(frame.size.height);
+    frame.size.width = TOURNMENT_SQUARE();
+    frame.size.height = TOURNMENT_SQUARE();
+    return frame;
+}
+
+- (void)resizeScrollView {
+    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * [self numberOfPages], self.scrollView.frame.size.height);
+    
+    // Now reset the coordinates of each bulletin in the list of viewControllers
+    int pageCount = 0 ;
+    for (UIViewController *vc in viewControllers) {
+        if ((NSNull *)vc != [NSNull null])
+        {
+            vc.view.frame = [self makeFrameForPage:pageCount];
+        }
+        pageCount++;
+    }
+    
+    // Now, update the scroll view to the appropriate page
+    CGRect frame = self.scrollView.frame;
+    frame.origin.x = frame.size.width * pageControl.currentPage;
+    frame.origin.y = 0;
+    [self.scrollView scrollRectToVisible:frame animated:NO];
+}
+
+- (void)deletePage:(int)page {
+    SGPTournamentDetailFrontViewController *tdfvc = [self tdfViewControllerForPage:page];
+    if (tdfvc!=[NSNull class]) {
+        [[tdfvc view] removeFromSuperview];
+    }
+    [viewControllers removeObject:tdfvc];
+    [[self pageControl] setNumberOfPages:[self numberOfPages]];
+    if ([[self pageControl] currentPage]>=[[self pageControl] numberOfPages]) {
+        [[self pageControl] setCurrentPage:[self numberOfPages]-1];
+    }
+    [[self pageControl] setNeedsDisplay];
+    [self resizeScrollView];
+}
+
+- (SGPTournamentDetailFrontViewController*)tdfViewControllerForPage:(int)page {
+    // Replace the placeholder if necessary
+    SGPTournamentDetailFrontViewController *controller = [viewControllers objectAtIndex:page];
+    if ((NSNull *)controller == [NSNull null])
+    {
+        controller = [[SGPTournamentDetailFrontViewController alloc] initWithPageNumber:page];
+        [controller setParentNavController:[self navigationController]];
+        Tournament *tournament = [[[self fetchedResultsController] fetchedObjects] objectAtIndex:page];
+        [controller setTournament:tournament];
+        [viewControllers replaceObjectAtIndex:page withObject:controller];
+    }
+    return controller;
 }
 
 - (int)numberOfPages {
-    return 7;
+    return [[[self fetchedResultsController] fetchedObjects] count];
 }
 
 - (void)loadScrollViewWithPage:(int)page {
@@ -39,27 +93,14 @@
     if (page >= [self numberOfPages]) return;
     
     // Replace the placeholder if necessary
-    SGPTournamentDetailFrontViewController *controller = [viewControllers objectAtIndex:page];
-    if ((NSNull *)controller == [NSNull null])
-    {
-        controller = [[SGPTournamentDetailFrontViewController alloc] initWithPageNumber:page];
-        [controller setParentNavController:[self navigationController]];
-        [viewControllers replaceObjectAtIndex:page withObject:controller];
-    }
-    
-    
-    
+    SGPTournamentDetailFrontViewController *controller = [self tdfViewControllerForPage:page];    
     // Add the controller's view to the scroll view
     if (controller.view.superview == nil)
     {
-        CGRect frame = self.scrollView.frame;
-        frame.origin.x = frame.size.width * page + H_PADDING();
-        frame.origin.y = 0 + V_PADDING();
-        frame.size.width -= H_PADDING()*2;
-        frame.size.height -= V_PADDING()*2;
-        controller.view.frame = frame;
+        controller.view.frame = [self makeFrameForPage:page];
         [self.scrollView addSubview:controller.view];
     }
+    [controller showFronView];
 }
 
 #pragma mark - Public Methods
@@ -93,7 +134,13 @@
 
 - (IBAction)deleteTournament:(id)sender
 {
-
+    // First, find the tournament and delete it...
+    Tournament *tournament = [[[self fetchedResultsController] fetchedObjects] objectAtIndex:pageControl.currentPage];
+    if (tournament) {
+        [[self managedObjectContext] deleteObject:tournament];
+    }
+    [Tournament saveAll:[self managedObjectContext]];
+    // Note: The fetchresultscontroller will clean up the UI
 }
 
 - (IBAction)exportTournament:(id)sender
@@ -107,6 +154,10 @@
 {
     [super viewDidLoad];
     
+    [self setManagedObjectClass:[Tournament class]];
+    [self setSortDescriptors:[NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"createDate" 
+                                                                                    ascending:YES]]];
+
     pageControlBeingUsed = NO;
     
     // A page is the width of the scroll view
@@ -153,33 +204,8 @@
     [self didRotateFromInterfaceOrientation:[[UIDevice currentDevice] orientation]];
 }
 
-- (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration {
-    rotatePageStart = pageControl.currentPage;
-}
-
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-    self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * [self numberOfPages], self.scrollView.frame.size.height);
-        
-    // Now reset the coordinates of each bulletin in the list of viewControllers
-    int pageCount = 0 ;
-    for (UIViewController *vc in viewControllers) {
-        if ((NSNull *)vc != [NSNull null])
-        {
-            CGRect frame = self.scrollView.frame;
-            frame.origin.x = frame.size.width * pageCount + H_PADDING();
-            frame.origin.y = 0 + V_PADDING();
-            frame.size.width -= H_PADDING()*2;
-            frame.size.height -= V_PADDING()*2;
-            vc.view.frame = frame;
-        }
-        pageCount++;
-    }
-    
-    // Now, update the scroll view to the appropriate page
-    CGRect frame = self.scrollView.frame;
-    frame.origin.x = frame.size.width * rotatePageStart;
-    frame.origin.y = 0;
-    [self.scrollView scrollRectToVisible:frame animated:NO];
+    [self resizeScrollView];
 }
 
 #pragma mark - UIScrollViewDelegate
@@ -213,12 +239,52 @@
     {
         [controller showFronView];
     }
-
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView 
 {
     pageControlBeingUsed = NO;
+}
+
+#pragma mark - Fetched results controller
+
+- (void)controller:(NSFetchedResultsController *)controller didChangeObject:(id)anObject
+       atIndexPath:(NSIndexPath *)indexPath forChangeType:(NSFetchedResultsChangeType)type
+      newIndexPath:(NSIndexPath *)newIndexPath
+{
+    Tournament *tournament = anObject;
+    NSUInteger page = [[[self fetchedResultsController] fetchedObjects] indexOfObject:tournament];
+    switch (type) {
+        case NSFetchedResultsChangeInsert: {
+            self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * [self numberOfPages], self.scrollView.frame.size.height);
+            [[self pageControl] setNumberOfPages:[self numberOfPages]];
+            [viewControllers addObject:[NSNull null]];
+            [[self pageControl] setCurrentPage:[self numberOfPages]-1];
+        } break;
+        case NSFetchedResultsChangeDelete: {
+            [self deletePage:indexPath.row];
+//
+//            SGPTournamentDetailFrontViewController *tdfvc = [self tdfViewControllerForPage:page];
+//            if (tdfvc!=[NSNull class]) {
+//                [[tdfvc view] removeFromSuperview];
+//            }
+//            [viewControllers removeObject:tdfvc];
+//            [[self pageControl] setNumberOfPages:[self numberOfPages]];
+//            if ([[self pageControl] currentPage]>[[self pageControl] numberOfPages]) {
+//                [[self pageControl] setCurrentPage:[self numberOfPages]-1];
+//            }
+//            [self resizeScrollView];
+        } break;
+        case NSFetchedResultsChangeUpdate: {
+            SGPTournamentDetailFrontViewController *tdfvc = [self tdfViewControllerForPage:page];
+            if (tdfvc!=[NSNull class]) {
+                [tdfvc refreshData];
+            }
+        } break;
+    }
+    
+    [self changePage:nil];
+    
 }
 
 @end

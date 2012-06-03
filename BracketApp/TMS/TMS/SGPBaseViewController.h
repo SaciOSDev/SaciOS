@@ -7,13 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SGPBaseManagedObject.h"
 
 @interface SGPBaseViewController : UIViewController <NSFetchedResultsControllerDelegate>
 
+@property Class managedObjectClass;
+@property (strong, nonatomic) NSArray *sortDescriptors;
+@property (strong, nonatomic) NSPredicate *predicate;
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
-- (void)insertNewObject:(id)sender;
 - (void)cancelModalView:(id)sender;
 
 @end

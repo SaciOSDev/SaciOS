@@ -7,7 +7,10 @@
 //
 
 #import "SGPBaseViewController.h"
+#import "Tournament.h"
 
 @interface SGPSportTypeViewController : SGPBaseViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property (strong, nonatomic) Tournament *tournament;
 
 @end

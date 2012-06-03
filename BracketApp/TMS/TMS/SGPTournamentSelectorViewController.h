@@ -10,7 +10,6 @@
 
 @interface SGPTournamentSelectorViewController : SGPBaseViewController <UIScrollViewDelegate> {
     BOOL pageControlBeingUsed;
-    int rotatePageStart;
     NSMutableArray *viewControllers;
 }
 

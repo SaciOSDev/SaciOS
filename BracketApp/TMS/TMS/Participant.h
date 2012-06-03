@@ -10,17 +10,22 @@
 #import <CoreData/CoreData.h>
 #import "SGPBaseManagedObject.h"
 
-@class Game, Tournament;
+@class Game, Tournament, StockPhoto;
 
 @interface Participant : SGPBaseManagedObject
 
-@property (nonatomic, retain) NSNumber * primID;
 @property (nonatomic, retain) NSString * displayName;
 @property (nonatomic, retain) NSNumber * rank;
 @property (nonatomic, retain) NSString * photo;
+@property (nonatomic, retain) StockPhoto * stockPhoto;
 @property (nonatomic, retain) NSSet *tournaments;
 @property (nonatomic, retain) Game *games;
 @property (nonatomic, retain) NSSet *gamesWon;
+
+- (UIImage*)image;
+- (void)saveImage:(UIImage*)newImage;
+- (BOOL)deleteImage;
+
 @end
 
 @interface Participant (CoreDataGeneratedAccessors)

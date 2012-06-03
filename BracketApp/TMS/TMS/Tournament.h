@@ -2,7 +2,7 @@
 //  Tournament.h
 //  TMS
 //
-//  Created by Jeff Morris on 6/2/12.
+//  Created by Jeff Morris on 6/3/12.
 //  Copyright (c) 2012 SaciOSDev.com. All rights reserved.
 //
 
@@ -10,31 +10,38 @@
 #import <CoreData/CoreData.h>
 #import "SGPBaseManagedObject.h"
 
-@class EliminationStyle;
+@class EliminationStyle, Game, Location, Participant, SportType, TournamentType;
 
 @interface Tournament : SGPBaseManagedObject
 
-@property (nonatomic, retain) NSNumber * primID;
+@property (nonatomic, retain) NSDate * createDate;
 @property (nonatomic, retain) NSString * displayName;
 @property (nonatomic, retain) NSNumber * status;
-@property (nonatomic, retain) NSManagedObject *tournamentType;
 @property (nonatomic, retain) EliminationStyle *eliminationStyle;
-@property (nonatomic, retain) NSManagedObject *sportType;
 @property (nonatomic, retain) NSSet *games;
-@property (nonatomic, retain) NSSet *participants;
-@property (nonatomic, retain) NSManagedObject *location;
+@property (nonatomic, retain) Location *location;
+@property (nonatomic, retain) NSOrderedSet *participants;
+@property (nonatomic, retain) SportType *sportType;
+@property (nonatomic, retain) TournamentType *tournamentType;
+
 @end
 
 @interface Tournament (CoreDataGeneratedAccessors)
 
-- (void)addGamesObject:(NSManagedObject *)value;
-- (void)removeGamesObject:(NSManagedObject *)value;
+- (void)addGamesObject:(Game *)value;
+- (void)removeGamesObject:(Game *)value;
 - (void)addGames:(NSSet *)values;
 - (void)removeGames:(NSSet *)values;
 
-- (void)addParticipantsObject:(NSManagedObject *)value;
-- (void)removeParticipantsObject:(NSManagedObject *)value;
-- (void)addParticipants:(NSSet *)values;
-- (void)removeParticipants:(NSSet *)values;
+- (void)insertObject:(Participant *)value inParticipantsAtIndex:(NSUInteger)idx;
+- (void)removeObjectFromParticipantsAtIndex:(NSUInteger)idx;
+- (void)insertParticipants:(NSArray *)value atIndexes:(NSIndexSet *)indexes;
+- (void)removeParticipantsAtIndexes:(NSIndexSet *)indexes;
+- (void)replaceObjectInParticipantsAtIndex:(NSUInteger)idx withObject:(Participant *)value;
+- (void)replaceParticipantsAtIndexes:(NSIndexSet *)indexes withParticipants:(NSArray *)values;
+- (void)addParticipantsObject:(Participant *)value;
+- (void)removeParticipantsObject:(Participant *)value;
+- (void)addParticipants:(NSOrderedSet *)values;
+- (void)removeParticipants:(NSOrderedSet *)values;
 
 @end

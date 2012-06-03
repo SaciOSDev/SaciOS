@@ -14,4 +14,6 @@
 
 + (id)createObject:(NSManagedObjectContext*)moc;
 
++ (void)saveAll:(NSManagedObjectContext*)moc;
+
 @end

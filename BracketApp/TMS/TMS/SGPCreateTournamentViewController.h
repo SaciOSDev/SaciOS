@@ -11,6 +11,7 @@
 @interface SGPCreateTournamentViewController : SGPBaseViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *tournNameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *sportTypeTextField;
 
 - (IBAction)nextView:(id)sender;
 - (IBAction)selectSportType:(id)sender;

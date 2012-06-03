@@ -14,11 +14,26 @@
 
 @implementation SGPTournamentViewController
 
+@synthesize tournament;
+
 #pragma mark - Public Methods
 
 - (IBAction)navigateBackHome:(id)sender 
 {
     [[self navigationController] popViewControllerAnimated:YES];
+}
+
+#pragma mark - UIViewController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+}
+
+- (void)viewDidUnload
+{
+    [self setTournament:nil];
+    [super viewDidUnload];
 }
 
 @end

@@ -7,8 +7,11 @@
 //
 
 #import "SGPBaseViewController.h"
+#import "Tournament.h"
 
 @interface SGPTournamentViewController : SGPBaseViewController
+
+@property (strong, nonatomic) Tournament * tournament;
 
 - (IBAction)navigateBackHome:(id)sender;
 

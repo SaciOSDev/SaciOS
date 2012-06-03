@@ -7,10 +7,12 @@
 //
 
 #import "SGPBaseViewController.h"
+#import "Tournament.h"
 
 @interface SGPTeamListViewController : SGPBaseViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) Tournament *tournament;
 
 - (IBAction)nextView:(id)sender;
 - (IBAction)editSegmentButtonTapped:(id)sender;

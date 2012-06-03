@@ -7,6 +7,7 @@
 //
 
 #import "SGPSportTypeViewController.h"
+#import "SportType.h"
 
 @interface SGPSportTypeViewController ()
 
@@ -14,42 +15,56 @@
 
 @implementation SGPSportTypeViewController
 
+@synthesize tournament;
+
 #pragma mark - UIViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    [self setManagedObjectClass:[SportType class]];
+    [self setSortDescriptors:[NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"displayName" 
+                                                                                    ascending:YES]]];
     [self setTitle:NSLocalizedString(@"Sport Types", @"Sport Types")];
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 #pragma mark - UITableViewDataSource
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 15;
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return [[[self fetchedResultsController] sections] count];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSString *cellIdent = @"";
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 
+{
+    id<NSFetchedResultsSectionInfo> sectionInfo = [[[self fetchedResultsController] sections] objectAtIndex:section];
+    return [sectionInfo numberOfObjects];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
+{
+    NSString *cellIdent = @"UITableViewCellStyleDefault";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdent];
     if (cell==nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdent];
     }
-    [[cell textLabel] setText:[NSString stringWithFormat:@"Sport Type %d",indexPath.row+1]];
+    SportType *sportType = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+    [[cell textLabel] setText:[sportType displayName]];
+    [[cell imageView] setImage:[sportType image]];
+    if ([[[self tournament] sportType] isEqual:sportType]) {
+        [cell setAccessoryType:UITableViewCellAccessoryCheckmark];        
+    } else {
+        [cell setAccessoryType:UITableViewCellAccessoryNone];
+    }
     return cell;
 }
 
 #pragma mark - UITableViewDelegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath 
+{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [[self tournament] setSportType:[[self fetchedResultsController] objectAtIndexPath:indexPath]];
     [[self navigationController] popViewControllerAnimated:YES];
 }
 

@@ -15,7 +15,11 @@
 @interface SportType : SGPBaseManagedObject
 
 @property (nonatomic, retain) NSString * displayName;
+@property (nonatomic, retain) NSString * photo;
 @property (nonatomic, retain) NSSet *tournaments;
+
+- (UIImage*)image;
+
 @end
 
 @interface SportType (CoreDataGeneratedAccessors)
