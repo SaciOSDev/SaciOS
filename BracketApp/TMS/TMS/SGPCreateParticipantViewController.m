@@ -122,7 +122,7 @@
     [[[self photoImage] layer] setMasksToBounds:YES];
     [[[self photoImage] layer] setCornerRadius:BORDER_RADIUS];
     [[[self photoImage] layer] setBorderWidth:BORDER_WIDTH];
-    [[[self photoImage] layer] setBorderColor:[[UIColor whiteColor] CGColor]];
+    [[[self photoImage] layer] setBorderColor:[[UIColor blackColor] CGColor]];
 
     [[self photoImage] setImage:[[self photoImage] image]]; 
     [[self participantNameTextField] becomeFirstResponder];

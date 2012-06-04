@@ -51,11 +51,12 @@
                       nil];
 
     CGRect frame = self.view.frame;
-    [self setMenu:[[AwesomeMenu alloc] initWithFrame:CGRectMake(0, frame.size.height-200, 200, 200) menus:menus]];
-    [[self menu] setAutoresizingMask: UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleRightMargin];
-    [self menu].startPoint = CGPointMake(32.0, self.menu.bounds.size.height-32.0);
+//    [self setMenu:[[AwesomeMenu alloc] initWithFrame:CGRectMake(0, frame.size.height-200, 200, 200) menus:menus]];
+    [self setMenu:[[AwesomeMenu alloc] initWithFrame:CGRectMake(frame.size.width-200, frame.size.height-200, 200, 200) menus:menus]];
+    [[self menu] setAutoresizingMask: UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleLeftMargin];
+    [self menu].startPoint = CGPointMake(self.menu.bounds.size.width-32.0, self.menu.bounds.size.height-32.0);
     [self menu].rotateAngle = 0.0f;
-    [self menu].menuWholeAngle = M_PI / 1.5;
+    [self menu].menuWholeAngle = M_PI / -1.5;
     [self menu].timeOffset = 0.05f;
     [self menu].farRadius = 110.0f;
     [self menu].nearRadius = 90.0f;

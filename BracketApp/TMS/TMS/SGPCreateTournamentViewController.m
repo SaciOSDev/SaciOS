@@ -8,9 +8,11 @@
 
 #import "SGPCreateTournamentViewController.h"
 #import "SGPSportTypeViewController.h"
+#import "SGPLocationListViewController.h"
 #import "SGPTeamListViewController.h"
 #import "Tournament.h"
 #import "SportType.h"
+#import "Location.h"
 #import "NSString+WhiteSpacing.h"
 
 @interface SGPCreateTournamentViewController ()
@@ -21,6 +23,7 @@
 
 @synthesize tournNameTextField = _tournNameTextField;
 @synthesize sportTypeTextField = _sportTypeTextField;
+@synthesize locationTextField = _locationTextField;
 @synthesize tournament = _tournament;
 
 #pragma mark - Private Methods
@@ -64,6 +67,13 @@
     [[self navigationController] pushViewController:vc animated:YES];
 }
 
+- (IBAction)selectLocation:(id)sender {
+    SGPLocationListViewController *vc = [[SGPLocationListViewController alloc] initWithNibName:@"SGPLocationListViewController" bundle:nil];
+    [vc setManagedObjectContext:[self managedObjectContext]];
+    [vc setTournament:[self tournament]];
+    [[self navigationController] pushViewController:vc animated:YES];
+}
+
 #pragma mark - UIViewController
 
 - (void)viewDidLoad
@@ -73,8 +83,8 @@
     [self setTournament:[Tournament createObject:[self managedObjectContext]]];
     [[self tournament] setCreateDate:[NSDate date]];
     
-    [self setTitle:NSLocalizedString(@"Add Tournament", @"Add Tournament")];
-    [[[self navigationController] navigationBar] setTintColor:[UIColor blackColor]];
+    [self setTitle:NSLocalizedString(@"New Tournament", @"New Tournament")];
+    [[[self navigationController] navigationBar] setTintColor:[UIColor darkGrayColor]];
     
     [[self navigationItem] setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
                                                                                               target:self
@@ -90,6 +100,7 @@
 {
     [self setTournNameTextField:nil];
     [self setSportTypeTextField:nil];
+    [self setLocationTextField:nil];
     [self setTournament:nil];
     [super viewDidUnload];
 }
@@ -99,6 +110,7 @@
     [[self tournNameTextField] setText:[[self tournament] displayName]];
     [[self tournNameTextField] becomeFirstResponder];
     [[self sportTypeTextField] setText:[[[self tournament] sportType] displayName]];
+    [[self locationTextField] setText:[[[self tournament] location] fullLocation]];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {

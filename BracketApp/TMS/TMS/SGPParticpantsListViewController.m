@@ -87,6 +87,33 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tv commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    switch (editingStyle) {
+        case UITableViewCellEditingStyleDelete: { 
+            Participant *participant = [[[self fetchedResultsController] fetchedObjects] objectAtIndex:indexPath.row];
+            if ([[participant tournaments] count]>0) {
+                UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Delete Problem", @"Delete Problem")
+                                                                message:NSLocalizedString(@"We can not delete this participant because they are associated to a tournament. Remove this participant from all tournaments then try to delete them again.", 
+                                                                                          @"We can not delete this participant because they are associated to a tournament. Remove this participant from all tournaments then try to delete them again.") 
+                                                               delegate:nil
+                                                      cancelButtonTitle:NSLocalizedString(@"OK", @"OK") 
+                                                      otherButtonTitles:nil];
+                [alert show];
+            } else {
+                [[self managedObjectContext] deleteObject:participant];
+                [Participant saveAll:[self managedObjectContext]];                
+                [tv reloadData];
+            }
+        } break;
+        case UITableViewCellEditingStyleInsert: { 
+            
+        } break;
+        case UITableViewCellEditingStyleNone: { 
+            
+        } break;
+    }
+}
+
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tv didSelectRowAtIndexPath:(NSIndexPath *)indexPath 

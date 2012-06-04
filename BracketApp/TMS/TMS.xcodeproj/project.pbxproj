@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9010526D157C7FCB0075A19C /* SGPLocationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9010526B157C7FCB0075A19C /* SGPLocationListViewController.m */; };
+		9010526E157C7FCB0075A19C /* SGPLocationListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9010526C157C7FCB0075A19C /* SGPLocationListViewController.xib */; };
+		90105273157C860D0075A19C /* SGPLocationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90105271157C860D0075A19C /* SGPLocationDetailViewController.m */; };
+		90105274157C860D0075A19C /* SGPLocationDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90105272157C860D0075A19C /* SGPLocationDetailViewController.xib */; };
 		90214B70157B4D2900B20225 /* SGPParticpantsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90214B6E157B4D2800B20225 /* SGPParticpantsListViewController.m */; };
 		90214B71157B4D2900B20225 /* SGPParticpantsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90214B6F157B4D2900B20225 /* SGPParticpantsListViewController.xib */; };
 		9023E02B157C3BFC00A6CF97 /* Add.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E007157C3BFC00A6CF97 /* Add.png */; };
@@ -89,6 +93,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9010526A157C7FCB0075A19C /* SGPLocationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPLocationListViewController.h; sourceTree = "<group>"; };
+		9010526B157C7FCB0075A19C /* SGPLocationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPLocationListViewController.m; sourceTree = "<group>"; };
+		9010526C157C7FCB0075A19C /* SGPLocationListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGPLocationListViewController.xib; sourceTree = "<group>"; };
+		90105270157C860D0075A19C /* SGPLocationDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPLocationDetailViewController.h; sourceTree = "<group>"; };
+		90105271157C860D0075A19C /* SGPLocationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPLocationDetailViewController.m; sourceTree = "<group>"; };
+		90105272157C860D0075A19C /* SGPLocationDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGPLocationDetailViewController.xib; sourceTree = "<group>"; };
 		90214B6D157B4D2800B20225 /* SGPParticpantsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPParticpantsListViewController.h; sourceTree = "<group>"; };
 		90214B6E157B4D2800B20225 /* SGPParticpantsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPParticpantsListViewController.m; sourceTree = "<group>"; };
 		90214B6F157B4D2900B20225 /* SGPParticpantsListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGPParticpantsListViewController.xib; sourceTree = "<group>"; };
@@ -371,6 +381,12 @@
 				90825E6D157BE6CF00E2A219 /* SGPStockPhotoListViewController.h */,
 				90825E6E157BE6CF00E2A219 /* SGPStockPhotoListViewController.m */,
 				90825E6F157BE6CF00E2A219 /* SGPStockPhotoListViewController.xib */,
+				9010526A157C7FCB0075A19C /* SGPLocationListViewController.h */,
+				9010526B157C7FCB0075A19C /* SGPLocationListViewController.m */,
+				9010526C157C7FCB0075A19C /* SGPLocationListViewController.xib */,
+				90105270157C860D0075A19C /* SGPLocationDetailViewController.h */,
+				90105271157C860D0075A19C /* SGPLocationDetailViewController.m */,
+				90105272157C860D0075A19C /* SGPLocationDetailViewController.xib */,
 			);
 			name = "Tounrament Selector";
 			sourceTree = "<group>";
@@ -534,6 +550,8 @@
 				9023E04D157C3BFC00A6CF97 /* Silhouette.png in Resources */,
 				9023E04E157C3BFC00A6CF97 /* Silhouette@2x.png in Resources */,
 				9023E054157C4BA700A6CF97 /* Check@2x.png in Resources */,
+				9010526E157C7FCB0075A19C /* SGPLocationListViewController.xib in Resources */,
+				90105274157C860D0075A19C /* SGPLocationDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +592,8 @@
 				90825E70157BE6D000E2A219 /* SGPStockPhotoListViewController.m in Sources */,
 				9023E082157C5E5100A6CF97 /* AwesomeMenu.m in Sources */,
 				9023E083157C5E5100A6CF97 /* AwesomeMenuItem.m in Sources */,
+				9010526D157C7FCB0075A19C /* SGPLocationListViewController.m in Sources */,
+				90105273157C860D0075A19C /* SGPLocationDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

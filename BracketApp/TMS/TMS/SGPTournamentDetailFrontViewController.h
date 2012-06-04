@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *bigButton;
 
 - (id)initWithPageNumber:(int)page;
+
 - (IBAction)showTournament:(id)sender;
 - (IBAction)flipView:(id)sender;
 - (IBAction)showFronView;

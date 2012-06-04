@@ -12,8 +12,10 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *tournNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *sportTypeTextField;
+@property (weak, nonatomic) IBOutlet UITextField *locationTextField;
 
 - (IBAction)nextView:(id)sender;
 - (IBAction)selectSportType:(id)sender;
+- (IBAction)selectLocation:(id)sender;
 
 @end

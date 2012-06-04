@@ -35,16 +35,16 @@
     return [[[self fetchedResultsController] sections] count];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 
+- (NSInteger)tableView:(UITableView *)tv numberOfRowsInSection:(NSInteger)section 
 {
     id<NSFetchedResultsSectionInfo> sectionInfo = [[[self fetchedResultsController] sections] objectAtIndex:section];
     return [sectionInfo numberOfObjects];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
+- (UITableViewCell *)tableView:(UITableView *)tv cellForRowAtIndexPath:(NSIndexPath *)indexPath 
 {
     NSString *cellIdent = @"UITableViewCellStyleDefault";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdent];
+    UITableViewCell *cell = [tv dequeueReusableCellWithIdentifier:cellIdent];
     if (cell==nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdent];
     }
@@ -61,9 +61,9 @@
 
 #pragma mark - UITableViewDelegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath 
+- (void)tableView:(UITableView *)tv didSelectRowAtIndexPath:(NSIndexPath *)indexPath 
 {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [tv deselectRowAtIndexPath:indexPath animated:YES];
     [[self tournament] setSportType:[[self fetchedResultsController] objectAtIndexPath:indexPath]];
     [[self navigationController] popViewControllerAnimated:YES];
 }

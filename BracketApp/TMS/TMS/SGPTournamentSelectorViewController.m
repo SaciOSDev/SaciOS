@@ -136,7 +136,9 @@
 
 - (IBAction)deleteTournament:(id)sender
 {
-    // First, find the tournament and delete it...
+    // First, verify we have a tournament to delete.
+    if ([self numberOfPages]<=0) return;
+    // Next, find the tournament and delete it...
     Tournament *tournament = [[[self fetchedResultsController] fetchedObjects] objectAtIndex:pageControl.currentPage];
     if (tournament) {
         [[self managedObjectContext] deleteObject:tournament];

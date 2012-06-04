@@ -21,6 +21,10 @@
 @property (nonatomic, retain) NSString * displayName;
 @property (nonatomic, retain) NSSet *games;
 @property (nonatomic, retain) NSSet *tournaments;
+
+- (NSString*)fullAddress;
+- (NSString*)fullLocation;
+
 @end
 
 @interface Location (CoreDataGeneratedAccessors)

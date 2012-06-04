@@ -24,6 +24,7 @@
 #pragma mark - Private Methods
 
 - (IBAction)nextView:(id)sender {
+    [[self tournament] setDisplayName:[[self tournament] displayName]]; // A trick to update the tournament and fire off some listeners
     [Participant saveAll:[self managedObjectContext]];
     [self cancelModalView:sender];
 }
@@ -53,7 +54,7 @@
             if ([self editingMode]) {
                 [seg setTitle:NSLocalizedString(@"Done", @"Done") forSegmentAtIndex:2];
             } else {
-                [seg setTitle:NSLocalizedString(@"Edit", @"Edit") forSegmentAtIndex:2];
+                [seg setTitle:NSLocalizedString(@"Delete", @"Delete") forSegmentAtIndex:2];
             }
             [[self tableView] reloadData];
         } break;
@@ -66,7 +67,7 @@
 {
     [super viewDidLoad];
     [self setTitle:NSLocalizedString(@"Participants", @"Participants")];
-    [[[self navigationController] navigationBar] setTintColor:[UIColor blackColor]];
+    [[[self navigationController] navigationBar] setTintColor:[UIColor darkGrayColor]];
     [[self navigationItem] setRightBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Done", @"Done")
                                                                                   style:UIBarButtonItemStyleBordered
                                                                                  target:self
