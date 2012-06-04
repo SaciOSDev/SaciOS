@@ -7,6 +7,7 @@
 //
 
 #import "SGPParticpantsListViewController.h"
+#import "SGPCreateParticipantViewController.h"
 #import "Participant.h"
 
 @interface SGPParticpantsListViewController ()
@@ -16,6 +17,15 @@
 @implementation SGPParticpantsListViewController
 
 @synthesize tournament;
+@synthesize tableView;
+
+#pragma mark - Public Methods
+
+- (void)editMode:(id)sender 
+{
+    [super editMode:sender];
+    [[self tableView] reloadData];
+}
 
 #pragma mark - UIViewController
 
@@ -26,25 +36,36 @@
     [self setSortDescriptors:[NSArray arrayWithObject:[NSSortDescriptor sortDescriptorWithKey:@"displayName" 
                                                                                     ascending:YES]]];
     [self setTitle:NSLocalizedString(@"Existing Participants", @"Existing Participants")];
+    
+    [[self navigationItem] setRightBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
+                                                                                               target:self
+                                                                                               action:@selector(editMode:)]];
+
+}
+
+- (void)viewDidAppear:(BOOL)animated 
+{
+    [super viewDidAppear:YES];
+    [[self tableView] reloadData];
 }
 
 #pragma mark - UITableViewDataSource
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tv
 {
     return [[[self fetchedResultsController] sections] count];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 
+- (NSInteger)tableView:(UITableView *)tv numberOfRowsInSection:(NSInteger)section 
 {
     id<NSFetchedResultsSectionInfo> sectionInfo = [[[self fetchedResultsController] sections] objectAtIndex:section];
     return [sectionInfo numberOfObjects];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath 
+- (UITableViewCell *)tableView:(UITableView *)tv cellForRowAtIndexPath:(NSIndexPath *)indexPath 
 {
     NSString *cellIdent = @"UITableViewCellStyleDefault";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdent];
+    UITableViewCell *cell = [tv dequeueReusableCellWithIdentifier:cellIdent];
     if (cell==nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdent];
     }
@@ -56,7 +77,9 @@
     }
     [[cell imageView] setImage:photo];
 
-    if ([[[self tournament] participants] containsObject:participant]) {
+    if ([[[self vcSettings] objectForKey:EDIT_MODE] boolValue]) {
+        [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+    } else if ([[[self tournament] participants] containsObject:participant]) {
         [cell setAccessoryType:UITableViewCellAccessoryCheckmark];        
     } else {
         [cell setAccessoryType:UITableViewCellAccessoryNone];
@@ -66,12 +89,18 @@
 
 #pragma mark - UITableViewDelegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath 
+- (void)tableView:(UITableView *)tv didSelectRowAtIndexPath:(NSIndexPath *)indexPath 
 {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    [tv deselectRowAtIndexPath:indexPath animated:YES];
+    UITableViewCell *cell = [tv cellForRowAtIndexPath:indexPath];
     Participant *participant = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-    if ([[[self tournament] participants] containsObject:participant]) {
+    if ([[[self vcSettings] objectForKey:EDIT_MODE] boolValue]) {
+        SGPCreateParticipantViewController *vc = [[SGPCreateParticipantViewController alloc] initWithNibName:@"SGPCreateParticipantViewController" bundle:nil];
+        [vc setManagedObjectContext:[self managedObjectContext]];
+        [vc setParticipant:participant];
+        [[vc vcSettings] setObject:[NSNumber numberWithBool:YES] forKey:EDIT_MODE];
+        [[self navigationController] pushViewController:vc animated:YES];
+    } else if ([[[self tournament] participants] containsObject:participant]) {
         [[self tournament] removeParticipantsObject:participant];
         [cell setAccessoryType:UITableViewCellAccessoryNone];
     } else {

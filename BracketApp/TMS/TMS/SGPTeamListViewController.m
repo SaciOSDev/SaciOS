@@ -48,7 +48,13 @@
             [[self navigationController] pushViewController:vc animated:YES];
         } break;
         case 2: {
+            UISegmentedControl *seg = (UISegmentedControl*)sender;
             [self setEditingMode:![self editingMode]];
+            if ([self editingMode]) {
+                [seg setTitle:NSLocalizedString(@"Done", @"Done") forSegmentAtIndex:2];
+            } else {
+                [seg setTitle:NSLocalizedString(@"Edit", @"Edit") forSegmentAtIndex:2];
+            }
             [[self tableView] reloadData];
         } break;
     }
@@ -60,6 +66,7 @@
 {
     [super viewDidLoad];
     [self setTitle:NSLocalizedString(@"Participants", @"Participants")];
+    [[[self navigationController] navigationBar] setTintColor:[UIColor blackColor]];
     [[self navigationItem] setRightBarButtonItem:[[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Done", @"Done")
                                                                                   style:UIBarButtonItemStyleBordered
                                                                                  target:self
@@ -101,6 +108,11 @@
         photo = [UIImage imageNamed:@"Silhouette.png"];
     }
     [[cell imageView] setImage:photo];
+    if ([self editingMode]) {
+        [cell setSelectionStyle:UITableViewCellSelectionStyleBlue];
+    } else {
+        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    }
     return cell;
 }
 
@@ -137,6 +149,14 @@
 
 - (void)tableView:(UITableView *)tv didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tv deselectRowAtIndexPath:indexPath animated:YES];
+    if ([self editingMode]) {
+        Participant *participant = [[[self tournament] participants] objectAtIndex:indexPath.row];
+        SGPCreateParticipantViewController *vc = [[SGPCreateParticipantViewController alloc] initWithNibName:@"SGPCreateParticipantViewController" bundle:nil];
+        [vc setManagedObjectContext:[self managedObjectContext]];
+        [vc setParticipant:participant];
+        [[vc vcSettings] setObject:[NSNumber numberWithBool:YES] forKey:EDIT_MODE];
+        [[self navigationController] pushViewController:vc animated:YES];
+    }
 }
 
 - (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath {

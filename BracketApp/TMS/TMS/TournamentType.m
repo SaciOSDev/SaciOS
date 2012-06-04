@@ -18,4 +18,22 @@
     return NSStringFromClass([TournamentType class]);
 }
 
++ (TournamentType*)setupTournamentType:(NSManagedObjectContext*)moc {
+    return (TournamentType*)[TournamentType findObject:[self entityName] 
+                                         withPredicate:[NSPredicate predicateWithFormat:@"displayName == 'Setup'"]
+                                               withMOC:moc];
+}
+
++ (TournamentType*)startedTournamentType:(NSManagedObjectContext*)moc {
+    return (TournamentType*)[TournamentType findObject:[self entityName] 
+                                         withPredicate:[NSPredicate predicateWithFormat:@"displayName == 'Started'"]
+                                               withMOC:moc];
+}
+
++ (TournamentType*)completedTournamentType:(NSManagedObjectContext*)moc {
+    return (TournamentType*)[TournamentType findObject:[self entityName] 
+                                         withPredicate:[NSPredicate predicateWithFormat:@"displayName == 'Completed'"]
+                                               withMOC:moc];
+}
+
 @end

@@ -25,6 +25,7 @@
 - (IBAction)showTournament:(id)sender;
 - (IBAction)flipView:(id)sender;
 - (IBAction)showFronView;
+- (IBAction)editParticipants:(id)sender;
 - (void)refreshData;
 
 @end

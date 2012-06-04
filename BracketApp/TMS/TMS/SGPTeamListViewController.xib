@@ -50,6 +50,7 @@
 										<string key="NSFrame">{{10, 10}, {300, 44}}</string>
 										<reference key="NSSuperview" ref="144368284"/>
 										<reference key="NSWindow"/>
+										<reference key="NSNextKeyView"/>
 										<string key="NSReuseIdentifierKey">_NS:9</string>
 										<bool key="IBUIOpaque">NO</bool>
 										<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -58,7 +59,7 @@
 										<array key="IBSegmentTitles">
 											<string>New</string>
 											<string>Existing</string>
-											<string>Delete</string>
+											<string>Edit</string>
 										</array>
 										<array class="NSMutableArray" key="IBSegmentWidths">
 											<real value="0.0"/>
@@ -122,7 +123,7 @@
 				<string key="NSFrame">{{0, 64}, {320, 416}}</string>
 				<reference key="NSSuperview"/>
 				<reference key="NSWindow"/>
-				<reference key="NSNextKeyView"/>
+				<reference key="NSNextKeyView" ref="466949598"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">3</int>
 					<bytes key="NSWhite">MQA</bytes>

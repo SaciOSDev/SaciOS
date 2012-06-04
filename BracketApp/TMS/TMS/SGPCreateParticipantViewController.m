@@ -76,7 +76,10 @@
 
 - (void)cancelModalView:(id)sender
 {
-    [[self managedObjectContext] deleteObject:participant];
+    if (![[[self vcSettings] objectForKey:EDIT_MODE] boolValue]) {
+        [[self managedObjectContext] deleteObject:participant];
+        [self setParticipant:nil];
+    }
     [[self participantNameTextField] resignFirstResponder];
     [[self navigationController] popViewControllerAnimated:YES];
 }
@@ -116,14 +119,6 @@
     [super viewDidLoad];
     [self setTitle:NSLocalizedString(@"New Participant", @"New Participant")];
     
-    [[self navigationItem] setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
-                                                                                              target:self
-                                                                                              action:@selector(cancelModalView:)]];
-
-    [[self navigationItem] setRightBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave
-                                                                                              target:self
-                                                                                              action:@selector(saveParticipant:)]];
-
     [[[self photoImage] layer] setMasksToBounds:YES];
     [[[self photoImage] layer] setCornerRadius:BORDER_RADIUS];
     [[[self photoImage] layer] setBorderWidth:BORDER_WIDTH];
@@ -140,6 +135,24 @@
     [super viewDidUnload];
 }
 
+- (void)viewWillAppear:(BOOL)animated  
+{
+    [super viewWillAppear:animated];
+    if (![[[self vcSettings] objectForKey:EDIT_MODE] boolValue]) {
+        [[self navigationItem] setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel
+                                                                                                  target:self
+                                                                                                  action:@selector(cancelModalView:)]];        
+        
+        [[self navigationItem] setRightBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave
+                                                                                                   target:self
+                                                                                                   action:@selector(saveParticipant:)]];
+    } else {
+        [[self navigationItem] setLeftBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave
+                                                                                                   target:self
+                                                                                                   action:@selector(saveParticipant:)]];        
+    }
+}
+
 - (void)viewDidAppear:(BOOL)animated 
 {
     [super viewDidAppear:animated];
@@ -148,6 +161,7 @@
         image = [UIImage imageNamed:@"Photo.png"];
     }
     [[self photoImage] setImage:image];
+    [[self participantNameTextField] setText:[[self participant] displayName]];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

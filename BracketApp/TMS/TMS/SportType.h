@@ -19,6 +19,7 @@
 @property (nonatomic, retain) NSSet *tournaments;
 
 - (UIImage*)image;
++ (SportType*)otherSportType:(NSManagedObjectContext*)moc;
 
 @end
 

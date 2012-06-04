@@ -9,14 +9,18 @@
 #import <UIKit/UIKit.h>
 #import "SGPBaseManagedObject.h"
 
+#define EDIT_MODE @"EDIT_MODE"
+
 @interface SGPBaseViewController : UIViewController <NSFetchedResultsControllerDelegate>
 
 @property Class managedObjectClass;
 @property (strong, nonatomic) NSArray *sortDescriptors;
 @property (strong, nonatomic) NSPredicate *predicate;
+@property (strong, nonatomic) NSMutableDictionary *vcSettings;
 @property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 - (void)cancelModalView:(id)sender;
+- (void)editMode:(id)sender;
 
 @end

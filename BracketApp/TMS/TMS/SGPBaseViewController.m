@@ -17,6 +17,7 @@
 @synthesize managedObjectClass = _managedObjectClass;
 @synthesize sortDescriptors = _sortDescriptors;
 @synthesize predicate = _predicate;
+@synthesize vcSettings = _vcSettings;
 @synthesize fetchedResultsController = _fetchedResultsController;
 @synthesize managedObjectContext = _managedObjectContext;
 
@@ -27,12 +28,43 @@
     [[self navigationController] dismissModalViewControllerAnimated:YES];
 }
 
+- (void)editMode:(id)sender
+{
+    if (![[self vcSettings] objectForKey:EDIT_MODE]) {
+        [[self vcSettings] setObject:[NSNumber numberWithBool:NO] forKey:EDIT_MODE];
+    }
+    BOOL editMode = ![[[self vcSettings] objectForKey:EDIT_MODE] boolValue];
+//    [[self vcSettings] removeObjectForKey:EDIT_MODE];
+    [[self vcSettings] setObject:[NSNumber numberWithBool:editMode] forKey:EDIT_MODE];
+    if (editMode) {
+        [[self navigationItem] setRightBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
+                                                                                                  target:self
+                                                                                                  action:@selector(editMode:)]];
+    } else {
+        [[self navigationItem] setRightBarButtonItem:[[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemEdit
+                                                                                                  target:self
+                                                                                                  action:@selector(editMode:)]];
+    }
+}
+
+#pragma mark - NSObject
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    if (self == [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+        [self setVcSettings:[NSMutableDictionary dictionary]];
+    }
+    return self;
+}
+
 #pragma mark - UIViewController
 
 - (void)viewDidUnload
 {
     [self setManagedObjectContext:nil];
     [self setFetchedResultsController:nil];
+    [self setSortDescriptors:nil];
+    [self setPredicate:nil];
+    [self setVcSettings:nil];
     [super viewDidUnload];
 }
 

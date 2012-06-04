@@ -11,9 +11,13 @@
 @interface SGPBaseManagedObject : NSManagedObject
 
 + (NSString*)entityName;
-
 + (id)createObject:(NSManagedObjectContext*)moc;
-
 + (void)saveAll:(NSManagedObjectContext*)moc;
++ (NSMutableArray*)findObjects:(NSString *)entity withPredicate:(NSPredicate*)predicate withSort:(NSArray*)sortDescriptors withMOC:(NSManagedObjectContext*)moc;
++ (NSMutableArray*)findObjects:(NSString *)entity withPredicate:(NSPredicate*)predicate withMOC:(NSManagedObjectContext*)moc;
++ (NSManagedObject*)findObject:(NSString *)entity withPredicate:(NSPredicate*)predicate withMOC:(NSManagedObjectContext*)moc;
++ (NSMutableArray*)findObjects:(NSString *)entity withPredicate:(NSPredicate*)predicate withSort:(NSArray*)sortDescriptors;
++ (NSMutableArray*)findObjects:(NSString *)entity withPredicate:(NSPredicate*)predicate;
++ (NSManagedObject*)findObject:(NSString *)entity withPredicate:(NSPredicate*)predicate;
 
 @end

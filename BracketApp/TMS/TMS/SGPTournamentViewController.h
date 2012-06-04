@@ -7,11 +7,13 @@
 //
 
 #import "SGPBaseViewController.h"
+#import "AwesomeMenu.h"
 #import "Tournament.h"
 
-@interface SGPTournamentViewController : SGPBaseViewController
+@interface SGPTournamentViewController : SGPBaseViewController <AwesomeMenuDelegate>
 
 @property (strong, nonatomic) Tournament * tournament;
+@property (strong, nonatomic) AwesomeMenu * menu;
 
 - (IBAction)navigateBackHome:(id)sender;
 

@@ -30,6 +30,18 @@
     return NSStringFromClass([Tournament class]);
 }
 
++ (id)createObject:(NSManagedObjectContext*)moc
+{
+    Tournament *tournament = [NSEntityDescription insertNewObjectForEntityForName:[self entityName] 
+                                                           inManagedObjectContext:moc];
+    if (tournament!=nil) {
+        [tournament setSportType:[SportType otherSportType:moc]];
+        [tournament setEliminationStyle:[EliminationStyle singleEliminationStyle:moc]];
+        [tournament setTournamentType:[TournamentType setupTournamentType:moc]];
+    }
+    return tournament;
+}
+
 static NSString *const kItemsKey = @"participants";
 
 - (void)insertObject:(Participant *)value inParticipantsAtIndex:(NSUInteger)idx {

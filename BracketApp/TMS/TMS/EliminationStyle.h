@@ -16,6 +16,9 @@
 
 @property (nonatomic, retain) NSString * displayName;
 @property (nonatomic, retain) NSSet *tournaments;
+
++ (EliminationStyle*)singleEliminationStyle:(NSManagedObjectContext*)moc;
+
 @end
 
 @interface EliminationStyle (CoreDataGeneratedAccessors)

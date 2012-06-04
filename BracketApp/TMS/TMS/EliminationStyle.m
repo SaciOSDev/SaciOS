@@ -17,4 +17,10 @@
     return NSStringFromClass([EliminationStyle class]);
 }
 
++ (EliminationStyle*)singleEliminationStyle:(NSManagedObjectContext*)moc {
+    return (EliminationStyle*)[EliminationStyle findObject:[self entityName] 
+                                             withPredicate:[NSPredicate predicateWithFormat:@"displayName == 'Single'"]
+                                                   withMOC:moc];
+}
+
 @end

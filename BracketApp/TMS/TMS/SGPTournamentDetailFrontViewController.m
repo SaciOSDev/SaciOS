@@ -8,8 +8,10 @@
 
 #import "SGPTournamentDetailFrontViewController.h"
 #import "SGPTournamentViewController.h"
+#import "SGPTeamListViewController.h"
 #import "Tournament.h"
 #import "Participant.h"
+#import "TournamentType.h"
 #import <QuartzCore/QuartzCore.h>
 
 @interface SGPTournamentDetailFrontViewController ()
@@ -41,6 +43,7 @@
     {
         SGPTournamentViewController *tvc = [[SGPTournamentViewController alloc] initWithNibName:@"SGPTournamentViewController" bundle:nil];
         [tvc setManagedObjectContext:[self managedObjectContext]];
+        [tvc setTournament:[self tournament]];
         [[self parentNavController] pushViewController:tvc animated:YES];
         [self showFronView];
     }
@@ -82,6 +85,40 @@
     }
 }
 
+- (IBAction)editParticipants:(id)sender 
+{
+    NSManagedObjectContext *moc = [self managedObjectContext];
+    // Check to see if this tournament has started yet.
+    if ([[[self tournament] tournamentType] isEqual:[TournamentType setupTournamentType:moc]]) {
+        SGPTeamListViewController *vc = [[SGPTeamListViewController alloc] initWithNibName:@"SGPTeamListViewController" bundle:nil];
+        [vc setManagedObjectContext:[self managedObjectContext]];
+        [vc setTournament:[self tournament]];
+        UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
+        [nvc setModalPresentationStyle:UIModalPresentationFormSheet];
+        [[self parentNavController] presentModalViewController:nvc animated:YES];  
+    } 
+    // If it has, do not allow them to edit the participants unless they reset.
+    else if ([[[self tournament] tournamentType] isEqual:[TournamentType startedTournamentType:moc]]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Tournament Started", @"Tournament Started")
+                                                        message:NSLocalizedString(@"The tournament has already started and you can not edit the participant list unless you reset the tournament. Resetting the tournament will erase all games and scores, which can not be undone.", 
+                                                                                  @"The tournament has already started and you can not edit the participant list unless you reset the tournament. Resetting the tournament will erase all games and scores, which can not be undone.") 
+                                                       delegate:nil
+                                              cancelButtonTitle:NSLocalizedString(@"Cancel", @"Cancel")
+                                              otherButtonTitles:NSLocalizedString(@"Reset", @"Reset"),nil];
+        [alert show];
+    } 
+    // If it has completed, it's too late.
+    else if ([[[self tournament] tournamentType] isEqual:[TournamentType completedTournamentType:moc]]) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Tournament Completed", @"Tournament Completed")
+                                                        message:NSLocalizedString(@"The tournament has already been completed and you can not edit the participant list.", 
+                                                                                  @"The tournament has already been completed and you can not edit the participant list.") 
+                                                       delegate:nil
+                                              cancelButtonTitle:NSLocalizedString(@"OK", @"OK") 
+                                              otherButtonTitles:nil];
+        [alert show];
+    }
+}
+
 - (void)refreshData {
     [[self bigButton] setTitle:[[self tournament] displayName] forState:UIControlStateNormal];
     [[self backTableView] reloadData];
@@ -95,12 +132,12 @@
     
     [[[self frontView] layer] setMasksToBounds:YES];
     [[[self frontView] layer] setCornerRadius:20];
-    [[[self frontView] layer] setBorderWidth:1];
+    [[[self frontView] layer] setBorderWidth:3];
     [[[self frontView] layer] setBorderColor:[[UIColor blackColor] CGColor]];
 
     [[[self backView] layer] setMasksToBounds:YES];
     [[[self backView] layer] setCornerRadius:20];
-    [[[self backView] layer] setBorderWidth:1];
+    [[[self backView] layer] setBorderWidth:3];
     [[[self backView] layer] setBorderColor:[[UIColor blackColor] CGColor]];
 
     [self refreshData];

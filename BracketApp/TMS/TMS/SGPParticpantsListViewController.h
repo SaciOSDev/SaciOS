@@ -12,5 +12,6 @@
 @interface SGPParticpantsListViewController : SGPBaseViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) Tournament *tournament;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end

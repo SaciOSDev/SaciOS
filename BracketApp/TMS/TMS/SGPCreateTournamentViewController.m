@@ -27,9 +27,12 @@
 
 - (void)cancelModalView:(id)sender
 {
-    [[self managedObjectContext] deleteObject:[self tournament]];
-    [Tournament saveAll:[self managedObjectContext]];
-    [super cancelModalView:sender];
+    if (![[[self vcSettings] objectForKey:EDIT_MODE] boolValue]) {
+        [[self managedObjectContext] deleteObject:[self tournament]];
+        [Tournament saveAll:[self managedObjectContext]];
+        [self setTournament:nil];
+    }
+    [super cancelModalView:sender];        
 }
 
 #pragma mark - Public Methods
@@ -93,7 +96,14 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
+    [[self tournNameTextField] setText:[[self tournament] displayName]];
+    [[self tournNameTextField] becomeFirstResponder];
     [[self sportTypeTextField] setText:[[[self tournament] sportType] displayName]];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [[self tournament] setDisplayName:[[self tournNameTextField] text]];
 }
 
 @end

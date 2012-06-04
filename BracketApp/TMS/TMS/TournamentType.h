@@ -16,6 +16,11 @@
 
 @property (nonatomic, retain) NSString * displayName;
 @property (nonatomic, retain) NSSet *tournaments;
+
++ (TournamentType*)setupTournamentType:(NSManagedObjectContext*)moc;
++ (TournamentType*)startedTournamentType:(NSManagedObjectContext*)moc;
++ (TournamentType*)completedTournamentType:(NSManagedObjectContext*)moc;
+
 @end
 
 @interface TournamentType (CoreDataGeneratedAccessors)

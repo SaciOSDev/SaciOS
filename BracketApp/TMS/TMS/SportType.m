@@ -26,4 +26,10 @@
     return nil;
 }
 
++ (SportType*)otherSportType:(NSManagedObjectContext*)moc {
+    return (SportType*)[SportType findObject:[self entityName] 
+                               withPredicate:[NSPredicate predicateWithFormat:@"displayName == 'Other'"]
+                                     withMOC:moc];
+}
+
 @end
