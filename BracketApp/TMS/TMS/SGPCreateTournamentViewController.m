@@ -32,17 +32,10 @@
 
 #pragma mark - Private Methods
 
-- (void)cancelModalView:(id)sender
-{
-    if (![[[self vcSettings] objectForKey:EDIT_MODE] boolValue]) {
-        [[self managedObjectContext] deleteObject:[self tournament]];
-        [Tournament saveAll:[self managedObjectContext]];
-        [self setTournament:nil];
-    }
-    [super cancelModalView:sender];        
-}
-
-- (void)moveTextViewForKeyboard:(NSNotification*)aNotification up:(BOOL)up {
+- (void)updateViewFrKeyboard:(NSNotification*)aNotification up:(BOOL)up {
+    // If we are on an iPad, don't update the view.
+    if (UI_USER_INTERFACE_IDIOM()!=UIUserInterfaceIdiomPhone) return;
+    
     NSDictionary* userInfo = [aNotification userInfo];
     NSTimeInterval animationDuration;
     UIViewAnimationCurve animationCurve;
@@ -67,17 +60,17 @@
     [UIView commitAnimations];   
 }
 
-- (void)keyboardWillShown:(NSNotification*)aNotification
-{
-    [self moveTextViewForKeyboard:aNotification up:YES]; 
-}
-
-- (void)keyboardWillHide:(NSNotification*)aNotification
-{
-    [self moveTextViewForKeyboard:aNotification up:NO]; 
-}
-
 #pragma mark - Public Methods
+
+- (void)cancelModalView:(id)sender
+{
+    if (![[[self vcSettings] objectForKey:EDIT_MODE] boolValue]) {
+        [[self managedObjectContext] deleteObject:[self tournament]];
+        [Tournament saveAll:[self managedObjectContext]];
+        [self setTournament:nil];
+    }
+    [super cancelModalView:sender];        
+}
 
 - (IBAction)nextView:(id)sender {
     // First check to see if the user has entered a Tournament name...

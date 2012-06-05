@@ -21,6 +21,22 @@
 @synthesize fetchedResultsController = _fetchedResultsController;
 @synthesize managedObjectContext = _managedObjectContext;
 
+#pragma mark - Private Methods
+
+- (void)updateViewFrKeyboard:(NSNotification*)aNotification up:(BOOL)up {
+    // Should be over written in extending class
+}
+
+- (void)keyboardWillShown:(NSNotification*)aNotification
+{
+    [self updateViewFrKeyboard:aNotification up:YES]; 
+}
+
+- (void)keyboardWillHide:(NSNotification*)aNotification
+{
+    [self updateViewFrKeyboard:aNotification up:NO]; 
+}
+
 #pragma mark - Public Methods
 
 - (void)cancelModalView:(id)sender
