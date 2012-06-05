@@ -12,7 +12,7 @@
 
 @interface SGPLocationListViewController : SGPBaseViewController <UITableViewDelegate, UITableViewDataSource>
 
-@property (strong, nonatomic) UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) Tournament *tournament;
 
 @end

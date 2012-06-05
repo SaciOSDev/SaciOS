@@ -26,18 +26,18 @@
 
 - (NSString*)fullAddress {
     NSString *str = @"";
-    if ([self streetAddress]) {
+    if ([self streetAddress]!=nil && [[self streetAddress] length]>0) {
         str = [NSString stringWithFormat:@"%@%@",str, [self streetAddress]];
     }
-    if ([self city]) {
+    if ([self city]!=nil && [[self city] length]>0) {
         if ([str length]>0) str = [NSString stringWithFormat:@"%@, ",str];
         str = [NSString stringWithFormat:@"%@%@",str, [self city]];
     }
-    if ([self state]) {
+    if ([self state]!=nil && [[self state] length]>0) {
         if ([str length]>0) str = [NSString stringWithFormat:@"%@ ",str];
         str = [NSString stringWithFormat:@"%@%@",str, [self state]];
     }
-    if ([self zip]) {
+    if ([self zip]!=nil && [[self zip] length]>0) {
         if ([str length]>0) str = [NSString stringWithFormat:@"%@ ",str];
         str = [NSString stringWithFormat:@"%@%@",str, [self zip]];
     }
@@ -46,13 +46,13 @@
 
 - (NSString*)fullLocation {
     NSString *str = @"";
-    if ([self displayName]) {
+    if ([self displayName]!=nil && [[self displayName] length]>0) {
         str = [NSString stringWithFormat:@"%@%@",str, [self displayName]];
     }
     NSString *fullAdd = [self fullAddress];
-    if (fullAdd!=nil) {
+    if (fullAdd!=nil && [fullAdd length]>0) {
         if ([str length]>0) str = [NSString stringWithFormat:@"%@ - ",str];
-        str = [NSString stringWithFormat:@"%@%@",str, [self streetAddress]];
+        str = [NSString stringWithFormat:@"%@%@",str, fullAdd];
     }
     return str;
 }

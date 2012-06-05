@@ -153,6 +153,12 @@
     }
 }
 
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [[self participant] setDisplayName:[[self participantNameTextField] text]];
+}
+
 - (void)viewDidAppear:(BOOL)animated 
 {
     [super viewDidAppear:animated];

@@ -11,6 +11,9 @@
 #import "SGPTeamListViewController.h"
 #import "Tournament.h"
 #import "Participant.h"
+#import "Location.h"
+#import "SportType.h"
+#import "EliminationStyle.h"
 #import "TournamentType.h"
 #import <QuartzCore/QuartzCore.h>
 
@@ -26,6 +29,12 @@
 @synthesize backTableView;
 @synthesize parentNavController;
 @synthesize bigButton;
+@synthesize tournamentNameLbl;
+@synthesize dateLbl;
+@synthesize timeLbl;
+@synthesize locationLbl;
+@synthesize backgroundImage;
+@synthesize sportImage;
 
 #pragma mark - Public Methods
 
@@ -120,7 +129,11 @@
 }
 
 - (void)refreshData {
-    [[self bigButton] setTitle:[[self tournament] displayName] forState:UIControlStateNormal];
+    [[self tournamentNameLbl] setText:[[self tournament] displayName]];
+    [[self dateLbl] setText:@"Dates Here"];
+    [[self timeLbl] setText:@"Times Here"];
+    [[self sportImage] setImage:[[[self tournament] sportType] image]];
+    [[self locationLbl] setText:[[[self tournament] location] fullLocation]];
     [[self backTableView] reloadData];
 }
 
@@ -151,6 +164,12 @@
     [self setBackTableView:nil];
     [self setParentNavController:nil];
     [self setBigButton:nil];
+    [self setTournamentNameLbl:nil];
+    [self setDateLbl:nil];
+    [self setTimeLbl:nil];
+    [self setLocationLbl:nil];
+    [self setBackgroundImage:nil];
+    [self setSportImage:nil];
     [super viewDidUnload];
 }
 

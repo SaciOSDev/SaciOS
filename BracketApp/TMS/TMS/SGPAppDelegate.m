@@ -33,15 +33,12 @@
         if ([self managedObjectContext]!=nil) {
             // Create the Sport Types
             NSMutableArray *displayNames = [NSMutableArray arrayWithObjects:
-                                            [NSArray arrayWithObjects:@"Baseball",@"Check.png", nil],
-                                            [NSArray arrayWithObjects:@"Softball",@"Check.png", nil],
-                                            [NSArray arrayWithObjects:@"Football",@"Check.png", nil],
-                                            [NSArray arrayWithObjects:@"Basketball",@"Check.png", nil],
-                                            [NSArray arrayWithObjects:@"Football",@"Check.png", nil],
+                                            [NSArray arrayWithObjects:@"Baseball",@"sport-baseball.png", nil],
+                                            [NSArray arrayWithObjects:@"Softball",@"sport-baseball.png", nil],
+                                            [NSArray arrayWithObjects:@"Football",@"sport-football.png", nil],
+                                            [NSArray arrayWithObjects:@"Basketball",@"sport-basketball.png", nil],
                                             [NSArray arrayWithObjects:@"Soccer",@"Check.png", nil],
                                             [NSArray arrayWithObjects:@"Tennis",@"Check.png", nil],
-                                            [NSArray arrayWithObjects:@"Lion",@"Check.png", nil],
-                                            [NSArray arrayWithObjects:@"Lion",@"Check.png", nil],
                                             [NSArray arrayWithObjects:@"Lion",@"Check.png", nil],
                                             [NSArray arrayWithObjects:@"Archery",@"Check.png", nil],
                                             [NSArray arrayWithObjects:@"Volleyball",@"Check.png", nil],

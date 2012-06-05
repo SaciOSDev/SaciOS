@@ -49,24 +49,17 @@
                                                                                                action:@selector(addLocation:)]];
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)viewDidAppear:(BOOL)animated 
 {
     [super viewDidAppear:animated];
-    [self setFetchedResultsController:nil];
     [[self tableView] reloadData];
 }
 
 #pragma mark - UITableViewDataSource
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (NSInteger)tableView:(UITableView *)tv numberOfRowsInSection:(NSInteger)section 
 {
-    return [[[self fetchedResultsController] sections] count];
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section 
-{
-    id<NSFetchedResultsSectionInfo> sectionInfo = [[[self fetchedResultsController] sections] objectAtIndex:section];
-    return [sectionInfo numberOfObjects];
+    return [[[self fetchedResultsController] fetchedObjects] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tv cellForRowAtIndexPath:(NSIndexPath *)indexPath 

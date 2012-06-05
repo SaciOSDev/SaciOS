@@ -8,7 +8,7 @@
 
 #import "SGPBaseViewController.h"
 
-@interface SGPTournamentSelectorViewController : SGPBaseViewController <UIScrollViewDelegate> {
+@interface SGPTournamentSelectorViewController : SGPBaseViewController <UIScrollViewDelegate, UIAlertViewDelegate> {
     BOOL pageControlBeingUsed;
     NSMutableArray *viewControllers;
 }

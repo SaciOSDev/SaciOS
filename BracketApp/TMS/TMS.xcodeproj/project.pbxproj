@@ -72,6 +72,14 @@
 		90825E6C157BDE5F00E2A219 /* StockPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 90825E6B157BDE5F00E2A219 /* StockPhoto.m */; };
 		90825E70157BE6D000E2A219 /* SGPStockPhotoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90825E6E157BE6CF00E2A219 /* SGPStockPhotoListViewController.m */; };
 		90825E71157BE6D000E2A219 /* SGPStockPhotoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90825E6F157BE6CF00E2A219 /* SGPStockPhotoListViewController.xib */; };
+		90C38B89157D821D00DC8FA6 /* tournament-sel-bk.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C38B87157D821D00DC8FA6 /* tournament-sel-bk.png */; };
+		90C38B8A157D821D00DC8FA6 /* tournament-sel-bk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C38B88157D821D00DC8FA6 /* tournament-sel-bk@2x.png */; };
+		90C38B97157D891B00DC8FA6 /* sport-baseball.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C38B91157D891B00DC8FA6 /* sport-baseball.png */; };
+		90C38B98157D891B00DC8FA6 /* sport-baseball@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C38B92157D891B00DC8FA6 /* sport-baseball@2x.png */; };
+		90C38B99157D891B00DC8FA6 /* sport-basketball.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C38B93157D891B00DC8FA6 /* sport-basketball.png */; };
+		90C38B9A157D891B00DC8FA6 /* sport-basketball@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C38B94157D891B00DC8FA6 /* sport-basketball@2x.png */; };
+		90C38B9B157D891B00DC8FA6 /* sport-football.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C38B95157D891B00DC8FA6 /* sport-football.png */; };
+		90C38B9C157D891B00DC8FA6 /* sport-football@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C38B96157D891B00DC8FA6 /* sport-football@2x.png */; };
 		90D1F79D1551961C0088515E /* SGPTournamentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D1F79C1551961C0088515E /* SGPTournamentViewController.m */; };
 		90D1F7A1155199120088515E /* SGPTournamentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90D1F79F155199120088515E /* SGPTournamentViewController.xib */; };
 		90DC51E3156411F200E35E1E /* SGPCreateTournamentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DC51E1156411F200E35E1E /* SGPCreateTournamentViewController.m */; };
@@ -178,6 +186,14 @@
 		90825E6D157BE6CF00E2A219 /* SGPStockPhotoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPStockPhotoListViewController.h; sourceTree = "<group>"; };
 		90825E6E157BE6CF00E2A219 /* SGPStockPhotoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPStockPhotoListViewController.m; sourceTree = "<group>"; };
 		90825E6F157BE6CF00E2A219 /* SGPStockPhotoListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGPStockPhotoListViewController.xib; sourceTree = "<group>"; };
+		90C38B87157D821D00DC8FA6 /* tournament-sel-bk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tournament-sel-bk.png"; sourceTree = "<group>"; };
+		90C38B88157D821D00DC8FA6 /* tournament-sel-bk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tournament-sel-bk@2x.png"; sourceTree = "<group>"; };
+		90C38B91157D891B00DC8FA6 /* sport-baseball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sport-baseball.png"; sourceTree = "<group>"; };
+		90C38B92157D891B00DC8FA6 /* sport-baseball@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sport-baseball@2x.png"; sourceTree = "<group>"; };
+		90C38B93157D891B00DC8FA6 /* sport-basketball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sport-basketball.png"; sourceTree = "<group>"; };
+		90C38B94157D891B00DC8FA6 /* sport-basketball@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sport-basketball@2x.png"; sourceTree = "<group>"; };
+		90C38B95157D891B00DC8FA6 /* sport-football.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sport-football.png"; sourceTree = "<group>"; };
+		90C38B96157D891B00DC8FA6 /* sport-football@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sport-football@2x.png"; sourceTree = "<group>"; };
 		90D1F79B1551961C0088515E /* SGPTournamentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPTournamentViewController.h; sourceTree = "<group>"; };
 		90D1F79C1551961C0088515E /* SGPTournamentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPTournamentViewController.m; sourceTree = "<group>"; };
 		90D1F7A0155199120088515E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SGPTournamentViewController.xib; sourceTree = "<group>"; };
@@ -412,27 +428,45 @@
 			name = "Core App";
 			sourceTree = "<group>";
 		};
-		90DC51F21564263900E35E1E /* Images */ = {
+		90C38B90157D891000DC8FA6 /* Sport Types */ = {
+			isa = PBXGroup;
+			children = (
+				90C38B91157D891B00DC8FA6 /* sport-baseball.png */,
+				90C38B92157D891B00DC8FA6 /* sport-baseball@2x.png */,
+				90C38B93157D891B00DC8FA6 /* sport-basketball.png */,
+				90C38B94157D891B00DC8FA6 /* sport-basketball@2x.png */,
+				90C38B95157D891B00DC8FA6 /* sport-football.png */,
+				90C38B96157D891B00DC8FA6 /* sport-football@2x.png */,
+			);
+			name = "Sport Types";
+			sourceTree = "<group>";
+		};
+		90C38B9D157D899500DC8FA6 /* Black & White Buttons */ = {
 			isa = PBXGroup;
 			children = (
 				9023E007157C3BFC00A6CF97 /* Add.png */,
 				9023E008157C3BFC00A6CF97 /* Add@2x.png */,
+				9023E010157C3BFC00A6CF97 /* Delete.png */,
+				9023E011157C3BFC00A6CF97 /* Delete@2x.png */,
+				9023E016157C3BFC00A6CF97 /* Export.png */,
+				9023E017157C3BFC00A6CF97 /* Export@2x.png */,
+			);
+			name = "Black & White Buttons";
+			sourceTree = "<group>";
+		};
+		90C38B9E157D89A100DC8FA6 /* Blue Buttons */ = {
+			isa = PBXGroup;
+			children = (
 				9023E009157C3BFC00A6CF97 /* AddRemove.png */,
 				9023E00A157C3BFC00A6CF97 /* AddRemove@2x.png */,
 				9023E00B157C3BFC00A6CF97 /* Back.png */,
 				9023E00C157C3BFC00A6CF97 /* Back@2x.png */,
-				9023E00D157C3BFC00A6CF97 /* background.png */,
-				9023E00E157C3BFC00A6CF97 /* background@2x.png */,
 				9023E00F157C3BFC00A6CF97 /* Check.png */,
 				9023E053157C4BA700A6CF97 /* Check@2x.png */,
-				9023E010157C3BFC00A6CF97 /* Delete.png */,
-				9023E011157C3BFC00A6CF97 /* Delete@2x.png */,
 				9023E012157C3BFC00A6CF97 /* Demote.png */,
 				9023E013157C3BFC00A6CF97 /* Demote@2x.png */,
 				9023E014157C3BFC00A6CF97 /* Details.png */,
 				9023E015157C3BFC00A6CF97 /* Details@2x.png */,
-				9023E016157C3BFC00A6CF97 /* Export.png */,
-				9023E017157C3BFC00A6CF97 /* Export@2x.png */,
 				9023E018157C3BFC00A6CF97 /* Flex.png */,
 				9023E019157C3BFC00A6CF97 /* Flex@2x.png */,
 				9023E01A157C3BFC00A6CF97 /* Flow.png */,
@@ -447,8 +481,22 @@
 				9023E023157C3BFC00A6CF97 /* Search@2x.png */,
 				9023E024157C3BFC00A6CF97 /* ShortMenu.png */,
 				9023E025157C3BFC00A6CF97 /* ShortMenu@2x.png */,
+			);
+			name = "Blue Buttons";
+			sourceTree = "<group>";
+		};
+		90DC51F21564263900E35E1E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				90C38B9E157D89A100DC8FA6 /* Blue Buttons */,
+				90C38B9D157D899500DC8FA6 /* Black & White Buttons */,
+				90C38B90157D891000DC8FA6 /* Sport Types */,
 				9023E029157C3BFC00A6CF97 /* Silhouette.png */,
 				9023E02A157C3BFC00A6CF97 /* Silhouette@2x.png */,
+				90C38B87157D821D00DC8FA6 /* tournament-sel-bk.png */,
+				90C38B88157D821D00DC8FA6 /* tournament-sel-bk@2x.png */,
+				9023E00D157C3BFC00A6CF97 /* background.png */,
+				9023E00E157C3BFC00A6CF97 /* background@2x.png */,
 			);
 			name = Images;
 			path = images;
@@ -552,6 +600,14 @@
 				9023E054157C4BA700A6CF97 /* Check@2x.png in Resources */,
 				9010526E157C7FCB0075A19C /* SGPLocationListViewController.xib in Resources */,
 				90105274157C860D0075A19C /* SGPLocationDetailViewController.xib in Resources */,
+				90C38B89157D821D00DC8FA6 /* tournament-sel-bk.png in Resources */,
+				90C38B8A157D821D00DC8FA6 /* tournament-sel-bk@2x.png in Resources */,
+				90C38B97157D891B00DC8FA6 /* sport-baseball.png in Resources */,
+				90C38B98157D891B00DC8FA6 /* sport-baseball@2x.png in Resources */,
+				90C38B99157D891B00DC8FA6 /* sport-basketball.png in Resources */,
+				90C38B9A157D891B00DC8FA6 /* sport-basketball@2x.png in Resources */,
+				90C38B9B157D891B00DC8FA6 /* sport-football.png in Resources */,
+				90C38B9C157D891B00DC8FA6 /* sport-football@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

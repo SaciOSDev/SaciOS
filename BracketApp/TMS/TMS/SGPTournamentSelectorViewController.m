@@ -11,8 +11,8 @@
 #import "SGPCreateTournamentViewController.h"
 #import "Tournament.h"
 
-#define H_TOURNMENT_SQUARE() (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPhone ? 260 : 500)
-#define V_TOURNMENT_SQUARE() (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPhone ? (UIDeviceOrientationIsPortrait([[UIDevice currentDevice] orientation]) ? 260 : 160) : 500)
+#define H_TOURNMENT_SQUARE() (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPhone ? (UIDeviceOrientationIsLandscape([[UIDevice currentDevice] orientation]) ? 320 : 260) : 500)
+#define V_TOURNMENT_SQUARE() (UI_USER_INTERFACE_IDIOM()==UIUserInterfaceIdiomPhone ? (UIDeviceOrientationIsLandscape([[UIDevice currentDevice] orientation]) ? 160 : 260) : 500)
 #define H_PADDING(width) ((width-H_TOURNMENT_SQUARE())/2)
 #define V_PADDING(height) ((height-V_TOURNMENT_SQUARE())/2)
 
@@ -26,6 +26,19 @@
 @synthesize pageControl;
 
 #pragma mark - Private Methods
+
+- (IBAction)reallyDeleteCurrentTournament:(id)sender
+{
+    // First, verify we have a tournament to delete.
+    if ([self numberOfPages]<=0) return;
+    // Next, find the tournament and delete it...
+    Tournament *tournament = [[[self fetchedResultsController] fetchedObjects] objectAtIndex:pageControl.currentPage];
+    if (tournament) {
+        [[self managedObjectContext] deleteObject:tournament];
+    }
+    [Tournament saveAll:[self managedObjectContext]];
+    // Note: The fetchresultscontroller will clean up the UI
+}
 
 - (CGRect)makeFrameForPage:(int)page {
     CGRect frame = self.scrollView.frame;
@@ -138,13 +151,14 @@
 {
     // First, verify we have a tournament to delete.
     if ([self numberOfPages]<=0) return;
-    // Next, find the tournament and delete it...
-    Tournament *tournament = [[[self fetchedResultsController] fetchedObjects] objectAtIndex:pageControl.currentPage];
-    if (tournament) {
-        [[self managedObjectContext] deleteObject:tournament];
-    }
-    [Tournament saveAll:[self managedObjectContext]];
-    // Note: The fetchresultscontroller will clean up the UI
+    // Now ask the user if they want to delete the tournament.
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Delete Tournament", @"Delete Tournament")
+                                                    message:NSLocalizedString(@"Are you sure you want to delete this tournament. All games and scores will be deleted and there is no undo after you delete it.", 
+                                                                              @"Are you sure you want to delete this tournament. All games and scores will be deleted and there is no undo after you delete it.") 
+                                                   delegate:self
+                                          cancelButtonTitle:NSLocalizedString(@"Cancel", @"Cancel") 
+                                          otherButtonTitles:NSLocalizedString(@"Delete", @"Delete"),nil];
+    [alert show];
 }
 
 - (IBAction)exportTournament:(id)sender
@@ -278,6 +292,17 @@
     
     [self changePage:nil];
     
+}
+
+#pragma mark - UIAlertViewDelegate
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
+    if ([[alertView title] isEqualToString:NSLocalizedString(@"Delete Tournament", @"Delete Tournament")]) {
+        if (buttonIndex==1) {
+            // The user tapped Delete, so delete it.
+            [self reallyDeleteCurrentTournament:nil];
+        }
+    }
 }
 
 @end

@@ -46,12 +46,6 @@
     
     // TODO - We should probablye validate that we are not entering a duplicate location...
 
-    [[self displayNameTextField] resignFirstResponder];
-    [[self streetAddressTextField] resignFirstResponder];
-    [[self cityTextField] resignFirstResponder];
-    [[self stateTextField] resignFirstResponder];
-    [[self zipTextField] resignFirstResponder];
-
     [[self location] setDisplayName:[[self displayNameTextField] text]];
     [[self location] setStreetAddress:[[self streetAddressTextField] text]];
     [[self location] setCity:[[self cityTextField] text]];
@@ -59,6 +53,13 @@
     [[self location] setZip:[[self zipTextField] text]];
     
     [Location saveAll:[self managedObjectContext]];
+    
+    [[self displayNameTextField] resignFirstResponder];
+    [[self streetAddressTextField] resignFirstResponder];
+    [[self cityTextField] resignFirstResponder];
+    [[self stateTextField] resignFirstResponder];
+    [[self zipTextField] resignFirstResponder];
+    
     [[self navigationController] popViewControllerAnimated:YES];
 }
 

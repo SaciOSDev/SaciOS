@@ -19,7 +19,13 @@
 @property (strong, nonatomic) IBOutlet UIView *backView;
 @property (strong, nonatomic) IBOutlet UITableView *backTableView;
 @property (strong, nonatomic) UINavigationController *parentNavController;
-@property (weak, nonatomic) IBOutlet UIButton *bigButton;
+@property (strong, nonatomic) IBOutlet UIButton *bigButton;
+@property (strong, nonatomic) IBOutlet UILabel *tournamentNameLbl;
+@property (strong, nonatomic) IBOutlet UILabel *dateLbl;
+@property (strong, nonatomic) IBOutlet UILabel *timeLbl;
+@property (strong, nonatomic) IBOutlet UILabel *locationLbl;
+@property (strong, nonatomic) IBOutlet UIImageView *backgroundImage;
+@property (strong, nonatomic) IBOutlet UIImageView *sportImage;
 
 - (id)initWithPageNumber:(int)page;
 
