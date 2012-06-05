@@ -13,6 +13,10 @@
 *.sql
 *.sqlite
 
+# XCode user files #
+######################
+morrjd2.xcuderdatad
+
 # OS generated files #
 ######################
 .DS_Store*

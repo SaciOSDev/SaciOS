@@ -1,0 +1,13 @@
+<h2>Welcome to Sacramento iOS Meetup code base</h2>
+We will host all our source code here. Please visit: http://yuric.github.com/SaciOS for the github run down.
+
+<h2>For help</h2>
+1. Post your questions at our Google Group: http://groups.google.com/group/sac-ios-dev
+2. Feel free to contact me directly as well at yuri@sparkroad.com
+
+<h2>TMS App Main Features</h2>
+- Manage Bracket Style Tournaments
+- Manage multiple Participants and Locations
+
+<h2>TMS App Data Structure</h2>
+![](https://github.com/macmoe/SaciOS/raw/master/Other/screenshots/TMS-coredata.png) &nbsp;&nbsp;&nbsp;

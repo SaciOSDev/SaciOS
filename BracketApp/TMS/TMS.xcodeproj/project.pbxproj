@@ -1,0 +1,808 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9010526D157C7FCB0075A19C /* SGPLocationListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9010526B157C7FCB0075A19C /* SGPLocationListViewController.m */; };
+		9010526E157C7FCB0075A19C /* SGPLocationListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9010526C157C7FCB0075A19C /* SGPLocationListViewController.xib */; };
+		90105273157C860D0075A19C /* SGPLocationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90105271157C860D0075A19C /* SGPLocationDetailViewController.m */; };
+		90105274157C860D0075A19C /* SGPLocationDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90105272157C860D0075A19C /* SGPLocationDetailViewController.xib */; };
+		90214B70157B4D2900B20225 /* SGPParticpantsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90214B6E157B4D2800B20225 /* SGPParticpantsListViewController.m */; };
+		90214B71157B4D2900B20225 /* SGPParticpantsListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90214B6F157B4D2900B20225 /* SGPParticpantsListViewController.xib */; };
+		9023E02B157C3BFC00A6CF97 /* Add.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E007157C3BFC00A6CF97 /* Add.png */; };
+		9023E02C157C3BFC00A6CF97 /* Add@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E008157C3BFC00A6CF97 /* Add@2x.png */; };
+		9023E02D157C3BFC00A6CF97 /* AddRemove.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E009157C3BFC00A6CF97 /* AddRemove.png */; };
+		9023E02E157C3BFC00A6CF97 /* AddRemove@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E00A157C3BFC00A6CF97 /* AddRemove@2x.png */; };
+		9023E02F157C3BFC00A6CF97 /* Back.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E00B157C3BFC00A6CF97 /* Back.png */; };
+		9023E030157C3BFC00A6CF97 /* Back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E00C157C3BFC00A6CF97 /* Back@2x.png */; };
+		9023E031157C3BFC00A6CF97 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E00D157C3BFC00A6CF97 /* background.png */; };
+		9023E032157C3BFC00A6CF97 /* background@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E00E157C3BFC00A6CF97 /* background@2x.png */; };
+		9023E033157C3BFC00A6CF97 /* Check.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E00F157C3BFC00A6CF97 /* Check.png */; };
+		9023E034157C3BFC00A6CF97 /* Delete.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E010157C3BFC00A6CF97 /* Delete.png */; };
+		9023E035157C3BFC00A6CF97 /* Delete@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E011157C3BFC00A6CF97 /* Delete@2x.png */; };
+		9023E036157C3BFC00A6CF97 /* Demote.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E012157C3BFC00A6CF97 /* Demote.png */; };
+		9023E037157C3BFC00A6CF97 /* Demote@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E013157C3BFC00A6CF97 /* Demote@2x.png */; };
+		9023E038157C3BFC00A6CF97 /* Details.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E014157C3BFC00A6CF97 /* Details.png */; };
+		9023E039157C3BFC00A6CF97 /* Details@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E015157C3BFC00A6CF97 /* Details@2x.png */; };
+		9023E03A157C3BFC00A6CF97 /* Export.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E016157C3BFC00A6CF97 /* Export.png */; };
+		9023E03B157C3BFC00A6CF97 /* Export@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E017157C3BFC00A6CF97 /* Export@2x.png */; };
+		9023E03C157C3BFC00A6CF97 /* Flex.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E018157C3BFC00A6CF97 /* Flex.png */; };
+		9023E03D157C3BFC00A6CF97 /* Flex@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E019157C3BFC00A6CF97 /* Flex@2x.png */; };
+		9023E03E157C3BFC00A6CF97 /* Flow.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E01A157C3BFC00A6CF97 /* Flow.png */; };
+		9023E03F157C3BFC00A6CF97 /* Flow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E01B157C3BFC00A6CF97 /* Flow@2x.png */; };
+		9023E040157C3BFC00A6CF97 /* Photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E01C157C3BFC00A6CF97 /* Photo.png */; };
+		9023E041157C3BFC00A6CF97 /* Photo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E01D157C3BFC00A6CF97 /* Photo@2x.png */; };
+		9023E042157C3BFC00A6CF97 /* Promote.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E01E157C3BFC00A6CF97 /* Promote.png */; };
+		9023E043157C3BFC00A6CF97 /* Promote@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E01F157C3BFC00A6CF97 /* Promote@2x.png */; };
+		9023E044157C3BFC00A6CF97 /* Reseed.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E020157C3BFC00A6CF97 /* Reseed.png */; };
+		9023E045157C3BFC00A6CF97 /* Reseed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E021157C3BFC00A6CF97 /* Reseed@2x.png */; };
+		9023E046157C3BFC00A6CF97 /* Search.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E022157C3BFC00A6CF97 /* Search.png */; };
+		9023E047157C3BFC00A6CF97 /* Search@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E023157C3BFC00A6CF97 /* Search@2x.png */; };
+		9023E048157C3BFC00A6CF97 /* ShortMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E024157C3BFC00A6CF97 /* ShortMenu.png */; };
+		9023E049157C3BFC00A6CF97 /* ShortMenu@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E025157C3BFC00A6CF97 /* ShortMenu@2x.png */; };
+		9023E04D157C3BFC00A6CF97 /* Silhouette.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E029157C3BFC00A6CF97 /* Silhouette.png */; };
+		9023E04E157C3BFC00A6CF97 /* Silhouette@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E02A157C3BFC00A6CF97 /* Silhouette@2x.png */; };
+		9023E054157C4BA700A6CF97 /* Check@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9023E053157C4BA700A6CF97 /* Check@2x.png */; };
+		9023E082157C5E5100A6CF97 /* AwesomeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 9023E070157C5E5100A6CF97 /* AwesomeMenu.m */; };
+		9023E083157C5E5100A6CF97 /* AwesomeMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9023E072157C5E5100A6CF97 /* AwesomeMenuItem.m */; };
+		9023E094157C634500A6CF97 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9023E092157C633700A6CF97 /* QuartzCore.framework */; };
+		9044B585154F9F0200850349 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9044B584154F9F0200850349 /* UIKit.framework */; };
+		9044B587154F9F0200850349 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9044B586154F9F0200850349 /* Foundation.framework */; };
+		9044B589154F9F0200850349 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9044B588154F9F0200850349 /* CoreGraphics.framework */; };
+		9044B58B154F9F0200850349 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9044B58A154F9F0200850349 /* CoreData.framework */; };
+		9044B591154F9F0200850349 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9044B58F154F9F0200850349 /* InfoPlist.strings */; };
+		9044B593154F9F0200850349 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9044B592154F9F0200850349 /* main.m */; };
+		9044B597154F9F0200850349 /* SGPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9044B596154F9F0200850349 /* SGPAppDelegate.m */; };
+		9044B59A154F9F0200850349 /* TMS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9044B598154F9F0200850349 /* TMS.xcdatamodeld */; };
+		9044B5BB154FA0C500850349 /* SGPTournamentSelectorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9044B5B9154FA0C500850349 /* SGPTournamentSelectorViewController.m */; };
+		9044B5BF154FA15000850349 /* SGPBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9044B5BE154FA15000850349 /* SGPBaseViewController.m */; };
+		9044B5D1154FB1E300850349 /* SGPTournamentDetailFrontViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9044B5CF154FB1E300850349 /* SGPTournamentDetailFrontViewController.m */; };
+		9044B5D9154FB8C100850349 /* SGPTournamentDetailFrontViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9044B5D7154FB8C100850349 /* SGPTournamentDetailFrontViewController.xib */; };
+		9044B5DD154FB8CA00850349 /* SGPTournamentSelectorViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9044B5DB154FB8CA00850349 /* SGPTournamentSelectorViewController.xib */; };
+		90825E5D157BD58400E2A219 /* NSString+WhiteSpacing.m in Sources */ = {isa = PBXBuildFile; fileRef = 90825E54157BD58400E2A219 /* NSString+WhiteSpacing.m */; };
+		90825E5E157BD58400E2A219 /* UIImage+Resize.m in Sources */ = {isa = PBXBuildFile; fileRef = 90825E56157BD58400E2A219 /* UIImage+Resize.m */; };
+		90825E5F157BD58400E2A219 /* UIImage+RoundedCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 90825E58157BD58400E2A219 /* UIImage+RoundedCorner.m */; };
+		90825E60157BD58400E2A219 /* UIScreen+Scale.m in Sources */ = {isa = PBXBuildFile; fileRef = 90825E5A157BD58400E2A219 /* UIScreen+Scale.m */; };
+		90825E61157BD58400E2A219 /* UIView+Screenshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 90825E5C157BD58400E2A219 /* UIView+Screenshot.m */; };
+		90825E65157BD61300E2A219 /* UIImage+Alpha.m in Sources */ = {isa = PBXBuildFile; fileRef = 90825E64157BD61300E2A219 /* UIImage+Alpha.m */; };
+		90825E6C157BDE5F00E2A219 /* StockPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 90825E6B157BDE5F00E2A219 /* StockPhoto.m */; };
+		90825E70157BE6D000E2A219 /* SGPStockPhotoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90825E6E157BE6CF00E2A219 /* SGPStockPhotoListViewController.m */; };
+		90825E71157BE6D000E2A219 /* SGPStockPhotoListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90825E6F157BE6CF00E2A219 /* SGPStockPhotoListViewController.xib */; };
+		90C38B89157D821D00DC8FA6 /* tournament-sel-bk.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C38B87157D821D00DC8FA6 /* tournament-sel-bk.png */; };
+		90C38B8A157D821D00DC8FA6 /* tournament-sel-bk@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C38B88157D821D00DC8FA6 /* tournament-sel-bk@2x.png */; };
+		90C38B97157D891B00DC8FA6 /* sport-baseball.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C38B91157D891B00DC8FA6 /* sport-baseball.png */; };
+		90C38B98157D891B00DC8FA6 /* sport-baseball@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C38B92157D891B00DC8FA6 /* sport-baseball@2x.png */; };
+		90C38B99157D891B00DC8FA6 /* sport-basketball.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C38B93157D891B00DC8FA6 /* sport-basketball.png */; };
+		90C38B9A157D891B00DC8FA6 /* sport-basketball@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C38B94157D891B00DC8FA6 /* sport-basketball@2x.png */; };
+		90C38B9B157D891B00DC8FA6 /* sport-football.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C38B95157D891B00DC8FA6 /* sport-football.png */; };
+		90C38B9C157D891B00DC8FA6 /* sport-football@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 90C38B96157D891B00DC8FA6 /* sport-football@2x.png */; };
+		90D1F79D1551961C0088515E /* SGPTournamentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90D1F79C1551961C0088515E /* SGPTournamentViewController.m */; };
+		90D1F7A1155199120088515E /* SGPTournamentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90D1F79F155199120088515E /* SGPTournamentViewController.xib */; };
+		90DC51E3156411F200E35E1E /* SGPCreateTournamentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DC51E1156411F200E35E1E /* SGPCreateTournamentViewController.m */; };
+		90DC51E71564120900E35E1E /* SGPCreateTournamentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90DC51E51564120900E35E1E /* SGPCreateTournamentViewController.xib */; };
+		90DC51FA15642BA200E35E1E /* SGPSportTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DC51F815642BA200E35E1E /* SGPSportTypeViewController.m */; };
+		90DC51FB15642BA200E35E1E /* SGPSportTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90DC51F915642BA200E35E1E /* SGPSportTypeViewController.xib */; };
+		90DC51FF1564308300E35E1E /* SGPTeamListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90DC51FD1564308300E35E1E /* SGPTeamListViewController.m */; };
+		90DC52001564308300E35E1E /* SGPTeamListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90DC51FE1564308300E35E1E /* SGPTeamListViewController.xib */; };
+		90FEB6AD157B5357009F3996 /* Tournament.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FEB6AC157B5357009F3996 /* Tournament.m */; };
+		90FEB6B1157B5E26009F3996 /* SGPCreateParticipantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FEB6AF157B5E26009F3996 /* SGPCreateParticipantViewController.m */; };
+		90FEB6B2157B5E26009F3996 /* SGPCreateParticipantViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 90FEB6B0157B5E26009F3996 /* SGPCreateParticipantViewController.xib */; };
+		90FF95CD157A917F007CE210 /* EliminationStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FF95CC157A917F007CE210 /* EliminationStyle.m */; };
+		90FF95D4157A917F007CE210 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FF95D3157A917F007CE210 /* Game.m */; };
+		90FF95D7157A9180007CE210 /* Participant.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FF95D6157A9180007CE210 /* Participant.m */; };
+		90FF95DA157A9180007CE210 /* SportType.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FF95D9157A9180007CE210 /* SportType.m */; };
+		90FF95DD157A9180007CE210 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FF95DC157A9180007CE210 /* Location.m */; };
+		90FF95E0157A9180007CE210 /* TournamentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FF95DF157A9180007CE210 /* TournamentType.m */; };
+		90FF95E3157A91E9007CE210 /* SGPBaseManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 90FF95E2157A91E8007CE210 /* SGPBaseManagedObject.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9010526A157C7FCB0075A19C /* SGPLocationListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPLocationListViewController.h; sourceTree = "<group>"; };
+		9010526B157C7FCB0075A19C /* SGPLocationListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPLocationListViewController.m; sourceTree = "<group>"; };
+		9010526C157C7FCB0075A19C /* SGPLocationListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGPLocationListViewController.xib; sourceTree = "<group>"; };
+		90105270157C860D0075A19C /* SGPLocationDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPLocationDetailViewController.h; sourceTree = "<group>"; };
+		90105271157C860D0075A19C /* SGPLocationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPLocationDetailViewController.m; sourceTree = "<group>"; };
+		90105272157C860D0075A19C /* SGPLocationDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGPLocationDetailViewController.xib; sourceTree = "<group>"; };
+		90214B6D157B4D2800B20225 /* SGPParticpantsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPParticpantsListViewController.h; sourceTree = "<group>"; };
+		90214B6E157B4D2800B20225 /* SGPParticpantsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPParticpantsListViewController.m; sourceTree = "<group>"; };
+		90214B6F157B4D2900B20225 /* SGPParticpantsListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGPParticpantsListViewController.xib; sourceTree = "<group>"; };
+		9023E007157C3BFC00A6CF97 /* Add.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Add.png; sourceTree = "<group>"; };
+		9023E008157C3BFC00A6CF97 /* Add@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Add@2x.png"; sourceTree = "<group>"; };
+		9023E009157C3BFC00A6CF97 /* AddRemove.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddRemove.png; sourceTree = "<group>"; };
+		9023E00A157C3BFC00A6CF97 /* AddRemove@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AddRemove@2x.png"; sourceTree = "<group>"; };
+		9023E00B157C3BFC00A6CF97 /* Back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Back.png; sourceTree = "<group>"; };
+		9023E00C157C3BFC00A6CF97 /* Back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Back@2x.png"; sourceTree = "<group>"; };
+		9023E00D157C3BFC00A6CF97 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		9023E00E157C3BFC00A6CF97 /* background@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "background@2x.png"; sourceTree = "<group>"; };
+		9023E00F157C3BFC00A6CF97 /* Check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Check.png; sourceTree = "<group>"; };
+		9023E010157C3BFC00A6CF97 /* Delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Delete.png; sourceTree = "<group>"; };
+		9023E011157C3BFC00A6CF97 /* Delete@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Delete@2x.png"; sourceTree = "<group>"; };
+		9023E012157C3BFC00A6CF97 /* Demote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Demote.png; sourceTree = "<group>"; };
+		9023E013157C3BFC00A6CF97 /* Demote@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Demote@2x.png"; sourceTree = "<group>"; };
+		9023E014157C3BFC00A6CF97 /* Details.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Details.png; sourceTree = "<group>"; };
+		9023E015157C3BFC00A6CF97 /* Details@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Details@2x.png"; sourceTree = "<group>"; };
+		9023E016157C3BFC00A6CF97 /* Export.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Export.png; sourceTree = "<group>"; };
+		9023E017157C3BFC00A6CF97 /* Export@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Export@2x.png"; sourceTree = "<group>"; };
+		9023E018157C3BFC00A6CF97 /* Flex.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Flex.png; sourceTree = "<group>"; };
+		9023E019157C3BFC00A6CF97 /* Flex@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Flex@2x.png"; sourceTree = "<group>"; };
+		9023E01A157C3BFC00A6CF97 /* Flow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Flow.png; sourceTree = "<group>"; };
+		9023E01B157C3BFC00A6CF97 /* Flow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Flow@2x.png"; sourceTree = "<group>"; };
+		9023E01C157C3BFC00A6CF97 /* Photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Photo.png; sourceTree = "<group>"; };
+		9023E01D157C3BFC00A6CF97 /* Photo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Photo@2x.png"; sourceTree = "<group>"; };
+		9023E01E157C3BFC00A6CF97 /* Promote.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Promote.png; sourceTree = "<group>"; };
+		9023E01F157C3BFC00A6CF97 /* Promote@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Promote@2x.png"; sourceTree = "<group>"; };
+		9023E020157C3BFC00A6CF97 /* Reseed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Reseed.png; sourceTree = "<group>"; };
+		9023E021157C3BFC00A6CF97 /* Reseed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Reseed@2x.png"; sourceTree = "<group>"; };
+		9023E022157C3BFC00A6CF97 /* Search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Search.png; sourceTree = "<group>"; };
+		9023E023157C3BFC00A6CF97 /* Search@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Search@2x.png"; sourceTree = "<group>"; };
+		9023E024157C3BFC00A6CF97 /* ShortMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ShortMenu.png; sourceTree = "<group>"; };
+		9023E025157C3BFC00A6CF97 /* ShortMenu@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ShortMenu@2x.png"; sourceTree = "<group>"; };
+		9023E029157C3BFC00A6CF97 /* Silhouette.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Silhouette.png; sourceTree = "<group>"; };
+		9023E02A157C3BFC00A6CF97 /* Silhouette@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Silhouette@2x.png"; sourceTree = "<group>"; };
+		9023E053157C4BA700A6CF97 /* Check@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Check@2x.png"; sourceTree = "<group>"; };
+		9023E06F157C5E5100A6CF97 /* AwesomeMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenu.h; sourceTree = "<group>"; };
+		9023E070157C5E5100A6CF97 /* AwesomeMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenu.m; sourceTree = "<group>"; };
+		9023E071157C5E5100A6CF97 /* AwesomeMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AwesomeMenuItem.h; sourceTree = "<group>"; };
+		9023E072157C5E5100A6CF97 /* AwesomeMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AwesomeMenuItem.m; sourceTree = "<group>"; };
+		9023E092157C633700A6CF97 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9044B580154F9F0200850349 /* TMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TMS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9044B584154F9F0200850349 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		9044B586154F9F0200850349 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9044B588154F9F0200850349 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9044B58A154F9F0200850349 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9044B58E154F9F0200850349 /* TMS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TMS-Info.plist"; sourceTree = "<group>"; };
+		9044B590154F9F0200850349 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9044B592154F9F0200850349 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9044B594154F9F0200850349 /* TMS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TMS-Prefix.pch"; sourceTree = "<group>"; };
+		9044B595154F9F0200850349 /* SGPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGPAppDelegate.h; sourceTree = "<group>"; };
+		9044B596154F9F0200850349 /* SGPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SGPAppDelegate.m; sourceTree = "<group>"; };
+		9044B599154F9F0200850349 /* TMS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TMS.xcdatamodel; sourceTree = "<group>"; };
+		9044B5B8154FA0C500850349 /* SGPTournamentSelectorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPTournamentSelectorViewController.h; sourceTree = "<group>"; };
+		9044B5B9154FA0C500850349 /* SGPTournamentSelectorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPTournamentSelectorViewController.m; sourceTree = "<group>"; };
+		9044B5BD154FA15000850349 /* SGPBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPBaseViewController.h; sourceTree = "<group>"; };
+		9044B5BE154FA15000850349 /* SGPBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPBaseViewController.m; sourceTree = "<group>"; };
+		9044B5CE154FB1E300850349 /* SGPTournamentDetailFrontViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPTournamentDetailFrontViewController.h; sourceTree = "<group>"; };
+		9044B5CF154FB1E300850349 /* SGPTournamentDetailFrontViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPTournamentDetailFrontViewController.m; sourceTree = "<group>"; };
+		9044B5D8154FB8C100850349 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SGPTournamentDetailFrontViewController.xib; sourceTree = "<group>"; };
+		9044B5DC154FB8CA00850349 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SGPTournamentSelectorViewController.xib; sourceTree = "<group>"; };
+		90825E53157BD58400E2A219 /* NSString+WhiteSpacing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+WhiteSpacing.h"; path = "Categories/NSString+WhiteSpacing.h"; sourceTree = SOURCE_ROOT; };
+		90825E54157BD58400E2A219 /* NSString+WhiteSpacing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+WhiteSpacing.m"; path = "Categories/NSString+WhiteSpacing.m"; sourceTree = SOURCE_ROOT; };
+		90825E55157BD58400E2A219 /* UIImage+Resize.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Resize.h"; path = "Categories/UIImage+Resize.h"; sourceTree = SOURCE_ROOT; };
+		90825E56157BD58400E2A219 /* UIImage+Resize.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Resize.m"; path = "Categories/UIImage+Resize.m"; sourceTree = SOURCE_ROOT; };
+		90825E57157BD58400E2A219 /* UIImage+RoundedCorner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+RoundedCorner.h"; path = "Categories/UIImage+RoundedCorner.h"; sourceTree = SOURCE_ROOT; };
+		90825E58157BD58400E2A219 /* UIImage+RoundedCorner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+RoundedCorner.m"; path = "Categories/UIImage+RoundedCorner.m"; sourceTree = SOURCE_ROOT; };
+		90825E59157BD58400E2A219 /* UIScreen+Scale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIScreen+Scale.h"; path = "Categories/UIScreen+Scale.h"; sourceTree = SOURCE_ROOT; };
+		90825E5A157BD58400E2A219 /* UIScreen+Scale.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIScreen+Scale.m"; path = "Categories/UIScreen+Scale.m"; sourceTree = SOURCE_ROOT; };
+		90825E5B157BD58400E2A219 /* UIView+Screenshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+Screenshot.h"; path = "Categories/UIView+Screenshot.h"; sourceTree = SOURCE_ROOT; };
+		90825E5C157BD58400E2A219 /* UIView+Screenshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+Screenshot.m"; path = "Categories/UIView+Screenshot.m"; sourceTree = SOURCE_ROOT; };
+		90825E63157BD61300E2A219 /* UIImage+Alpha.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Alpha.h"; path = "Categories/UIImage+Alpha.h"; sourceTree = SOURCE_ROOT; };
+		90825E64157BD61300E2A219 /* UIImage+Alpha.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Alpha.m"; path = "Categories/UIImage+Alpha.m"; sourceTree = SOURCE_ROOT; };
+		90825E6A157BDE5F00E2A219 /* StockPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StockPhoto.h; sourceTree = "<group>"; };
+		90825E6B157BDE5F00E2A219 /* StockPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StockPhoto.m; sourceTree = "<group>"; };
+		90825E6D157BE6CF00E2A219 /* SGPStockPhotoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPStockPhotoListViewController.h; sourceTree = "<group>"; };
+		90825E6E157BE6CF00E2A219 /* SGPStockPhotoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPStockPhotoListViewController.m; sourceTree = "<group>"; };
+		90825E6F157BE6CF00E2A219 /* SGPStockPhotoListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGPStockPhotoListViewController.xib; sourceTree = "<group>"; };
+		90C38B87157D821D00DC8FA6 /* tournament-sel-bk.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tournament-sel-bk.png"; sourceTree = "<group>"; };
+		90C38B88157D821D00DC8FA6 /* tournament-sel-bk@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tournament-sel-bk@2x.png"; sourceTree = "<group>"; };
+		90C38B91157D891B00DC8FA6 /* sport-baseball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sport-baseball.png"; sourceTree = "<group>"; };
+		90C38B92157D891B00DC8FA6 /* sport-baseball@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sport-baseball@2x.png"; sourceTree = "<group>"; };
+		90C38B93157D891B00DC8FA6 /* sport-basketball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sport-basketball.png"; sourceTree = "<group>"; };
+		90C38B94157D891B00DC8FA6 /* sport-basketball@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sport-basketball@2x.png"; sourceTree = "<group>"; };
+		90C38B95157D891B00DC8FA6 /* sport-football.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sport-football.png"; sourceTree = "<group>"; };
+		90C38B96157D891B00DC8FA6 /* sport-football@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sport-football@2x.png"; sourceTree = "<group>"; };
+		90D1F79B1551961C0088515E /* SGPTournamentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPTournamentViewController.h; sourceTree = "<group>"; };
+		90D1F79C1551961C0088515E /* SGPTournamentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPTournamentViewController.m; sourceTree = "<group>"; };
+		90D1F7A0155199120088515E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SGPTournamentViewController.xib; sourceTree = "<group>"; };
+		90DC51E0156411F200E35E1E /* SGPCreateTournamentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPCreateTournamentViewController.h; sourceTree = "<group>"; };
+		90DC51E1156411F200E35E1E /* SGPCreateTournamentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPCreateTournamentViewController.m; sourceTree = "<group>"; };
+		90DC51E61564120900E35E1E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/SGPCreateTournamentViewController.xib; sourceTree = "<group>"; };
+		90DC51F715642BA200E35E1E /* SGPSportTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPSportTypeViewController.h; sourceTree = "<group>"; };
+		90DC51F815642BA200E35E1E /* SGPSportTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPSportTypeViewController.m; sourceTree = "<group>"; };
+		90DC51F915642BA200E35E1E /* SGPSportTypeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGPSportTypeViewController.xib; sourceTree = "<group>"; };
+		90DC51FC1564308200E35E1E /* SGPTeamListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPTeamListViewController.h; sourceTree = "<group>"; };
+		90DC51FD1564308300E35E1E /* SGPTeamListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPTeamListViewController.m; sourceTree = "<group>"; };
+		90DC51FE1564308300E35E1E /* SGPTeamListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGPTeamListViewController.xib; sourceTree = "<group>"; };
+		90FEB6AB157B5357009F3996 /* Tournament.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tournament.h; sourceTree = "<group>"; };
+		90FEB6AC157B5357009F3996 /* Tournament.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tournament.m; sourceTree = "<group>"; };
+		90FEB6AE157B5E26009F3996 /* SGPCreateParticipantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPCreateParticipantViewController.h; sourceTree = "<group>"; };
+		90FEB6AF157B5E26009F3996 /* SGPCreateParticipantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPCreateParticipantViewController.m; sourceTree = "<group>"; };
+		90FEB6B0157B5E26009F3996 /* SGPCreateParticipantViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SGPCreateParticipantViewController.xib; sourceTree = "<group>"; };
+		90FF95CB157A917F007CE210 /* EliminationStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EliminationStyle.h; sourceTree = "<group>"; };
+		90FF95CC157A917F007CE210 /* EliminationStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EliminationStyle.m; sourceTree = "<group>"; };
+		90FF95D2157A917F007CE210 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		90FF95D3157A917F007CE210 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		90FF95D5157A9180007CE210 /* Participant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Participant.h; sourceTree = "<group>"; };
+		90FF95D6157A9180007CE210 /* Participant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Participant.m; sourceTree = "<group>"; };
+		90FF95D8157A9180007CE210 /* SportType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SportType.h; sourceTree = "<group>"; };
+		90FF95D9157A9180007CE210 /* SportType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SportType.m; sourceTree = "<group>"; };
+		90FF95DB157A9180007CE210 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		90FF95DC157A9180007CE210 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		90FF95DE157A9180007CE210 /* TournamentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TournamentType.h; sourceTree = "<group>"; };
+		90FF95DF157A9180007CE210 /* TournamentType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TournamentType.m; sourceTree = "<group>"; };
+		90FF95E1157A91E8007CE210 /* SGPBaseManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPBaseManagedObject.h; sourceTree = "<group>"; };
+		90FF95E2157A91E8007CE210 /* SGPBaseManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPBaseManagedObject.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9044B57D154F9F0200850349 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9044B585154F9F0200850349 /* UIKit.framework in Frameworks */,
+				9044B587154F9F0200850349 /* Foundation.framework in Frameworks */,
+				9044B589154F9F0200850349 /* CoreGraphics.framework in Frameworks */,
+				9044B58B154F9F0200850349 /* CoreData.framework in Frameworks */,
+				9023E094157C634500A6CF97 /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		90214B6B157B490000B20225 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				90825E53157BD58400E2A219 /* NSString+WhiteSpacing.h */,
+				90825E54157BD58400E2A219 /* NSString+WhiteSpacing.m */,
+				90825E63157BD61300E2A219 /* UIImage+Alpha.h */,
+				90825E64157BD61300E2A219 /* UIImage+Alpha.m */,
+				90825E55157BD58400E2A219 /* UIImage+Resize.h */,
+				90825E56157BD58400E2A219 /* UIImage+Resize.m */,
+				90825E57157BD58400E2A219 /* UIImage+RoundedCorner.h */,
+				90825E58157BD58400E2A219 /* UIImage+RoundedCorner.m */,
+				90825E59157BD58400E2A219 /* UIScreen+Scale.h */,
+				90825E5A157BD58400E2A219 /* UIScreen+Scale.m */,
+				90825E5B157BD58400E2A219 /* UIView+Screenshot.h */,
+				90825E5C157BD58400E2A219 /* UIView+Screenshot.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		9023E06C157C5E3000A6CF97 /* 3rd Party */ = {
+			isa = PBXGroup;
+			children = (
+				9023E06E157C5E5100A6CF97 /* AwesomeMenu */,
+			);
+			name = "3rd Party";
+			sourceTree = "<group>";
+		};
+		9023E06E157C5E5100A6CF97 /* AwesomeMenu */ = {
+			isa = PBXGroup;
+			children = (
+				9023E06F157C5E5100A6CF97 /* AwesomeMenu.h */,
+				9023E070157C5E5100A6CF97 /* AwesomeMenu.m */,
+				9023E071157C5E5100A6CF97 /* AwesomeMenuItem.h */,
+				9023E072157C5E5100A6CF97 /* AwesomeMenuItem.m */,
+			);
+			path = AwesomeMenu;
+			sourceTree = SOURCE_ROOT;
+		};
+		9044B575154F9F0200850349 = {
+			isa = PBXGroup;
+			children = (
+				9044B58C154F9F0200850349 /* TMS */,
+				9044B583154F9F0200850349 /* Frameworks */,
+				9044B581154F9F0200850349 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9044B581154F9F0200850349 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9044B580154F9F0200850349 /* TMS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9044B583154F9F0200850349 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9044B584154F9F0200850349 /* UIKit.framework */,
+				9044B586154F9F0200850349 /* Foundation.framework */,
+				9044B588154F9F0200850349 /* CoreGraphics.framework */,
+				9044B58A154F9F0200850349 /* CoreData.framework */,
+				9023E092157C633700A6CF97 /* QuartzCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9044B58C154F9F0200850349 /* TMS */ = {
+			isa = PBXGroup;
+			children = (
+				9044B5B7154FA02400850349 /* Core App */,
+				9044B5B5154F9FFD00850349 /* Tounrament Selector */,
+				9044B5B6154FA01300850349 /* Tournament Display */,
+				9044B5B3154F9FBD00850349 /* CoreData Schema */,
+				90214B6B157B490000B20225 /* Categories */,
+				90DC51F21564263900E35E1E /* Images */,
+				9044B58D154F9F0200850349 /* Supporting Files */,
+				9023E06C157C5E3000A6CF97 /* 3rd Party */,
+			);
+			path = TMS;
+			sourceTree = "<group>";
+		};
+		9044B58D154F9F0200850349 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9044B58E154F9F0200850349 /* TMS-Info.plist */,
+				9044B58F154F9F0200850349 /* InfoPlist.strings */,
+				9044B592154F9F0200850349 /* main.m */,
+				9044B594154F9F0200850349 /* TMS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9044B5B3154F9FBD00850349 /* CoreData Schema */ = {
+			isa = PBXGroup;
+			children = (
+				9044B598154F9F0200850349 /* TMS.xcdatamodeld */,
+				9044B5B4154F9FCA00850349 /* DB Objects */,
+			);
+			name = "CoreData Schema";
+			sourceTree = "<group>";
+		};
+		9044B5B4154F9FCA00850349 /* DB Objects */ = {
+			isa = PBXGroup;
+			children = (
+				90FF95E1157A91E8007CE210 /* SGPBaseManagedObject.h */,
+				90FF95E2157A91E8007CE210 /* SGPBaseManagedObject.m */,
+				90FF95DE157A9180007CE210 /* TournamentType.h */,
+				90FF95DF157A9180007CE210 /* TournamentType.m */,
+				90FF95DB157A9180007CE210 /* Location.h */,
+				90FF95DC157A9180007CE210 /* Location.m */,
+				90FF95D8157A9180007CE210 /* SportType.h */,
+				90FF95D9157A9180007CE210 /* SportType.m */,
+				90FF95D5157A9180007CE210 /* Participant.h */,
+				90FF95D6157A9180007CE210 /* Participant.m */,
+				90FF95D2157A917F007CE210 /* Game.h */,
+				90FF95D3157A917F007CE210 /* Game.m */,
+				90825E6A157BDE5F00E2A219 /* StockPhoto.h */,
+				90825E6B157BDE5F00E2A219 /* StockPhoto.m */,
+				90FEB6AB157B5357009F3996 /* Tournament.h */,
+				90FEB6AC157B5357009F3996 /* Tournament.m */,
+				90FF95CB157A917F007CE210 /* EliminationStyle.h */,
+				90FF95CC157A917F007CE210 /* EliminationStyle.m */,
+			);
+			name = "DB Objects";
+			sourceTree = "<group>";
+		};
+		9044B5B5154F9FFD00850349 /* Tounrament Selector */ = {
+			isa = PBXGroup;
+			children = (
+				9044B5B8154FA0C500850349 /* SGPTournamentSelectorViewController.h */,
+				9044B5B9154FA0C500850349 /* SGPTournamentSelectorViewController.m */,
+				9044B5DB154FB8CA00850349 /* SGPTournamentSelectorViewController.xib */,
+				9044B5CE154FB1E300850349 /* SGPTournamentDetailFrontViewController.h */,
+				9044B5CF154FB1E300850349 /* SGPTournamentDetailFrontViewController.m */,
+				9044B5D7154FB8C100850349 /* SGPTournamentDetailFrontViewController.xib */,
+				90DC51E0156411F200E35E1E /* SGPCreateTournamentViewController.h */,
+				90DC51E1156411F200E35E1E /* SGPCreateTournamentViewController.m */,
+				90DC51E51564120900E35E1E /* SGPCreateTournamentViewController.xib */,
+				90DC51F715642BA200E35E1E /* SGPSportTypeViewController.h */,
+				90DC51F815642BA200E35E1E /* SGPSportTypeViewController.m */,
+				90DC51F915642BA200E35E1E /* SGPSportTypeViewController.xib */,
+				90DC51FC1564308200E35E1E /* SGPTeamListViewController.h */,
+				90DC51FD1564308300E35E1E /* SGPTeamListViewController.m */,
+				90DC51FE1564308300E35E1E /* SGPTeamListViewController.xib */,
+				90214B6D157B4D2800B20225 /* SGPParticpantsListViewController.h */,
+				90214B6E157B4D2800B20225 /* SGPParticpantsListViewController.m */,
+				90214B6F157B4D2900B20225 /* SGPParticpantsListViewController.xib */,
+				90FEB6AE157B5E26009F3996 /* SGPCreateParticipantViewController.h */,
+				90FEB6AF157B5E26009F3996 /* SGPCreateParticipantViewController.m */,
+				90FEB6B0157B5E26009F3996 /* SGPCreateParticipantViewController.xib */,
+				90825E6D157BE6CF00E2A219 /* SGPStockPhotoListViewController.h */,
+				90825E6E157BE6CF00E2A219 /* SGPStockPhotoListViewController.m */,
+				90825E6F157BE6CF00E2A219 /* SGPStockPhotoListViewController.xib */,
+				9010526A157C7FCB0075A19C /* SGPLocationListViewController.h */,
+				9010526B157C7FCB0075A19C /* SGPLocationListViewController.m */,
+				9010526C157C7FCB0075A19C /* SGPLocationListViewController.xib */,
+				90105270157C860D0075A19C /* SGPLocationDetailViewController.h */,
+				90105271157C860D0075A19C /* SGPLocationDetailViewController.m */,
+				90105272157C860D0075A19C /* SGPLocationDetailViewController.xib */,
+			);
+			name = "Tounrament Selector";
+			sourceTree = "<group>";
+		};
+		9044B5B6154FA01300850349 /* Tournament Display */ = {
+			isa = PBXGroup;
+			children = (
+				90D1F79B1551961C0088515E /* SGPTournamentViewController.h */,
+				90D1F79C1551961C0088515E /* SGPTournamentViewController.m */,
+				90D1F79F155199120088515E /* SGPTournamentViewController.xib */,
+			);
+			name = "Tournament Display";
+			sourceTree = "<group>";
+		};
+		9044B5B7154FA02400850349 /* Core App */ = {
+			isa = PBXGroup;
+			children = (
+				9044B595154F9F0200850349 /* SGPAppDelegate.h */,
+				9044B596154F9F0200850349 /* SGPAppDelegate.m */,
+				9044B5BD154FA15000850349 /* SGPBaseViewController.h */,
+				9044B5BE154FA15000850349 /* SGPBaseViewController.m */,
+			);
+			name = "Core App";
+			sourceTree = "<group>";
+		};
+		90C38B90157D891000DC8FA6 /* Sport Types */ = {
+			isa = PBXGroup;
+			children = (
+				90C38B91157D891B00DC8FA6 /* sport-baseball.png */,
+				90C38B92157D891B00DC8FA6 /* sport-baseball@2x.png */,
+				90C38B93157D891B00DC8FA6 /* sport-basketball.png */,
+				90C38B94157D891B00DC8FA6 /* sport-basketball@2x.png */,
+				90C38B95157D891B00DC8FA6 /* sport-football.png */,
+				90C38B96157D891B00DC8FA6 /* sport-football@2x.png */,
+			);
+			name = "Sport Types";
+			sourceTree = "<group>";
+		};
+		90C38B9D157D899500DC8FA6 /* Black & White Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				9023E007157C3BFC00A6CF97 /* Add.png */,
+				9023E008157C3BFC00A6CF97 /* Add@2x.png */,
+				9023E010157C3BFC00A6CF97 /* Delete.png */,
+				9023E011157C3BFC00A6CF97 /* Delete@2x.png */,
+				9023E016157C3BFC00A6CF97 /* Export.png */,
+				9023E017157C3BFC00A6CF97 /* Export@2x.png */,
+			);
+			name = "Black & White Buttons";
+			sourceTree = "<group>";
+		};
+		90C38B9E157D89A100DC8FA6 /* Blue Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				9023E009157C3BFC00A6CF97 /* AddRemove.png */,
+				9023E00A157C3BFC00A6CF97 /* AddRemove@2x.png */,
+				9023E00B157C3BFC00A6CF97 /* Back.png */,
+				9023E00C157C3BFC00A6CF97 /* Back@2x.png */,
+				9023E00F157C3BFC00A6CF97 /* Check.png */,
+				9023E053157C4BA700A6CF97 /* Check@2x.png */,
+				9023E012157C3BFC00A6CF97 /* Demote.png */,
+				9023E013157C3BFC00A6CF97 /* Demote@2x.png */,
+				9023E014157C3BFC00A6CF97 /* Details.png */,
+				9023E015157C3BFC00A6CF97 /* Details@2x.png */,
+				9023E018157C3BFC00A6CF97 /* Flex.png */,
+				9023E019157C3BFC00A6CF97 /* Flex@2x.png */,
+				9023E01A157C3BFC00A6CF97 /* Flow.png */,
+				9023E01B157C3BFC00A6CF97 /* Flow@2x.png */,
+				9023E01C157C3BFC00A6CF97 /* Photo.png */,
+				9023E01D157C3BFC00A6CF97 /* Photo@2x.png */,
+				9023E01E157C3BFC00A6CF97 /* Promote.png */,
+				9023E01F157C3BFC00A6CF97 /* Promote@2x.png */,
+				9023E020157C3BFC00A6CF97 /* Reseed.png */,
+				9023E021157C3BFC00A6CF97 /* Reseed@2x.png */,
+				9023E022157C3BFC00A6CF97 /* Search.png */,
+				9023E023157C3BFC00A6CF97 /* Search@2x.png */,
+				9023E024157C3BFC00A6CF97 /* ShortMenu.png */,
+				9023E025157C3BFC00A6CF97 /* ShortMenu@2x.png */,
+			);
+			name = "Blue Buttons";
+			sourceTree = "<group>";
+		};
+		90DC51F21564263900E35E1E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				90C38B9E157D89A100DC8FA6 /* Blue Buttons */,
+				90C38B9D157D899500DC8FA6 /* Black & White Buttons */,
+				90C38B90157D891000DC8FA6 /* Sport Types */,
+				9023E029157C3BFC00A6CF97 /* Silhouette.png */,
+				9023E02A157C3BFC00A6CF97 /* Silhouette@2x.png */,
+				90C38B87157D821D00DC8FA6 /* tournament-sel-bk.png */,
+				90C38B88157D821D00DC8FA6 /* tournament-sel-bk@2x.png */,
+				9023E00D157C3BFC00A6CF97 /* background.png */,
+				9023E00E157C3BFC00A6CF97 /* background@2x.png */,
+			);
+			name = Images;
+			path = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9044B57F154F9F0200850349 /* TMS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9044B5AF154F9F0200850349 /* Build configuration list for PBXNativeTarget "TMS" */;
+			buildPhases = (
+				9044B57C154F9F0200850349 /* Sources */,
+				9044B57D154F9F0200850349 /* Frameworks */,
+				9044B57E154F9F0200850349 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TMS;
+			productName = TMS;
+			productReference = 9044B580154F9F0200850349 /* TMS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9044B577154F9F0200850349 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SGP;
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = Pearson;
+			};
+			buildConfigurationList = 9044B57A154F9F0200850349 /* Build configuration list for PBXProject "TMS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 9044B575154F9F0200850349;
+			productRefGroup = 9044B581154F9F0200850349 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9044B57F154F9F0200850349 /* TMS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9044B57E154F9F0200850349 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9044B591154F9F0200850349 /* InfoPlist.strings in Resources */,
+				9044B5D9154FB8C100850349 /* SGPTournamentDetailFrontViewController.xib in Resources */,
+				9044B5DD154FB8CA00850349 /* SGPTournamentSelectorViewController.xib in Resources */,
+				90D1F7A1155199120088515E /* SGPTournamentViewController.xib in Resources */,
+				90DC51E71564120900E35E1E /* SGPCreateTournamentViewController.xib in Resources */,
+				90DC51FB15642BA200E35E1E /* SGPSportTypeViewController.xib in Resources */,
+				90DC52001564308300E35E1E /* SGPTeamListViewController.xib in Resources */,
+				90214B71157B4D2900B20225 /* SGPParticpantsListViewController.xib in Resources */,
+				90FEB6B2157B5E26009F3996 /* SGPCreateParticipantViewController.xib in Resources */,
+				90825E71157BE6D000E2A219 /* SGPStockPhotoListViewController.xib in Resources */,
+				9023E02B157C3BFC00A6CF97 /* Add.png in Resources */,
+				9023E02C157C3BFC00A6CF97 /* Add@2x.png in Resources */,
+				9023E02D157C3BFC00A6CF97 /* AddRemove.png in Resources */,
+				9023E02E157C3BFC00A6CF97 /* AddRemove@2x.png in Resources */,
+				9023E02F157C3BFC00A6CF97 /* Back.png in Resources */,
+				9023E030157C3BFC00A6CF97 /* Back@2x.png in Resources */,
+				9023E031157C3BFC00A6CF97 /* background.png in Resources */,
+				9023E032157C3BFC00A6CF97 /* background@2x.png in Resources */,
+				9023E033157C3BFC00A6CF97 /* Check.png in Resources */,
+				9023E034157C3BFC00A6CF97 /* Delete.png in Resources */,
+				9023E035157C3BFC00A6CF97 /* Delete@2x.png in Resources */,
+				9023E036157C3BFC00A6CF97 /* Demote.png in Resources */,
+				9023E037157C3BFC00A6CF97 /* Demote@2x.png in Resources */,
+				9023E038157C3BFC00A6CF97 /* Details.png in Resources */,
+				9023E039157C3BFC00A6CF97 /* Details@2x.png in Resources */,
+				9023E03A157C3BFC00A6CF97 /* Export.png in Resources */,
+				9023E03B157C3BFC00A6CF97 /* Export@2x.png in Resources */,
+				9023E03C157C3BFC00A6CF97 /* Flex.png in Resources */,
+				9023E03D157C3BFC00A6CF97 /* Flex@2x.png in Resources */,
+				9023E03E157C3BFC00A6CF97 /* Flow.png in Resources */,
+				9023E03F157C3BFC00A6CF97 /* Flow@2x.png in Resources */,
+				9023E040157C3BFC00A6CF97 /* Photo.png in Resources */,
+				9023E041157C3BFC00A6CF97 /* Photo@2x.png in Resources */,
+				9023E042157C3BFC00A6CF97 /* Promote.png in Resources */,
+				9023E043157C3BFC00A6CF97 /* Promote@2x.png in Resources */,
+				9023E044157C3BFC00A6CF97 /* Reseed.png in Resources */,
+				9023E045157C3BFC00A6CF97 /* Reseed@2x.png in Resources */,
+				9023E046157C3BFC00A6CF97 /* Search.png in Resources */,
+				9023E047157C3BFC00A6CF97 /* Search@2x.png in Resources */,
+				9023E048157C3BFC00A6CF97 /* ShortMenu.png in Resources */,
+				9023E049157C3BFC00A6CF97 /* ShortMenu@2x.png in Resources */,
+				9023E04D157C3BFC00A6CF97 /* Silhouette.png in Resources */,
+				9023E04E157C3BFC00A6CF97 /* Silhouette@2x.png in Resources */,
+				9023E054157C4BA700A6CF97 /* Check@2x.png in Resources */,
+				9010526E157C7FCB0075A19C /* SGPLocationListViewController.xib in Resources */,
+				90105274157C860D0075A19C /* SGPLocationDetailViewController.xib in Resources */,
+				90C38B89157D821D00DC8FA6 /* tournament-sel-bk.png in Resources */,
+				90C38B8A157D821D00DC8FA6 /* tournament-sel-bk@2x.png in Resources */,
+				90C38B97157D891B00DC8FA6 /* sport-baseball.png in Resources */,
+				90C38B98157D891B00DC8FA6 /* sport-baseball@2x.png in Resources */,
+				90C38B99157D891B00DC8FA6 /* sport-basketball.png in Resources */,
+				90C38B9A157D891B00DC8FA6 /* sport-basketball@2x.png in Resources */,
+				90C38B9B157D891B00DC8FA6 /* sport-football.png in Resources */,
+				90C38B9C157D891B00DC8FA6 /* sport-football@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9044B57C154F9F0200850349 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9044B593154F9F0200850349 /* main.m in Sources */,
+				9044B597154F9F0200850349 /* SGPAppDelegate.m in Sources */,
+				9044B59A154F9F0200850349 /* TMS.xcdatamodeld in Sources */,
+				9044B5BB154FA0C500850349 /* SGPTournamentSelectorViewController.m in Sources */,
+				9044B5BF154FA15000850349 /* SGPBaseViewController.m in Sources */,
+				9044B5D1154FB1E300850349 /* SGPTournamentDetailFrontViewController.m in Sources */,
+				90D1F79D1551961C0088515E /* SGPTournamentViewController.m in Sources */,
+				90DC51E3156411F200E35E1E /* SGPCreateTournamentViewController.m in Sources */,
+				90DC51FA15642BA200E35E1E /* SGPSportTypeViewController.m in Sources */,
+				90DC51FF1564308300E35E1E /* SGPTeamListViewController.m in Sources */,
+				90FF95CD157A917F007CE210 /* EliminationStyle.m in Sources */,
+				90FF95D4157A917F007CE210 /* Game.m in Sources */,
+				90FF95D7157A9180007CE210 /* Participant.m in Sources */,
+				90FF95DA157A9180007CE210 /* SportType.m in Sources */,
+				90FF95DD157A9180007CE210 /* Location.m in Sources */,
+				90FF95E0157A9180007CE210 /* TournamentType.m in Sources */,
+				90FF95E3157A91E9007CE210 /* SGPBaseManagedObject.m in Sources */,
+				90214B70157B4D2900B20225 /* SGPParticpantsListViewController.m in Sources */,
+				90FEB6AD157B5357009F3996 /* Tournament.m in Sources */,
+				90FEB6B1157B5E26009F3996 /* SGPCreateParticipantViewController.m in Sources */,
+				90825E5D157BD58400E2A219 /* NSString+WhiteSpacing.m in Sources */,
+				90825E5E157BD58400E2A219 /* UIImage+Resize.m in Sources */,
+				90825E5F157BD58400E2A219 /* UIImage+RoundedCorner.m in Sources */,
+				90825E60157BD58400E2A219 /* UIScreen+Scale.m in Sources */,
+				90825E61157BD58400E2A219 /* UIView+Screenshot.m in Sources */,
+				90825E65157BD61300E2A219 /* UIImage+Alpha.m in Sources */,
+				90825E6C157BDE5F00E2A219 /* StockPhoto.m in Sources */,
+				90825E70157BE6D000E2A219 /* SGPStockPhotoListViewController.m in Sources */,
+				9023E082157C5E5100A6CF97 /* AwesomeMenu.m in Sources */,
+				9023E083157C5E5100A6CF97 /* AwesomeMenuItem.m in Sources */,
+				9010526D157C7FCB0075A19C /* SGPLocationListViewController.m in Sources */,
+				90105273157C860D0075A19C /* SGPLocationDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9044B58F154F9F0200850349 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9044B590154F9F0200850349 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9044B5D7154FB8C100850349 /* SGPTournamentDetailFrontViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9044B5D8154FB8C100850349 /* en */,
+			);
+			name = SGPTournamentDetailFrontViewController.xib;
+			sourceTree = "<group>";
+		};
+		9044B5DB154FB8CA00850349 /* SGPTournamentSelectorViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9044B5DC154FB8CA00850349 /* en */,
+			);
+			name = SGPTournamentSelectorViewController.xib;
+			sourceTree = "<group>";
+		};
+		90D1F79F155199120088515E /* SGPTournamentViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90D1F7A0155199120088515E /* en */,
+			);
+			name = SGPTournamentViewController.xib;
+			sourceTree = "<group>";
+		};
+		90DC51E51564120900E35E1E /* SGPCreateTournamentViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				90DC51E61564120900E35E1E /* en */,
+			);
+			name = SGPCreateTournamentViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9044B5AD154F9F0200850349 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9044B5AE154F9F0200850349 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9044B5B0154F9F0200850349 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TMS/TMS-Prefix.pch";
+				INFOPLIST_FILE = "TMS/TMS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9044B5B1154F9F0200850349 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TMS/TMS-Prefix.pch";
+				INFOPLIST_FILE = "TMS/TMS-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9044B57A154F9F0200850349 /* Build configuration list for PBXProject "TMS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9044B5AD154F9F0200850349 /* Debug */,
+				9044B5AE154F9F0200850349 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9044B5AF154F9F0200850349 /* Build configuration list for PBXNativeTarget "TMS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9044B5B0154F9F0200850349 /* Debug */,
+				9044B5B1154F9F0200850349 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9044B598154F9F0200850349 /* TMS.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9044B599154F9F0200850349 /* TMS.xcdatamodel */,
+			);
+			currentVersion = 9044B599154F9F0200850349 /* TMS.xcdatamodel */;
+			path = TMS.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 9044B577154F9F0200850349 /* Project object */;
+}
