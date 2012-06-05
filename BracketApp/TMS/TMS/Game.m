@@ -11,6 +11,8 @@
 
 @implementation Game
 
+@dynamic endDate;
+@dynamic startDate;
 @dynamic gameNumber;
 @dynamic scoreForP1;
 @dynamic scoreForP2;

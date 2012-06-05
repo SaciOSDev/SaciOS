@@ -14,6 +14,8 @@
 
 @interface Tournament : SGPBaseManagedObject
 
+@property (nonatomic, retain) NSNumber * endDate;
+@property (nonatomic, retain) NSNumber * startDate;
 @property (nonatomic, retain) NSDate * createDate;
 @property (nonatomic, retain) NSString * displayName;
 @property (nonatomic, retain) NSNumber * status;

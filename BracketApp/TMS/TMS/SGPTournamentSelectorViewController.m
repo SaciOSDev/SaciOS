@@ -252,7 +252,7 @@
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     pageControlBeingUsed = NO;
-    SGPTournamentDetailFrontViewController *controller = [viewControllers objectAtIndex:pageControl.currentPage];
+    SGPTournamentDetailFrontViewController *controller = [self tdfViewControllerForPage:pageControl.currentPage];    
     if (controller!=nil && (NSNull *)controller != [NSNull null])
     {
         [controller showFronView];

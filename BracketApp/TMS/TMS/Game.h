@@ -14,6 +14,8 @@
 
 @interface Game : SGPBaseManagedObject
 
+@property (nonatomic, retain) NSNumber * endDate;
+@property (nonatomic, retain) NSNumber * startDate;
 @property (nonatomic, retain) NSNumber * gameNumber;
 @property (nonatomic, retain) NSNumber * scoreForP1;
 @property (nonatomic, retain) NSNumber * scoreForP2;

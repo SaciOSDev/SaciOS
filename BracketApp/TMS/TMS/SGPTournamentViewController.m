@@ -7,6 +7,7 @@
 //
 
 #import "SGPTournamentViewController.h"
+#import "SGPCreateTournamentViewController.h"
 #import "AwesomeMenuItem.h"
 
 @interface SGPTournamentViewController ()
@@ -72,15 +73,32 @@
     [super viewDidUnload];
 }
 
-//- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-//    [self menu].startPoint = CGPointMake(32.0, self.view.bounds.size.height-32.0);
-//}
-
 #pragma mark - AwesomeMenuDelegate
 
 - (void)AwesomeMenu:(AwesomeMenu *)menu didSelectIndex:(NSInteger)idx
 {
     NSLog(@"Select the index : %d",idx);
+    switch (idx) {
+        case 0: {
+            SGPCreateTournamentViewController *vc = [[SGPCreateTournamentViewController alloc] initWithNibName:@"SGPCreateTournamentViewController" bundle:nil];
+            [vc setManagedObjectContext:[self managedObjectContext]];
+            [vc setTournament:[self tournament]];
+            UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
+            [nvc setModalPresentationStyle:UIModalPresentationFormSheet];
+            [[self navigationController] presentModalViewController:nvc animated:YES];  
+        } break;
+        case 1: {
+            
+        } break;
+        case 2: {
+            
+        } break;
+        case 3: {
+            
+        } break;
+        default:
+            break;
+    }
 }
 
 @end

@@ -26,6 +26,7 @@
 @synthesize tournament;
 @synthesize frontView;
 @synthesize backView;
+@synthesize sectionHeaderView;
 @synthesize backTableView;
 @synthesize parentNavController;
 @synthesize bigButton;
@@ -197,5 +198,12 @@
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return [self sectionHeaderView].frame.size.height;
+}
+
+- (UIView *)tableView:(UITableView *)tv viewForHeaderInSection:(NSInteger)section {
+    return [self sectionHeaderView];
+}
 
 @end
