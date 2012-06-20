@@ -15,6 +15,4 @@
 @property (strong, nonatomic) Tournament * tournament;
 @property (strong, nonatomic) AwesomeMenu * menu;
 
-- (IBAction)navigateBackHome:(id)sender;
-
 @end

@@ -62,12 +62,12 @@
         <relationship name="tournaments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tournament" inverseName="tournamentType" inverseEntity="Tournament" syncable="YES"/>
     </entity>
     <elements>
-        <element name="EliminationStyle" positionX="-342" positionY="144" width="128" height="75"/>
-        <element name="Game" positionX="331" positionY="189" width="128" height="195"/>
+        <element name="EliminationStyle" positionX="-342" positionY="135" width="128" height="75"/>
+        <element name="Game" positionX="297" positionY="192" width="128" height="195"/>
         <element name="Location" positionX="72" positionY="111" width="128" height="150"/>
-        <element name="Participant" positionX="106" positionY="360" width="128" height="150"/>
+        <element name="Participant" positionX="99" positionY="426" width="128" height="150"/>
         <element name="SportType" positionX="-405" positionY="243" width="128" height="90"/>
-        <element name="StockPhoto" positionX="331" positionY="441" width="128" height="90"/>
+        <element name="StockPhoto" positionX="315" positionY="441" width="128" height="90"/>
         <element name="Tournament" positionX="-117" positionY="216" width="128" height="210"/>
         <element name="TournamentType" positionX="-405" positionY="378" width="128" height="75"/>
     </elements>

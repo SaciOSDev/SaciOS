@@ -314,7 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				9044B5B7154FA02400850349 /* Core App */,
-				9044B5B5154F9FFD00850349 /* Tounrament Selector */,
+				9044B5B5154F9FFD00850349 /* Tournament Selector */,
 				9044B5B6154FA01300850349 /* Tournament Display */,
 				9044B5B3154F9FBD00850349 /* CoreData Schema */,
 				90214B6B157B490000B20225 /* Categories */,
@@ -370,7 +370,7 @@
 			name = "DB Objects";
 			sourceTree = "<group>";
 		};
-		9044B5B5154F9FFD00850349 /* Tounrament Selector */ = {
+		9044B5B5154F9FFD00850349 /* Tournament Selector */ = {
 			isa = PBXGroup;
 			children = (
 				9044B5B8154FA0C500850349 /* SGPTournamentSelectorViewController.h */,
@@ -404,7 +404,7 @@
 				90105271157C860D0075A19C /* SGPLocationDetailViewController.m */,
 				90105272157C860D0075A19C /* SGPLocationDetailViewController.xib */,
 			);
-			name = "Tounrament Selector";
+			name = "Tournament Selector";
 			sourceTree = "<group>";
 		};
 		9044B5B6154FA01300850349 /* Tournament Display */ = {

@@ -55,6 +55,17 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [[[UIAlertView alloc] initWithTitle:@"Cell Tapped" 
+                                message:[NSString stringWithFormat:@"Cell at section %d for row %d was tapped!",indexPath.section,indexPath.row] 
+                               delegate:nil 
+                      cancelButtonTitle:@"OK" 
+                      otherButtonTitles:nil] show];
+
+
+}
+
 - (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath {
     [[[UIAlertView alloc] initWithTitle:@"Accessory Tapped" 
                                 message:[NSString stringWithFormat:@"Accessor at section %d for row %d was tapped!",indexPath.section,indexPath.row] 

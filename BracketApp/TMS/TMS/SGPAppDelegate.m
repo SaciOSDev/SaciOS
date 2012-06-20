@@ -55,12 +55,12 @@
                                             [NSArray arrayWithObjects:@"Martial Arts",@"Check.png", nil],
                                             [NSArray arrayWithObjects:@"Fencing",@"Check.png", nil],
                                             [NSArray arrayWithObjects:@"Boxing",@"Check.png", nil],
-                                            [NSArray arrayWithObjects:@"Billards",@"Check.png", nil],
+                                            [NSArray arrayWithObjects:@"Pool",@"Check.png", nil],
                                             [NSArray arrayWithObjects:@"Darts",@"Check.png", nil],
                                             [NSArray arrayWithObjects:@"Beer Pong",@"Check.png", nil],
                                             [NSArray arrayWithObjects:@"Dance",@"Check.png", nil],
                                             [NSArray arrayWithObjects:@"Fishing",@"Check.png", nil],
-                                            [NSArray arrayWithObjects:@"Rubgy",@"Check.png", nil],
+                                            [NSArray arrayWithObjects:@"Rugby",@"Check.png", nil],
                                             [NSArray arrayWithObjects:@"Racing",@"Check.png", nil],
                                             [NSArray arrayWithObjects:@"Cricket",@"Check.png", nil],
                                             [NSArray arrayWithObjects:@"Gymnastics",@"Check.png", nil],
@@ -76,10 +76,9 @@
                                             [NSArray arrayWithObjects:@"Other",@"Check.png", nil],
                                             nil];
             for (NSArray *data in displayNames) {
-                NSManagedObject *mo = [NSEntityDescription insertNewObjectForEntityForName:[SportType entityName] 
-                                                                    inManagedObjectContext:[self managedObjectContext]];
-                [mo setValue:[data objectAtIndex:0] forKey:@"displayName"];
-                [mo setValue:[data objectAtIndex:1] forKey:@"photo"];
+                SportType *sportType = [SportType createObject:[self managedObjectContext]];
+                [sportType setDisplayName:[data objectAtIndex:0]];
+                [sportType setPhoto:[data objectAtIndex:1]];
             }
             
             // Create the Tournament Types

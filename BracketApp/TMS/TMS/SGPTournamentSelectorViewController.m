@@ -223,7 +223,13 @@
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-    [self resizeScrollView];
+    [UIView animateWithDuration:0.15 
+                          delay:0.0 
+                        options:UIViewAnimationOptionTransitionNone
+                     animations:^{
+                         [self resizeScrollView];                   
+                     }
+                     completion:nil];
 }
 
 #pragma mark - UIScrollViewDelegate
