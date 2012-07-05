@@ -11,3 +11,29 @@ We will host all our source code here. Please visit: http://yuric.github.com/Sac
 
 <h2>TMS App Data Structure</h2>
 ![](https://github.com/macmoe/SaciOS/raw/master/Other/screenshots/TMS-coredata.png) &nbsp;&nbsp;&nbsp;
+
+<h2>Rules</h2>
+
+1. User cannot add another person once they Seed/Start the tournament. To add another team/player the tournamanet needs to be reseeded.
+2. Decide of number of sectors for brackets depending on number of teams. (1,2,4)
+3. Suggested: When adding a new location, point out any required field.
+
+<h3>Drawing</h3>
+
+1. 2-16 players/team will have one bracket/tree setup.
+2. 27-64 we will use two bracket setup.
+3. Max Up to 32 players per bracket side for 2 bracket set players
+4. Buttons come down as path and if button is enabled all else is off
+5. Ceiling of SQR(number of teams) + 1 = number of columns
+
+Drawing for 2 brackets
+
+Columns
+2-16 players
+2^(col-1) = Rows
+
+17-32 players 
+16 = Rows
+
+32+ players
+32 = rows
