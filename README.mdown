@@ -1,5 +1,5 @@
 <h2>Welcome to Sacramento iOS Meetup code base</h2>
-We will host all our source code here. Please visit: http://yuric.github.com/SaciOS for the github run down.
+We will host all our source code here. Please visit: http://saciosdev.github.com/SaciOS/ for the github run down.
 
 <h2>For help</h2>
 1. Post your questions at our Google Group: http://groups.google.com/group/sac-ios-dev
