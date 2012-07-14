@@ -17,6 +17,7 @@
 @property (strong, nonatomic) Tournament *tournament;
 @property (strong, nonatomic) IBOutlet UIView *frontView;
 @property (strong, nonatomic) IBOutlet UIView *backView;
+@property (strong, nonatomic) IBOutlet UIView *sectionHeaderView;
 @property (strong, nonatomic) IBOutlet UITableView *backTableView;
 @property (strong, nonatomic) UINavigationController *parentNavController;
 @property (strong, nonatomic) IBOutlet UIButton *bigButton;

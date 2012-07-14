@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1171" systemVersion="11E53" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="878" systemVersion="11E53" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="EliminationStyle" representedClassName="EliminationStyle" syncable="YES">
         <attribute name="displayName" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="tournaments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tournament" inverseName="eliminationStyle" inverseEntity="Tournament" syncable="YES"/>
     </entity>
     <entity name="Game" representedClassName="Game">
+        <attribute name="endDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="gameNumber" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="scoreForP1" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="scoreForP2" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="status" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="location" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Location" inverseName="games" inverseEntity="Location" syncable="YES"/>
         <relationship name="participants" optional="YES" toMany="YES" maxCount="2" deletionRule="Nullify" ordered="YES" destinationEntity="Participant" inverseName="games" inverseEntity="Participant" syncable="YES"/>
@@ -45,6 +47,8 @@
     <entity name="Tournament" representedClassName="Tournament" syncable="YES">
         <attribute name="createDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="displayName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="endDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="status" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="eliminationStyle" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EliminationStyle" inverseName="tournaments" inverseEntity="EliminationStyle" syncable="YES"/>
         <relationship name="games" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Game" inverseName="tournament" inverseEntity="Game" syncable="YES"/>
@@ -58,13 +62,13 @@
         <relationship name="tournaments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tournament" inverseName="tournamentType" inverseEntity="Tournament" syncable="YES"/>
     </entity>
     <elements>
-        <element name="EliminationStyle" positionX="-342" positionY="144" width="128" height="75"/>
-        <element name="Game" positionX="331" positionY="189" width="128" height="165"/>
+        <element name="EliminationStyle" positionX="-342" positionY="135" width="128" height="75"/>
+        <element name="Game" positionX="297" positionY="192" width="128" height="195"/>
         <element name="Location" positionX="72" positionY="111" width="128" height="150"/>
-        <element name="Participant" positionX="106" positionY="360" width="128" height="150"/>
+        <element name="Participant" positionX="99" positionY="426" width="128" height="150"/>
         <element name="SportType" positionX="-405" positionY="243" width="128" height="90"/>
-        <element name="StockPhoto" positionX="331" positionY="441" width="128" height="90"/>
-        <element name="Tournament" positionX="-117" positionY="216" width="128" height="180"/>
+        <element name="StockPhoto" positionX="315" positionY="441" width="128" height="90"/>
+        <element name="Tournament" positionX="-117" positionY="216" width="128" height="210"/>
         <element name="TournamentType" positionX="-405" positionY="378" width="128" height="75"/>
     </elements>
 </model>

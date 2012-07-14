@@ -16,6 +16,8 @@
 
 @implementation Tournament
 
+@dynamic endDate;
+@dynamic startDate;
 @dynamic createDate;
 @dynamic displayName;
 @dynamic status;

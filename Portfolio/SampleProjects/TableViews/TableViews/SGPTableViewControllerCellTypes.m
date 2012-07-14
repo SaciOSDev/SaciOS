@@ -21,7 +21,7 @@
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 4;
+    return 40;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -43,6 +43,8 @@
         } break;
     }
     
+//    cellIdent = @"dumbyrow";
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdent];
     
     if (cell==nil) {
@@ -52,7 +54,8 @@
     
     // Configure the cell...
     [[cell imageView] setImage:[UIImage imageNamed:@"icon.png"]];
-    [[cell textLabel] setText:cellIdent];
+//    [[cell textLabel] setText:cellIdent];
+    [[cell textLabel] setText:[NSString stringWithFormat:@"Row %d",indexPath.row]];
     [[cell detailTextLabel] setText:@"Detail View"];
     
     return cell;

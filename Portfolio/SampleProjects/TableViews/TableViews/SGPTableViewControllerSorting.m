@@ -84,7 +84,11 @@
 //}
 
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
-    
+    [[[UIAlertView alloc] initWithTitle:@"Row Moved" 
+                                message:[NSString stringWithFormat:@"Moved to section %d for row %d was tapped!",destinationIndexPath.section,destinationIndexPath.row] 
+                               delegate:nil 
+                      cancelButtonTitle:@"OK" 
+                      otherButtonTitles:nil] show];
 }
 
 - (BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath {

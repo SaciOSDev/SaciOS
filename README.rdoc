@@ -1,6 +1,0 @@
-==Welcome to Sacramento iOS Meetup code base
-
-We will host all our source code here. Please visit: http://yuric.github.com/SaciOS for the github run down. Any questions can also be sent to yuri@sparkroad.com
-
-=== TODOs:
-1. Feel free to edit this (or any README) page also. For extra credit and to make it look pretty you can follow the rdoc markdown.

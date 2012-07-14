@@ -76,10 +76,9 @@
                                             [NSArray arrayWithObjects:@"Other",@"Check.png", nil],
                                             nil];
             for (NSArray *data in displayNames) {
-                NSManagedObject *mo = [NSEntityDescription insertNewObjectForEntityForName:[SportType entityName] 
-                                                                    inManagedObjectContext:[self managedObjectContext]];
-                [mo setValue:[data objectAtIndex:0] forKey:@"displayName"];
-                [mo setValue:[data objectAtIndex:1] forKey:@"photo"];
+                SportType *sportType = [SportType createObject:[self managedObjectContext]];
+                [sportType setDisplayName:[data objectAtIndex:0]];
+                [sportType setPhoto:[data objectAtIndex:1]];
             }
             
             // Create the Tournament Types

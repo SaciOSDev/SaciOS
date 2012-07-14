@@ -7,15 +7,22 @@
 //
 
 #import "SGPBaseViewController.h"
+#import "Tournament.h"
 
 @interface SGPCreateTournamentViewController : SGPBaseViewController
 
-@property (weak, nonatomic) IBOutlet UITextField *tournNameTextField;
-@property (weak, nonatomic) IBOutlet UITextField *sportTypeTextField;
-@property (weak, nonatomic) IBOutlet UITextField *locationTextField;
+@property (strong, nonatomic) Tournament *tournament;
+@property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (strong, nonatomic) IBOutlet UITextField *tournNameTextField;
+@property (strong, nonatomic) IBOutlet UIButton *locationBtn;
+@property (strong, nonatomic) IBOutlet UIButton *sportTypeBtn;
+@property (strong, nonatomic) IBOutlet UIButton *startDateBtn;
+@property (strong, nonatomic) IBOutlet UIButton *endDateBtn;
 
 - (IBAction)nextView:(id)sender;
 - (IBAction)selectSportType:(id)sender;
 - (IBAction)selectLocation:(id)sender;
+- (IBAction)selectStartDate:(id)sender;
+- (IBAction)selectEndDate:(id)sender;
 
 @end

@@ -43,11 +43,11 @@
 
 - (void)configureCell:(UITableViewCell*)cell withIndexPath:(NSIndexPath*)indexPath {
     [[cell textLabel] setText:[NSString stringWithFormat:@"Sec: %d Row: %d",indexPath.section,indexPath.row]];
-    if (indexPath.row % 2) {
-        [cell setBackgroundColor:[UIColor darkGrayColor]];
-    } else {
-        [cell setBackgroundColor:[UIColor lightGrayColor]];        
-    }
+//    if (indexPath.row % 2) {
+//        [cell setBackgroundColor:[UIColor darkGrayColor]];
+//    } else {
+//        [cell setBackgroundColor:[UIColor lightGrayColor]];        
+//    }
 }
 
 #pragma mark - Table view data source
@@ -84,7 +84,8 @@
 - (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row==0) {
         return UITableViewCellEditingStyleNone;
-    } else if (indexPath.row+1==[self tableView:tableView numberOfRowsInSection:indexPath.section]) {
+    } else if (indexPath.row+1==[self tableView:tableView numberOfRowsInSection:indexPath.section]
+               || indexPath.row==2) {
         return UITableViewCellEditingStyleInsert;
     } else {
         return UITableViewCellEditingStyleDelete;
@@ -93,7 +94,7 @@
 
 - (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row<2) {
-        return @"Meow";
+        return @"Meow Mix Meow Mix Meow Mix Meow Mix";
     } else {
         return nil;
     }
@@ -128,14 +129,14 @@
         case UITableViewCellEditingStyleInsert:
             self.rowCount += 1;
             [self configureCell:[tableView cellForRowAtIndexPath:indexPath] withIndexPath:indexPath];
-            [[self tableView] insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:self.rowCount-1 inSection:indexPath.section]] 
-                                    withRowAnimation:UITableViewRowAnimationRight];
+            [[self tableView] insertRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:indexPath.row inSection:indexPath.section]] 
+                                    withRowAnimation:UITableViewRowAnimationMiddle];
 //            [[[UIAlertView alloc] initWithTitle:@"UITableViewCellEditingStyleInsert" 
 //                                        message:@"UITableViewCellEditingStyleInsert"
 //                                       delegate:nil 
 //                              cancelButtonTitle:@"OK" 
 //                              otherButtonTitles:nil] show];
-            [tableView performSelector:@selector(reloadData) withObject:nil afterDelay:1.0];
+            [tableView performSelector:@selector(reloadData) withObject:nil afterDelay:0.7];
             break;
         default:
             break;

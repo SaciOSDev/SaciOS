@@ -13,7 +13,7 @@
 
 @interface SGPBaseViewController : UIViewController <NSFetchedResultsControllerDelegate>
 
-@property Class managedObjectClass;
+@property (weak, nonatomic) Class managedObjectClass;
 @property (strong, nonatomic) NSArray *sortDescriptors;
 @property (strong, nonatomic) NSPredicate *predicate;
 @property (strong, nonatomic) NSMutableDictionary *vcSettings;

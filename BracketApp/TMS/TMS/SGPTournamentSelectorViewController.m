@@ -17,7 +17,8 @@
 #define V_PADDING(height) ((height-V_TOURNMENT_SQUARE())/2)
 
 @interface SGPTournamentSelectorViewController ()
-
+- (int)numberOfPages;
+- (SGPTournamentDetailFrontViewController*)tdfViewControllerForPage:(int)page;
 @end
 
 @implementation SGPTournamentSelectorViewController
@@ -219,11 +220,17 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self didRotateFromInterfaceOrientation:[[UIDevice currentDevice] orientation]];
+    [self didRotateFromInterfaceOrientation:(UIInterfaceOrientation)[[UIDevice currentDevice] orientation]];
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {
-    [self resizeScrollView];
+    [UIView animateWithDuration:0.15 
+                          delay:0.0 
+                        options:UIViewAnimationOptionTransitionNone
+                     animations:^{
+                         [self resizeScrollView];                   
+                     }
+                     completion:nil];
 }
 
 #pragma mark - UIScrollViewDelegate
@@ -252,7 +259,7 @@
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     pageControlBeingUsed = NO;
-    SGPTournamentDetailFrontViewController *controller = [viewControllers objectAtIndex:pageControl.currentPage];
+    SGPTournamentDetailFrontViewController *controller = [self tdfViewControllerForPage:pageControl.currentPage];    
     if (controller!=nil && (NSNull *)controller != [NSNull null])
     {
         [controller showFronView];

@@ -17,6 +17,10 @@
 #import "TournamentType.h"
 #import <QuartzCore/QuartzCore.h>
 
+#define BORDER_RADIUS 21.0
+#define BORDER_WIDTH 2.0
+#define BORDER_COLOR [UIColor whiteColor]
+
 @interface SGPTournamentDetailFrontViewController ()
 
 @end
@@ -26,6 +30,7 @@
 @synthesize tournament;
 @synthesize frontView;
 @synthesize backView;
+@synthesize sectionHeaderView;
 @synthesize backTableView;
 @synthesize parentNavController;
 @synthesize bigButton;
@@ -145,12 +150,12 @@
     
     [[[self frontView] layer] setMasksToBounds:YES];
     [[[self frontView] layer] setCornerRadius:20];
-    [[[self frontView] layer] setBorderWidth:3];
+    [[[self frontView] layer] setBorderWidth:2];
     [[[self frontView] layer] setBorderColor:[[UIColor blackColor] CGColor]];
 
     [[[self backView] layer] setMasksToBounds:YES];
     [[[self backView] layer] setCornerRadius:20];
-    [[[self backView] layer] setBorderWidth:3];
+    [[[self backView] layer] setBorderWidth:2];
     [[[self backView] layer] setBorderColor:[[UIColor blackColor] CGColor]];
 
     [self refreshData];
@@ -192,10 +197,21 @@
     if (!photo) {
         photo = [UIImage imageNamed:@"Silhouette.png"];
     }
+    [[[cell imageView] layer] setMasksToBounds:YES];
+    [[[cell imageView] layer] setCornerRadius:BORDER_RADIUS];
+    [[[cell imageView] layer] setBorderWidth:BORDER_WIDTH];
+    [[[cell imageView] layer] setBorderColor:[BORDER_COLOR CGColor]];
     [[cell imageView] setImage:photo];
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     return cell;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return [self sectionHeaderView].frame.size.height;
+}
+
+- (UIView *)tableView:(UITableView *)tv viewForHeaderInSection:(NSInteger)section {
+    return [self sectionHeaderView];
+}
 
 @end

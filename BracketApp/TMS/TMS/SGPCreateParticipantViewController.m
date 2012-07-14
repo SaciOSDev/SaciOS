@@ -13,8 +13,9 @@
 #import <QuartzCore/QuartzCore.h>
 #import "NSString+WhiteSpacing.h"
 
-#define BORDER_RADIUS 20.0
-#define BORDER_WIDTH 1.0
+#define BORDER_RADIUS 50.0
+#define BORDER_WIDTH 3.0
+#define BORDER_COLOR [UIColor whiteColor]
 
 @interface SGPCreateParticipantViewController ()
 
@@ -122,7 +123,7 @@
     [[[self photoImage] layer] setMasksToBounds:YES];
     [[[self photoImage] layer] setCornerRadius:BORDER_RADIUS];
     [[[self photoImage] layer] setBorderWidth:BORDER_WIDTH];
-    [[[self photoImage] layer] setBorderColor:[[UIColor blackColor] CGColor]];
+    [[[self photoImage] layer] setBorderColor:[BORDER_COLOR CGColor]];
 
     [[self photoImage] setImage:[[self photoImage] image]]; 
     [[self participantNameTextField] becomeFirstResponder];
@@ -151,22 +152,23 @@
                                                                                                    target:self
                                                                                                    action:@selector(saveParticipant:)]];        
     }
+    UIImage *image = [[self participant] image];
+    if (!image) {
+        image = [UIImage imageNamed:@"Silhouette.png"];
+    }
+    [[self photoImage] setImage:image];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
     [[self participant] setDisplayName:[[self participantNameTextField] text]];
+    [[self participantNameTextField] resignFirstResponder];
 }
 
 - (void)viewDidAppear:(BOOL)animated 
 {
     [super viewDidAppear:animated];
-    UIImage *image = [[self participant] image];
-    if (!image) {
-        image = [UIImage imageNamed:@"Photo.png"];
-    }
-    [[self photoImage] setImage:image];
     [[self participantNameTextField] setText:[[self participant] displayName]];
 }
 
@@ -193,7 +195,7 @@
             [self killPopover];
             self.popOverview = [[UIPopoverController alloc] initWithContentViewController:impc];
             self.popOverview.delegate = self;
-            [self.popOverview presentPopoverFromRect:CGRectMake(0, 0, self.view.frame.size.width, 0) 
+            [self.popOverview presentPopoverFromRect:CGRectMake(0, 0, self.view.frame.size.width, 1) 
                                               inView:[self view]
                             permittedArrowDirections:UIPopoverArrowDirectionAny 
                                             animated:YES];
@@ -209,7 +211,7 @@
             [self killPopover];
             self.popOverview = [[UIPopoverController alloc] initWithContentViewController:impc];
             self.popOverview.delegate = self;
-            [self.popOverview presentPopoverFromRect:CGRectMake(0, 0, self.view.frame.size.width, 0) 
+            [self.popOverview presentPopoverFromRect:CGRectMake(0, 0, self.view.frame.size.width, 1) 
                                               inView:[self view]
                             permittedArrowDirections:UIPopoverArrowDirectionAny 
                                             animated:YES];

@@ -10,6 +10,11 @@
 #import "Participant.h"
 #import "SGPParticpantsListViewController.h"
 #import "SGPCreateParticipantViewController.h"
+#import <QuartzCore/QuartzCore.h>
+
+#define BORDER_RADIUS 21.0
+#define BORDER_WIDTH 2.0
+#define BORDER_COLOR [UIColor whiteColor]
 
 @interface SGPTeamListViewController ()
 @property BOOL editingMode;
@@ -108,6 +113,10 @@
     if (!photo) {
         photo = [UIImage imageNamed:@"Silhouette.png"];
     }
+    [[[cell imageView] layer] setMasksToBounds:YES];
+    [[[cell imageView] layer] setCornerRadius:BORDER_RADIUS];
+    [[[cell imageView] layer] setBorderWidth:BORDER_WIDTH];
+    [[[cell imageView] layer] setBorderColor:[BORDER_COLOR CGColor]];
     [[cell imageView] setImage:photo];
     if ([self editingMode]) {
         [cell setSelectionStyle:UITableViewCellSelectionStyleBlue];
