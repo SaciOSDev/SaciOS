@@ -164,7 +164,6 @@
     [super viewWillDisappear:animated];
     [[self participant] setDisplayName:[[self participantNameTextField] text]];
     [[self participantNameTextField] resignFirstResponder];
-
 }
 
 - (void)viewDidAppear:(BOOL)animated 

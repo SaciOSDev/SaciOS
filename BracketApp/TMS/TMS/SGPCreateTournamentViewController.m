@@ -106,12 +106,12 @@
     [[self navigationController] pushViewController:vc animated:YES];
 }
 
-- (IBAction)selectStartDate:(id)sender{
-    
+- (IBAction)selectStartDate:(id)sender {
+        
 }
 
 - (IBAction)selectEndDate:(id)sender {
-
+    
 }
 
 #pragma mark - UIViewController

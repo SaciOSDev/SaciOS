@@ -80,7 +80,6 @@
     if (!photo) {
         photo = [UIImage imageNamed:@"Silhouette.png"];
     }
-    
     [[[cell imageView] layer] setMasksToBounds:YES];
     [[[cell imageView] layer] setCornerRadius:BORDER_RADIUS];
     [[[cell imageView] layer] setBorderWidth:BORDER_WIDTH];

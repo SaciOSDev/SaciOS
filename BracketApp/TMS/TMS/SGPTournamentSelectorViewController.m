@@ -17,7 +17,8 @@
 #define V_PADDING(height) ((height-V_TOURNMENT_SQUARE())/2)
 
 @interface SGPTournamentSelectorViewController ()
-
+- (int)numberOfPages;
+- (SGPTournamentDetailFrontViewController*)tdfViewControllerForPage:(int)page;
 @end
 
 @implementation SGPTournamentSelectorViewController
@@ -219,7 +220,7 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    [self didRotateFromInterfaceOrientation:[[UIDevice currentDevice] orientation]];
+    [self didRotateFromInterfaceOrientation:(UIInterfaceOrientation)[[UIDevice currentDevice] orientation]];
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1171" systemVersion="11E53" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="878" systemVersion="11E53" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="EliminationStyle" representedClassName="EliminationStyle" syncable="YES">
         <attribute name="displayName" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="tournaments" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Tournament" inverseName="eliminationStyle" inverseEntity="Tournament" syncable="YES"/>
