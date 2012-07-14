@@ -4,6 +4,7 @@ We will host all our source code here. Please visit: http://saciosdev.github.com
 <h2>For help</h2>
 1. Post your questions at our Google Group: http://groups.google.com/group/sac-ios-dev
 2. Feel free to contact me directly as well at yuri@sparkroad.com
+3. Feature and Bug trace view <a href="https://trello.com/board/saciosdev-tournament-management-app/5000570d365ca9cb384c8acb">Trello.com on the "SaciOSDev: Tournament Management App" board</a> 
 
 <h2>TMS App Main Features</h2>
 - Manage Bracket Style Tournaments
